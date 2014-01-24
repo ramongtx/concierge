@@ -4,14 +4,14 @@ Concièrge:
       ☐ Ramon Carvalho = ramongtx@gmail.com
       ☐ Fellipe Coelho = fellipecoelho@live.com
 
-  Descrição da Idéia Inicial:
+   Descrição da Idéia Inicial:
      Criar um app onde seja possível ao usuário visualizar a mesa de um restaurante antes de efetuar a reserva, assim ele tem maior conhecimento sobre o que esta reservando.
 
    Descrição da Ideia Final:
        A ideia é fazer um aplicativo para fazer reservas, de maneira visual, de mesas/quartos em restaurantes/hotéis, possibilitando ao usuário dar nota ao servico contratado.
        Restaurantes e hotéis podem registrar seus estabelecimentos e enviar uma foto/esquema da organização das mesas/quartos, disponibilizando aos  usuários  para que possam fazer a reserva com base nessa foto.
 
-    Considerações:
+   Considerações:
        ☐ Usaremos um ScrollView com interações de toque customizados para a tela principal
        ☐ A aplicação tem como finalidade o aprendizado: torná-la comercial exigiria um esforço de marketing para conseguir povoar a aplicação com usuários/restaurantes
        ☐ Usaremos um servidor remoto (possivelmente uma máquina do IC-Unicamp) para guardar o banco de dados
@@ -49,7 +49,7 @@ Concièrge:
              ☐ Pesquisar o que será importante para os clientes @ramongtx @deadline (28-01-2014)
 
       Como utilizar o cadastro do facebook para o app ? pesquisar
-            ☐ Pesquisar o sistema de contas do facebook @fellipecoelho @deadline (29-01-2014)
+            ☐ Pesquisar o sistema de contas do facebook @fellipecoelho @deadline (28-01-2014)
 
       Como utilizar o cadastro do Google para o app ? pesquisar
              ☐ Pesquisar o sistema de contas do Google @brunoversignassi @deadline (28-01-2014)
@@ -59,6 +59,33 @@ Concièrge:
 
       A ideia de utilizar somente em restaurantes, pode tornar muito pequeno o publico alvo, vale a pena investir ? Utilizando praticamente a mesma estrutura, podemos expandir para a utilizacao em quartos de hotéis, pois assim como mesas de restaurantes, é fundamental poder visualizar antes.
 
+   Planejamento do Desenvolvimento:
+       ☐ Início do desenvolvimento @todos @deadline (28-01-2014)
+       ☐ Storyboard @todos  @deadline (29-01-2014)
+       ☐ Servidor @brunoversignassi @(30-01-2014)
+       ☐ Modelagem @todos @deadline (28-01-2014)
+
+       ☐ Primeiro protótipo @todos @deadline (31-01-2014)
+             ☐ Servidor responde requisições @brunoversignassi
+             ☐ Lado cliente @fellipecoelho
+             ☐ Lado restaurante @ramongtx
+
+       ☐ Segundo protótipo @todos @deadline (03-02-2014)
+             ☐ Notificação @brunoversignassi
+             ☐ Interface polida @fellipecoelho @ramongtx
+
+       ☐ Terceiro protótipo @todos @deadline (04-02-2014)
+             ☐ Servidor aceita múltiplos usuários @brunoversignassi
+             ☐ Integração com o Facebook @fellipecoelho
+             ☐ Integração com o Google @ramongtx
+
+       ☐ Quarta protótipo @todos @deadline (06-02-2014)
+             ☐ Gestor de buscas de restaurantes @ramongtx
+             ☐ Geolocalização @fellipecoelho
+             ☐ Extras @brunoversignassi
+               
+       ☐ Fim do desenvolvimento @todos @deadline (07-01-2014)
+       ☐ Preparar o pacote para entrega @todos @deadline (07-01-2014)
 
    Ideias a serem trabalhadas:
        ☐ Possibilidade de reviews por usuário para cada quarto
@@ -69,5 +96,5 @@ Concièrge:
        ☐ Sinal para chamar garçom/serviço de quarto
        ☐ Permitir pesquisa por palavras chave (cardápio, prato do dia)  
 
-  Archive:
+Archive:
 
