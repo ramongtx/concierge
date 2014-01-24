@@ -16,7 +16,7 @@ Concièrge:
        ☐ A aplicação tem como finalidade o aprendizado: torná-la comercial exigiria um esforço de marketing para conseguir povoar a aplicação com usuários/restaurantes
        ☐ Usaremos um servidor remoto (possivelmente uma máquina do IC-Unicamp) para guardar o banco de dados
    
-   Guiding Questions:
+   Guiding Questions e Pesquisa:
       Como fazer o usuário conseguir cadastrar suas mesas/quartos no aplicativo de maneira fácil ? Fazer com que o responstável pelo restaurante, cadastre as imagens via foto, assim ele pode escolher qual a melhor foto, possibilitando uma foto panorâmica para mostrar melhor o estabelecimento e para marcar as mesas, usar um sistema de drag, onde o usuário marca um quadrado na imagem como respectiva foto.
              ✔ Fazer teste de carregar a imagem da camera para o app @ramongtx @done (14-01-24 10:21)
              ☐ Aprender a enviar fotos para o servidor pelo aplicativo @fellipecoelho
@@ -83,7 +83,7 @@ Concièrge:
              ☐ Gestor de buscas de restaurantes @ramongtx
              ☐ Geolocalização @fellipecoelho
              ☐ Extras @brunoversignassi
-               
+
        ☐ Fim do desenvolvimento @todos @deadline (07-01-2014)
        ☐ Preparar o pacote para entrega @todos @deadline (07-01-2014)
 
