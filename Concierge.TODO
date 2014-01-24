@@ -18,11 +18,11 @@ Concièrge:
    
    Guiding Questions:
       Como fazer o usuário conseguir cadastrar suas mesas/quartos no aplicativo de maneira fácil ? Fazer com que o responstável pelo restaurante, cadastre as imagens via foto, assim ele pode escolher qual a melhor foto, possibilitando uma foto panorâmica para mostrar melhor o estabelecimento e para marcar as mesas, usar um sistema de drag, onde o usuário marca um quadrado na imagem como respectiva foto.
-             ☐ Fazer teste de carregar a imagem da camera para o app @ramongtx
+             ✔ Fazer teste de carregar a imagem da camera para o app @ramongtx @done (14-01-24 10:21)
              ☐ Aprender a enviar fotos para o servidor pelo aplicativo @fellipecoelho
 
       Como fazer o usuário durante a procura pela mesa, identificar onde tocar? Colocar um ícone sinalizando que nele é o lugar onde deve ser apertado, assim melhora a usabilidade e evita que o cliente aperte a mesa errada.
-             ☐ Estudar sistemas parecidos para ver se esta solucao é a mais apropriada. @ramongtx
+             ☐ Estudar sistemas parecidos para ver se esta solucao é a mais apropriada. @ramongtx @deadline()
              ☐ Fazer uma pesquisa rápida com usuários para saber como eles acham mais fácil. @ramongtx
 
       Como motivar aos usuários a fazer as pesquisas pelo sistema ? (Se possível) vincular com o sistema de mapas , quando mostrar os lugares no mapa, caso o restaurante/ hotél em questão já tenha o cadastro feito no sistema, possibilitar a visualizacao das informacões e imagens, porém para usar outras features, pedir o download. Caso o restaurante/ hotél ainda nao tenha este cadastro montar uma estatística papar facilitar a venda do app ao restaurante em questao.
