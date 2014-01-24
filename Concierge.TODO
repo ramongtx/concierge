@@ -22,42 +22,40 @@ Concièrge:
              ☐ Aprender a enviar fotos para o servidor pelo aplicativo @fellipecoelho
 
       Como fazer o usuário durante a procura pela mesa, identificar onde tocar? Colocar um ícone sinalizando que nele é o lugar onde deve ser apertado, assim melhora a usabilidade e evita que o cliente aperte a mesa errada.
-             ☐ Estudar sistemas parecidos para ver se esta solucao é a mais apropriada. @ramongtx @deadline()
-             ☐ Fazer uma pesquisa rápida com usuários para saber como eles acham mais fácil. @ramongtx
+             ☐ Estudar sistemas parecidos para ver se esta solucao é a mais apropriada. @ramongtx @deadline (28-01-2014)
+             ☐ Fazer uma pesquisa rápida com usuários para saber como eles acham mais fácil. @ramongtx @deadline (28-01-2014)
 
-      Como motivar aos usuários a fazer as pesquisas pelo sistema ? (Se possível) vincular com o sistema de mapas , quando mostrar os lugares no mapa, caso o restaurante/ hotél em questão já tenha o cadastro feito no sistema, possibilitar a visualizacao das informacões e imagens, porém para usar outras features, pedir o download. Caso o restaurante/ hotél ainda nao tenha este cadastro montar uma estatística papar facilitar a venda do app ao restaurante em questao.
-             ☐ Pesquisar sobre a comunicacao com o sistema de mapas da Apple @ramongtx
-             ☐ Estudar se política dos mapas permite que seja enviado mensagens aos usuários (restaurantes) @ramongtx
+      Como motivar aos usuários a fazer as pesquisas pelo sistema ? (Se possível) vincular com o sistema de mapas , quando mostrar os lugares no mapa, caso o restaurante/ hotél em questão já tenha o cadastro feito no sistema, possibilitar a visualizacao das informacões e imagens, porém para usar outras features, pedir o download. Caso o restaurante/ hotél ainda nao tenha este cadastro montar uma estatística para facilitar a venda do app ao restaurante em questao.
+             ☐ Pesquisar sobre a comunicacao com o sistema de mapas da Apple @fellipecoelho @deadline (28-01-2014)
+             ☐ Estudar se política dos mapas permite que seja enviado mensagens aos usuários (restaurantes) @fellipecoelho @deadline (28-01-2014)
 
       Como evitar que o restaurante/hotel cadastre mentiras ou alertar aos usuários que a descricao esta incorreta ? Montar um sistema de ranking, e colocar o que o cliente achou da mesa em equestao, montando um ranking dos melhores e piores restaurantes e os usuários consigam ver o que outros acharam
-             ☐ Pesquisar concorrentes @ramongtx
-             ☐ Estudar se política dos mapas permite que seja enviado mensagens aos usuários (restaurantes) @ramongtx
+             ☐ Pesquisar concorrentes @ramongtx @deadline (28-01-2014)
 
       Como devemos montar o servidor ? Quais são os requisitos para ele ?   -Pesquisar -
-             ☐ Aprender a montar um servidor @brunoversignassi
-             ☐ Descobrir os requisitos do servidor @brunoversignassi
+             ☐ Aprender a montar um servidor @brunoversignassi @deadline (27-01-2014)
+             ☐ Descobrir os requisitos do servidor @brunoversignassi @deadline (27-01-2014)
 
       Caso o usuário queira uma disposicao diferente das mesas, como fazer ? Permitir que o usuário ao cadastrar as mesas/ quartos, possa cadastrar mais de uma opcao, sobrepor imagens para poder mostrar como pode ficar em uma situacao diferente da convencional.
-              ☐ Ver se é viável fazer um sistema de recomendacao pegando dados para mostrar as imagens. @fellipecoelho
+              ✔ Ver se é viável fazer um sistema de recomendacao pegando dados para mostrar as imagens. @fellipecoelho @done (14-01-24 10:29)
 
       O que devemos implementar para conseguir manter o cadastro de todos na rede ? Quais os padroes de seguranca devem ser adotados para protejer os usuários ?
-             ☐ Pesquisar sobre os protocolos de seguranca utilizados @fellipecoelho
+             ☐ Pesquisar sobre os protocolos de seguranca utilizados @ramongtx @deadline (27-01-2014)
 
       Quais mais funcionalidades podem ser úteis para o dono do estabelecimento ? 
-             ☐ Pesquisar os pontos fortes e fracos dos concorrentes @fellipecoelho
-             ☐ Pesquisar o que será importante na visão dos donos de estabelecimentos @brunoversignassi
+             ☐ Pesquisar o que será importante na visão dos donos de estabelecimentos @brunoversignassi @deadline (28-01-2014)
 
       Quais outras funcionalidades serão úteis aos clientes ?
-             ☐ Pesquisar o que será importante para os clientes @ramongtx
+             ☐ Pesquisar o que será importante para os clientes @ramongtx @deadline (28-01-2014)
 
       Como utilizar o cadastro do facebook para o app ? pesquisar
-            ☐ Pesquisar o sistema de contas do facebook @fellipecoelho
+            ☐ Pesquisar o sistema de contas do facebook @fellipecoelho @deadline (29-01-2014)
 
       Como utilizar o cadastro do Google para o app ? pesquisar
-             ☐ Pesquisar o sistema de contas do Google @brunoversignassi
+             ☐ Pesquisar o sistema de contas do Google @brunoversignassi @deadline (28-01-2014)
 
       Como conseguir convencer que o aplicativo será útil para o estabelecimento ? Conseguir motivar com uma descricao muito bem feita e uma conta teste para restaurantes grandes, assim gerando estatísticas para convencer novos usuários.
-            ☐ Conversar com a equipe de trabalho do restaurante para ver se o que foi montado (prototipo) será realmente útil aos stakeholders. @todos
+            ☐ Conversar com a equipe de trabalho do restaurante para ver se o que foi montado (prototipo) será realmente útil aos stakeholders. @todos @deadline (03-02-2014)
 
       A ideia de utilizar somente em restaurantes, pode tornar muito pequeno o publico alvo, vale a pena investir ? Utilizando praticamente a mesma estrutura, podemos expandir para a utilizacao em quartos de hotéis, pois assim como mesas de restaurantes, é fundamental poder visualizar antes.
 
