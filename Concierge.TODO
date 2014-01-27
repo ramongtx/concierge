@@ -40,7 +40,7 @@ Concièrge:
               ✔ Ver se é viável fazer um sistema de recomendacao pegando dados para mostrar as imagens. @fellipecoelho @done (14-01-24 10:29)
 
       O que devemos implementar para conseguir manter o cadastro de todos na rede ? Quais os padroes de seguranca devem ser adotados para protejer os usuários ?
-             ☐ Pesquisar sobre os protocolos de seguranca utilizados @ramongtx @deadline (27-01-2014)
+             ✔ Pesquisar sobre os protocolos de seguranca utilizados @ramongtx @deadline (27-01-2014) @done (14-01-27 10:06)
 
       Quais mais funcionalidades podem ser úteis para o dono do estabelecimento ? 
              ☐ Pesquisar o que será importante na visão dos donos de estabelecimentos @brunoversignassi @deadline (28-01-2014)
@@ -89,6 +89,7 @@ Concièrge:
 
    Ideias a serem trabalhadas:
        ☐ Possibilidade de reviews por usuário para cada quarto
+       ☐ Usar SSL para conectar com servidor e HTTPS para imagens
        ☐ Gerador de mapas
        ☐ Sistema de login/password
        ☐ Pagamento via PayPal
