@@ -1,0 +1,6 @@
+Achei a documentação da google para usara autenticação deles:
+https://developers.google.com/gdata/docs/auth/overview#OAuth2
+
+tem vários tipos de protocolos a ser seguidos, ainda nao entendi direito a diferença entre eles, mas 
+no momento acho que devemos priorizar as outras features do nosso projeto. 
+
