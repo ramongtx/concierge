@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F6A4E6731897D7AE004C3320 /* sphere.png in Resources */ = {isa = PBXBuildFile; fileRef = F6A4E6721897D7AE004C3320 /* sphere.png */; };
 		F6B6DF121897BF19006B0034 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B6DF111897BF19006B0034 /* Foundation.framework */; };
 		F6B6DF141897BF19006B0034 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B6DF131897BF19006B0034 /* CoreGraphics.framework */; };
 		F6B6DF161897BF19006B0034 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B6DF151897BF19006B0034 /* UIKit.framework */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F6A4E6721897D7AE004C3320 /* sphere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sphere.png; sourceTree = "<group>"; };
 		F6B6DF0E1897BF19006B0034 /* Room Creator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Room Creator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6B6DF111897BF19006B0034 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F6B6DF131897BF19006B0034 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -120,6 +122,7 @@
 		F6B6DF171897BF19006B0034 /* Room Creator */ = {
 			isa = PBXGroup;
 			children = (
+				F6A4E6721897D7AE004C3320 /* sphere.png */,
 				F6B6DF4D1897C2D2006B0034 /* hotel_floor.jpg */,
 				F6B6DF491897C24B006B0034 /* Images.xcassets */,
 				F6B6DF201897BF19006B0034 /* AppDelegate.h */,
@@ -241,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6A4E6731897D7AE004C3320 /* sphere.png in Resources */,
 				F6B6DF4A1897C24B006B0034 /* Images.xcassets in Resources */,
 				F6B6DF1C1897BF19006B0034 /* InfoPlist.strings in Resources */,
 				F6B6DF251897BF19006B0034 /* Main.storyboard in Resources */,

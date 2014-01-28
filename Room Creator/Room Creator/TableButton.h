@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TableButton : UIButton <UIGestureRecognizerDelegate>
-
+@interface TableButton : UIImageView
+@property NSInteger id;
 @end

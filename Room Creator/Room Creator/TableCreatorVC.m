@@ -8,6 +8,8 @@
 
 #import "TableCreatorVC.h"
 #import "TableButton.h"
+#import <UIKit/UIGestureRecognizerSubclass.h>
+
 
 @interface TableCreatorVC () <UIScrollViewDelegate, UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -63,33 +65,38 @@ NSMutableArray* buttonArray;
 {
     CGRect rect;
     rect.origin = location;
-    rect.size = CGSizeMake(50, 50);
+    rect.size = CGSizeMake(20, 20);
     TableButton* tb = [[TableButton alloc] initWithFrame:rect];
+    tb.id = [buttonArray count];
     [imageView addSubview:tb];
     tb.center = location;
     [buttonArray addObject:tb];
+}
+
+- (float)distanceBetween : (CGPoint) p1 and: (CGPoint)p2
+{
+    return sqrt(((p1.x-p2.x)*(p1.x-p2.x))+((p1.y-p2.y)*(p1.y-p2.y)));
 }
 
 -(IBAction)tapGesture:(UITapGestureRecognizer *)recognizer
 {
     
     CGPoint location = [recognizer locationInView:imageView];
-    [self createTableButton:location];
-    
-}
-
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gesture
-{
-    CGPoint location = [gesture locationInView:imageView];
     for (TableButton *tb in buttonArray)
     {
-        if(CGRectContainsPoint(tb.frame, location)) {
-            NSLog(@"Not OK");
-            return false;
+        if ([self distanceBetween:location and:tb.center] < 40) {
+            NSLog(@"%d",tb.id);
+            return;
         }
     }
-    NSLog(@"OK");
-    return true;
+    NSLog(@"NEW");
+    [self createTableButton:location];
+    return;
+}
+
+-(IBAction)buttonPressed:(TableButton*)sender
+{
+    NSLog(@"Target");
 }
 
 

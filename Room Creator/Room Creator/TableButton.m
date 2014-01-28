@@ -15,19 +15,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        [self setBackgroundColor:[UIColor whiteColor]];
-        [self setAlpha:0.8];
-        
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapButton:)];
-        [self addGestureRecognizer:tap];
+        self.image = [UIImage imageNamed:@"sphere.png"];
     }
     return self;
 }
-
-
-- (IBAction)tapButton:(UITapGestureRecognizer *)sender
-{
-    NSLog(@"Button");
-}
-
 @end
