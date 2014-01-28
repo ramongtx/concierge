@@ -1,0 +1,17 @@
+Se o projeto nao funfar, digitar no terminal $mongo se apresentar mensagem de erro digitar as seguintes linhas:
+sudo rm /var/lib/mongodb/mongod.lock 
+sudo service mongodb restart
+
+se nao for isso chora implora por deus(voce mesmo)
+
+
+para rodar o servidor,  ligar o mongo e depois colocar
+
+sudo node index.js    na pasta do projeto que esta na area de trabalho
+
+para inserir coisas no mongo:
+bruno@zephirot:~$ curl "http://localhost:8080/restaurants?name=cantina_do_bozo" -F file=@"/home/bruno/Desktop/sml/projetosml.sml"
+
+
+com o index.js para fazer a requisicao de insercao fazer o seguinte: curl "http://localhost:8080/restaurants?name=novacantina2" -F file=@"/home/bruno/Desktop/sml/projetosml.sml"
+
