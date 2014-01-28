@@ -9,3 +9,7 @@ Conclusões da pesquisa:
 	Precisa-se de permissão para usar push notifications (permissão pedida first-run);
 	Alguns apps de reserva (restaurante), não pedem registro prévio;
 	Sistema de reviews sempre integrado na solução (ranking por estrelas);
+	Pessoas gostariam de ver os menus dos restaurantes antes de reservar;
+	Confirmação instantânea é um pedido constante;
+	Alguns concorrentes oferecem sistema de pontos para trocar por descontos;
+	Alguns usuários prefere selecionar restaurantes/mesas de uma lista que visualmente;
