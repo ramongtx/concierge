@@ -21,6 +21,9 @@
 		F604D17818992A1C00038365 /* ConciergeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F604D17718992A1C00038365 /* ConciergeTests.m */; };
 		F604D18218992A3D00038365 /* iPhoneStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F604D18118992A3D00038365 /* iPhoneStoryboard.storyboard */; };
 		F604D18518992D1200038365 /* Shared.m in Sources */ = {isa = PBXBuildFile; fileRef = F604D18418992D1200038365 /* Shared.m */; };
+		F60E5C6518992F8100B2ACD6 /* Table.m in Sources */ = {isa = PBXBuildFile; fileRef = F60E5C6418992F8100B2ACD6 /* Table.m */; };
+		F60E5C6918992FAB00B2ACD6 /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = F60E5C6818992FAB00B2ACD6 /* Restaurant.m */; };
+		F60E5C6C18992FC900B2ACD6 /* Reservation.m in Sources */ = {isa = PBXBuildFile; fileRef = F60E5C6B18992FC900B2ACD6 /* Reservation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,12 @@
 		F604D18118992A3D00038365 /* iPhoneStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhoneStoryboard.storyboard; sourceTree = "<group>"; };
 		F604D18318992D1200038365 /* Shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shared.h; sourceTree = "<group>"; };
 		F604D18418992D1200038365 /* Shared.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shared.m; sourceTree = "<group>"; };
+		F60E5C6318992F8100B2ACD6 /* Table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Table.h; sourceTree = "<group>"; };
+		F60E5C6418992F8100B2ACD6 /* Table.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Table.m; sourceTree = "<group>"; };
+		F60E5C6718992FAB00B2ACD6 /* Restaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Restaurant.h; sourceTree = "<group>"; };
+		F60E5C6818992FAB00B2ACD6 /* Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Restaurant.m; sourceTree = "<group>"; };
+		F60E5C6A18992FC900B2ACD6 /* Reservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reservation.h; sourceTree = "<group>"; };
+		F60E5C6B18992FC900B2ACD6 /* Reservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reservation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,13 +121,14 @@
 		F604D15818992A1C00038365 /* Concierge */ = {
 			isa = PBXGroup;
 			children = (
+				F60E5C6618992F8900B2ACD6 /* Model */,
 				F604D16118992A1C00038365 /* AppDelegate.h */,
 				F604D16218992A1C00038365 /* AppDelegate.m */,
+				F604D18318992D1200038365 /* Shared.h */,
+				F604D18418992D1200038365 /* Shared.m */,
 				F604D18118992A3D00038365 /* iPhoneStoryboard.storyboard */,
 				F604D16418992A1C00038365 /* Images.xcassets */,
 				F604D15918992A1C00038365 /* Supporting Files */,
-				F604D18318992D1200038365 /* Shared.h */,
-				F604D18418992D1200038365 /* Shared.m */,
 			);
 			path = Concierge;
 			sourceTree = "<group>";
@@ -150,6 +160,19 @@
 				F604D17418992A1C00038365 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F60E5C6618992F8900B2ACD6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F60E5C6318992F8100B2ACD6 /* Table.h */,
+				F60E5C6418992F8100B2ACD6 /* Table.m */,
+				F60E5C6718992FAB00B2ACD6 /* Restaurant.h */,
+				F60E5C6818992FAB00B2ACD6 /* Restaurant.m */,
+				F60E5C6A18992FC900B2ACD6 /* Reservation.h */,
+				F60E5C6B18992FC900B2ACD6 /* Reservation.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,8 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F60E5C6C18992FC900B2ACD6 /* Reservation.m in Sources */,
 				F604D18518992D1200038365 /* Shared.m in Sources */,
+				F60E5C6918992FAB00B2ACD6 /* Restaurant.m in Sources */,
 				F604D16318992A1C00038365 /* AppDelegate.m in Sources */,
+				F60E5C6518992F8100B2ACD6 /* Table.m in Sources */,
 				F604D15F18992A1C00038365 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,6 +477,7 @@
 				F604D17D18992A1C00038365 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F604D17E18992A1C00038365 /* Build configuration list for PBXNativeTarget "ConciergeTests" */ = {
 			isa = XCConfigurationList;
@@ -459,6 +486,7 @@
 				F604D18018992A1C00038365 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
