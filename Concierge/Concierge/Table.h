@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface Table : NSObject
-
+@property CGPoint location;
+@property NSInteger tableNumber;
+@property NSInteger numberOfChairs;
+@property (strong) NSString* details;
 @end

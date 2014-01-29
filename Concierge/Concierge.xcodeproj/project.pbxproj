@@ -24,6 +24,7 @@
 		F60E5C6518992F8100B2ACD6 /* Table.m in Sources */ = {isa = PBXBuildFile; fileRef = F60E5C6418992F8100B2ACD6 /* Table.m */; };
 		F60E5C6918992FAB00B2ACD6 /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = F60E5C6818992FAB00B2ACD6 /* Restaurant.m */; };
 		F60E5C6C18992FC900B2ACD6 /* Reservation.m in Sources */ = {isa = PBXBuildFile; fileRef = F60E5C6B18992FC900B2ACD6 /* Reservation.m */; };
+		F60E5C6F18992FD500B2ACD6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F60E5C6E18992FD500B2ACD6 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		F60E5C6818992FAB00B2ACD6 /* Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Restaurant.m; sourceTree = "<group>"; };
 		F60E5C6A18992FC900B2ACD6 /* Reservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reservation.h; sourceTree = "<group>"; };
 		F60E5C6B18992FC900B2ACD6 /* Reservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reservation.m; sourceTree = "<group>"; };
+		F60E5C6D18992FD500B2ACD6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		F60E5C6E18992FD500B2ACD6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +174,8 @@
 				F60E5C6818992FAB00B2ACD6 /* Restaurant.m */,
 				F60E5C6A18992FC900B2ACD6 /* Reservation.h */,
 				F60E5C6B18992FC900B2ACD6 /* Reservation.m */,
+				F60E5C6D18992FD500B2ACD6 /* User.h */,
+				F60E5C6E18992FD500B2ACD6 /* User.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F60E5C6C18992FC900B2ACD6 /* Reservation.m in Sources */,
+				F60E5C6F18992FD500B2ACD6 /* User.m in Sources */,
 				F604D18518992D1200038365 /* Shared.m in Sources */,
 				F60E5C6918992FAB00B2ACD6 /* Restaurant.m in Sources */,
 				F604D16318992A1C00038365 /* AppDelegate.m in Sources */,

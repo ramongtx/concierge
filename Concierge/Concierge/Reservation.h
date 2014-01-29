@@ -7,7 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "User.h"
+#import "Restaurant.h"
 
 @interface Reservation : NSObject
-
+@property (strong) User* client;
+@property (strong) NSDate* date;
+@property (strong) Table* table;
+@property (strong) Restaurant* restaurant;
+@property NSInteger numberOfPeople;
+@property NSTimeInterval duration;
+@property (strong) NSString* details;
 @end

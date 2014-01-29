@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Restaurant.h"
 
 @interface User : NSObject
-
+@property (strong) NSString* name;
+@property (strong) NSString* phone;
+@property (strong) NSString* email;
+@property bool isOwner;
+@property (strong) Restaurant* restaurant;
 @end
