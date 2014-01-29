@@ -102,6 +102,10 @@ NSMutableArray* tableArray;
     [indicator setCenter:location];
     [tableIndicatorArray addObject:indicator];
     
+    Table* table = [[Table alloc] init];
+    [table setDescription:@"Table created sucesfully."];
+    [tableArray addObject:table];
+    
     [self editTable:[tableIndicatorArray indexOfObject:indicator]];
     
 }
