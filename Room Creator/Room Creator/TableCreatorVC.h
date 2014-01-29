@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Table.h"
 
 @interface TableCreatorVC : UIViewController
 
+@property (strong) UIImage* roomIndicator;
+@property (strong) UIImage* mapImage;
+@property NSInteger indicatorSize;
+@property NSInteger indicatorRadius;
+
+-(void)reload;
++(float)distanceBetween:(CGPoint)p1 and:(CGPoint)p2;
 @end

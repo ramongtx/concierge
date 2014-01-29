@@ -7,8 +7,11 @@
 //
 
 #import "TableCreatorVC.h"
-#import "TableButton.h"
-#import <UIKit/UIGestureRecognizerSubclass.h>
+
+#define MAP_IMAGE "hotel_floor.jpg"
+#define ROOM_INDICATOR "sphere.png"
+#define INDICATOR_SIZE 20
+#define INDICATOR_RADIUS 40
 
 
 @interface TableCreatorVC () <UIScrollViewDelegate, UIGestureRecognizerDelegate>
@@ -18,14 +21,16 @@
 @implementation TableCreatorVC
 
 UIImageView* imageView;
-NSMutableArray* buttonArray;
+NSMutableArray* tableIndicatorArray;
+NSMutableArray* tableArray;
 
+#pragma mark - Constructors
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
 }
@@ -34,22 +39,32 @@ NSMutableArray* buttonArray;
 {
     [super viewDidLoad];
     
-    buttonArray = [[NSMutableArray alloc] init];
-    
-    UIImage *map = [UIImage imageNamed:@"hotel_floor.jpg"];
-    imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, map.size.width, map.size.height)];
-    imageView.image = map;
-    
-    self.scrollView.contentSize = imageView.frame.size;
-    [self.scrollView addSubview:imageView];
-    self.scrollView.delegate = self;
-    self.scrollView.minimumZoomScale = self.scrollView.frame.size.height/imageView.frame.size.height;
-    self.scrollView.zoomScale = self.scrollView.minimumZoomScale;
-    
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGesture:)];
     tap.cancelsTouchesInView = NO;
     tap.delegate = self;
     [self.scrollView addGestureRecognizer:tap];
+    
+    self.mapImage = [UIImage imageNamed:@MAP_IMAGE];
+    self.roomIndicator = [UIImage imageNamed:@ROOM_INDICATOR];
+    self.indicatorSize = INDICATOR_SIZE;
+    self.indicatorRadius = INDICATOR_RADIUS;
+    
+    tableIndicatorArray = [[NSMutableArray alloc] init];
+    
+    [self reload];
+    
+}
+
+- (void) reload
+{
+    imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.mapImage.size.width, self.mapImage.size.height)];
+    imageView.image = self.mapImage;
+    
+    self.scrollView.contentSize = imageView.frame.size;
+    self.scrollView.delegate = self;
+    self.scrollView.zoomScale = self.scrollView.frame.size.height/imageView.frame.size.height;
+    
+    [self.scrollView addSubview:imageView];
 }
 
 #pragma mark - UIScrollView Delegate
@@ -61,43 +76,47 @@ NSMutableArray* buttonArray;
 
 #pragma mark - UITapGestureRecognizer Selector
 
--(void)createTableButton:(CGPoint) location
+-(IBAction)tapGesture:(UITapGestureRecognizer *)recognizer
+{
+    CGPoint location = [recognizer locationInView:imageView];
+    for (UIImageView *indicator in tableIndicatorArray)
+    {
+        if ([TableCreatorVC distanceBetween:location and:indicator.center] < self.indicatorRadius) {
+            [self editTable:[tableIndicatorArray indexOfObject:indicator]];
+            return;
+        }
+    }
+    [self createTable:location];
+    return;
+}
+
+-(void)createTable:(CGPoint) location
 {
     CGRect rect;
     rect.origin = location;
-    rect.size = CGSizeMake(20, 20);
-    TableButton* tb = [[TableButton alloc] initWithFrame:rect];
-    tb.id = [buttonArray count];
-    [imageView addSubview:tb];
-    tb.center = location;
-    [buttonArray addObject:tb];
+    rect.size = CGSizeMake(self.indicatorSize, self.indicatorSize);
+    
+    UIImageView* indicator = [[UIImageView alloc] initWithFrame:rect];
+    [imageView addSubview:indicator];
+    [indicator setImage:self.roomIndicator];
+    [indicator setCenter:location];
+    [tableIndicatorArray addObject:indicator];
+    
+    [self editTable:[tableIndicatorArray indexOfObject:indicator]];
+    
 }
 
-- (float)distanceBetween : (CGPoint) p1 and: (CGPoint)p2
+-(void)editTable:(int)id
+{
+    NSLog(@"Editing table #%d",id);
+
+}
+
++(float)distanceBetween:(CGPoint)p1 and:(CGPoint)p2
 {
     return sqrt(((p1.x-p2.x)*(p1.x-p2.x))+((p1.y-p2.y)*(p1.y-p2.y)));
 }
 
--(IBAction)tapGesture:(UITapGestureRecognizer *)recognizer
-{
-    
-    CGPoint location = [recognizer locationInView:imageView];
-    for (TableButton *tb in buttonArray)
-    {
-        if ([self distanceBetween:location and:tb.center] < 40) {
-            NSLog(@"%d",tb.id);
-            return;
-        }
-    }
-    NSLog(@"NEW");
-    [self createTableButton:location];
-    return;
-}
-
--(IBAction)buttonPressed:(TableButton*)sender
-{
-    NSLog(@"Target");
-}
 
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F66467EB18991248006FA9AC /* Table.m in Sources */ = {isa = PBXBuildFile; fileRef = F66467EA18991248006FA9AC /* Table.m */; };
 		F6A4E6731897D7AE004C3320 /* sphere.png in Resources */ = {isa = PBXBuildFile; fileRef = F6A4E6721897D7AE004C3320 /* sphere.png */; };
 		F6B6DF121897BF19006B0034 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B6DF111897BF19006B0034 /* Foundation.framework */; };
 		F6B6DF141897BF19006B0034 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B6DF131897BF19006B0034 /* CoreGraphics.framework */; };
@@ -24,7 +25,6 @@
 		F6B6DF481897BF8C006B0034 /* TableCreatorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B6DF471897BF8C006B0034 /* TableCreatorVC.m */; };
 		F6B6DF4A1897C24B006B0034 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6B6DF491897C24B006B0034 /* Images.xcassets */; };
 		F6B6DF4E1897C2D2006B0034 /* hotel_floor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6B6DF4D1897C2D2006B0034 /* hotel_floor.jpg */; };
-		F6B6DF511897C90F006B0034 /* TableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B6DF501897C90F006B0034 /* TableButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F66467E918991248006FA9AC /* Table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Table.h; sourceTree = "<group>"; };
+		F66467EA18991248006FA9AC /* Table.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Table.m; sourceTree = "<group>"; };
 		F6A4E6721897D7AE004C3320 /* sphere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sphere.png; sourceTree = "<group>"; };
 		F6B6DF0E1897BF19006B0034 /* Room Creator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Room Creator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6B6DF111897BF19006B0034 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -61,8 +63,6 @@
 		F6B6DF471897BF8C006B0034 /* TableCreatorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCreatorVC.m; sourceTree = "<group>"; };
 		F6B6DF491897C24B006B0034 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F6B6DF4D1897C2D2006B0034 /* hotel_floor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hotel_floor.jpg; sourceTree = "<group>"; };
-		F6B6DF4F1897C90F006B0034 /* TableButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableButton.h; sourceTree = "<group>"; };
-		F6B6DF501897C90F006B0034 /* TableButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,8 +133,8 @@
 				F6B6DF181897BF19006B0034 /* Supporting Files */,
 				F6B6DF461897BF8C006B0034 /* TableCreatorVC.h */,
 				F6B6DF471897BF8C006B0034 /* TableCreatorVC.m */,
-				F6B6DF4F1897C90F006B0034 /* TableButton.h */,
-				F6B6DF501897C90F006B0034 /* TableButton.m */,
+				F66467E918991248006FA9AC /* Table.h */,
+				F66467EA18991248006FA9AC /* Table.m */,
 			);
 			path = "Room Creator";
 			sourceTree = "<group>";
@@ -267,10 +267,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F66467EB18991248006FA9AC /* Table.m in Sources */,
 				F6B6DF481897BF8C006B0034 /* TableCreatorVC.m in Sources */,
 				F6B6DF281897BF19006B0034 /* ViewController.m in Sources */,
 				F6B6DF221897BF19006B0034 /* AppDelegate.m in Sources */,
-				F6B6DF511897C90F006B0034 /* TableButton.m in Sources */,
 				F6B6DF1E1897BF19006B0034 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
