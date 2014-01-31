@@ -12,18 +12,22 @@
 
 @interface ViewController () <RestaurantRequestDelegate>
 @property (nonatomic) RestaurantRequest *buscador;
-
+@property (nonatomic, strong) NSDictionary *todosRestaurantes;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+   
 	// Do any additional setup after loading the view, typically from a nib.
-    self.buscador = [[RestaurantRequest alloc] init];
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    self.buscador = [[RestaurantRequest alloc] init];
+
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -36,6 +40,61 @@
     
     NSLog(@"objeto buscado");
     
+}
+
+-(void) viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+   // [_queue cancelAllOperations];
+    
+}
+
+#pragma mark - Request operations
+-(void) request: (RestaurantRequest*) request didFinishWithObject:(id) object
+{
+
+    self.todosRestaurantes = object;
+    
+    NSLog(@"Objeto de retorno %@", self.todosRestaurantes);
+    
+//    NSBlockOperation *operation = [[NSBlockOperation alloc] init];
+//   __weak NSBlockOperation *weakOperation = operation;
+//
+//    [operation addExecutionBlock:^{
+//        NSMutableArray * tempArray = [[NSMutableArray alloc] init];
+//        
+//        for(NSDictionary *flickrPhoto in object)
+//        {
+//            if([weakOperation isCancelled])
+//            {
+//                return ;
+//            }
+//            if (![flickrPhoto isKindOfClass:[NSDictionary class]])
+//            {
+//                continue;
+//            }
+//            Restaurant * novoRestaurant = [[Restaurant alloc] initWithFlickrFoto:flickrPhoto];
+//            [tempArray addObject: novaFoto];
+//            
+//        }
+//        
+//        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+//            fotosGrupo = [tempArray copy];
+//            
+//            NSLog(@"mandei recarregar a collection view");
+//            [[self myCollectionView] reloadData];
+//            
+//        }];
+//        
+//    }];
+//    
+//    [_queue addOperation:operation];
+    
+}
+
+-(void) request: (RestaurantRequest*) request didFailWithError:(NSError*) error
+{
+    NSLog(@"error with stocks request: %@",error);
 }
 
 @end

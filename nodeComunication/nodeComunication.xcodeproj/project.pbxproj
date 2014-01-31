@@ -38,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DBA48C2F189B25610031EB9E /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F9A7B7FA189AA6A600460416 /* nodeComunication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nodeComunication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A7B7FD189AA6A600460416 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F9A7B7FF189AA6A600460416 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -113,6 +114,7 @@
 		F9A7B7FC189AA6A600460416 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DBA48C2F189B25610031EB9E /* JavaScriptCore.framework */,
 				F9A7B7FD189AA6A600460416 /* Foundation.framework */,
 				F9A7B7FF189AA6A600460416 /* CoreGraphics.framework */,
 				F9A7B801189AA6A600460416 /* UIKit.framework */,
@@ -416,6 +418,7 @@
 				GCC_PREFIX_HEADER = "nodeComunication/nodeComunication-Prefix.pch";
 				INFOPLIST_FILE = "nodeComunication/nodeComunication-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -429,6 +432,7 @@
 				GCC_PREFIX_HEADER = "nodeComunication/nodeComunication-Prefix.pch";
 				INFOPLIST_FILE = "nodeComunication/nodeComunication-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -494,6 +498,7 @@
 				F9A7B82E189AA6A600460416 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F9A7B82F189AA6A600460416 /* Build configuration list for PBXNativeTarget "nodeComunicationTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +507,7 @@
 				F9A7B831189AA6A600460416 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
