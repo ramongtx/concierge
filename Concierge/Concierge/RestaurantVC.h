@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "KeyboardVC.h"
+#import "Model.h"
 
 @interface RestaurantVC : KeyboardVC
 

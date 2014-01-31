@@ -8,12 +8,18 @@
 
 #import "RestaurantVC.h"
 
-@interface RestaurantVC ()
+@interface RestaurantVC () <UITextViewDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *nameTextView;
+@property (weak, nonatomic) IBOutlet UITextField *typeTextView;
 @property (weak, nonatomic) IBOutlet UITextView *detailsTextView;
+@property (weak, nonatomic) IBOutlet UIButton *editTableButton;
+
+@property (strong) Restaurant* restaurant;
 
 @end
 
 @implementation RestaurantVC
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,13 +36,33 @@
     [self.view endEditing:YES];
     self.detailsTextView.layer.borderWidth = 0.5f;
     self.detailsTextView.layer.borderColor = [[UIColor grayColor] CGColor];;
-	// Do any additional setup after loading the view.
+    
+    self.nameTextView.text = [RESTAURANT name];
+    self.typeTextView.text = [RESTAURANT type];
+    [self.detailsTextView setDelegate:self];
+    self.detailsTextView.text = [RESTAURANT details];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)textViewDidEndEditing:(UITextView *)textView
+{
+    [self saveRestaurant];
+}
+
+- (IBAction)editingFinished:(id)sender {
+    [self saveRestaurant];
+}
+
+-(void)saveRestaurant
+{
+    [RESTAURANT setName:self.nameTextView.text];
+    [RESTAURANT setType:self.typeTextView.text];
+    [RESTAURANT setDetails:self.detailsTextView.text];
 }
 
 @end

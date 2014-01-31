@@ -23,7 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kRg-HC-kcN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-715" y="752"/>
+            <point key="canvasLocation" x="-427" y="784"/>
         </scene>
         <!--View Controller - Sign Up-->
         <scene sceneID="syd-F1-R9j">
@@ -45,7 +45,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3q-o3-FyE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-310" y="752"/>
+            <point key="canvasLocation" x="-22" y="784"/>
         </scene>
         <!--View Controller - Menu-->
         <scene sceneID="Hvv-tb-7wG">
@@ -66,7 +66,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="sv5-PT-zcb" kind="push" id="5qL-7y-9CQ"/>
+                                    <segue destination="wq1-sp-wLZ" kind="push" id="LV8-7E-FQx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nok-c1-24q">
@@ -96,6 +96,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DzH-Ad-psL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1032" y="752"/>
+        </scene>
+        <!--View Controller - Search-->
+        <scene sceneID="9zZ-fv-qcr">
+            <objects>
+                <viewController title="Search" id="wq1-sp-wLZ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lwD-2f-H31"/>
+                        <viewControllerLayoutGuide type="bottom" id="kTp-Qt-9cD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fwu-eV-WDK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search" id="Rf1-E9-bZV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wEc-Pa-Mtc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1606" y="580"/>
         </scene>
         <!--View Controller - RestaurantInfo-->
         <scene sceneID="oFD-iZ-9YX">
@@ -184,12 +203,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="editingFinished:" destination="o3I-Xa-ynJ" eventType="editingDidEnd" id="RoD-sV-gS7"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GMo-En-I1w">
                                 <rect key="frame" x="81" y="110" width="219" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="editingFinished:" destination="o3I-Xa-ynJ" eventType="editingDidEnd" id="em5-XP-qyD"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMT-QK-sb5">
                                 <rect key="frame" x="20" y="115" width="36" height="21"/>
@@ -257,16 +282,19 @@
                     <navigationItem key="navigationItem" title="Restaurant Info" id="VRa-MH-Nuh"/>
                     <connections>
                         <outlet property="detailsTextView" destination="afS-zQ-ocZ" id="fYf-dS-hfV"/>
+                        <outlet property="editTableButton" destination="9YJ-c3-Kij" id="Hbo-SO-nJ0"/>
+                        <outlet property="nameTextView" destination="kt6-8X-2ep" id="jsV-vI-lWE"/>
+                        <outlet property="typeTextView" destination="GMo-En-I1w" id="yrw-tI-0Hv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bel-Tu-33B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1620" y="1339"/>
         </scene>
-        <!--View Controller - TableMap-->
+        <!--Edit MapVC - TableMap-->
         <scene sceneID="MtC-0Z-spS">
             <objects>
-                <viewController title="TableMap" id="gxA-nl-p5h" sceneMemberID="viewController">
+                <viewController title="TableMap" id="gxA-nl-p5h" customClass="EditMapVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Osx-NA-Ilb"/>
                         <viewControllerLayoutGuide type="bottom" id="iaW-ZU-qX9"/>
@@ -274,11 +302,24 @@
                     <view key="view" contentMode="scaleToFill" id="Hrn-ns-mNp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2c5-1D-eWZ">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2c5-1D-eWZ" firstAttribute="top" secondItem="Osx-NA-Ilb" secondAttribute="bottom" id="OJe-9G-Wku"/>
+                            <constraint firstItem="2c5-1D-eWZ" firstAttribute="leading" secondItem="Hrn-ns-mNp" secondAttribute="leading" id="Sft-MJ-3zP"/>
+                            <constraint firstItem="iaW-ZU-qX9" firstAttribute="top" secondItem="2c5-1D-eWZ" secondAttribute="bottom" id="dWz-gR-bSv"/>
+                            <constraint firstAttribute="trailing" secondItem="2c5-1D-eWZ" secondAttribute="trailing" id="oDw-uf-6Ua"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Table Map" id="Wrc-bZ-SAP"/>
+                    <navigationItem key="navigationItem" title="Edit Map" id="Wrc-bZ-SAP"/>
                     <connections>
-                        <segue destination="2hD-bS-9M1" kind="push" id="lz7-dK-ttL"/>
+                        <outlet property="scrollView" destination="2c5-1D-eWZ" id="PKS-UI-24E"/>
+                        <segue destination="2hD-bS-9M1" kind="push" identifier="editTableInfoSegue" id="lz7-dK-ttL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Xf-N1-MWR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -304,28 +345,6 @@
             </objects>
             <point key="canvasLocation" x="2472" y="1339"/>
         </scene>
-        <!--View Controller - Search-->
-        <scene sceneID="DQM-3X-ZxI">
-            <objects>
-                <viewController title="Search" id="sv5-PT-zcb" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Naw-gB-wln"/>
-                        <viewControllerLayoutGuide type="bottom" id="cHQ-YU-bv6"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uAQ-Qr-coQ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Search" prompt="" id="Cqb-Lr-ke9"/>
-                    <connections>
-                        <segue destination="jTo-fg-PuL" kind="push" id="gP0-bc-mM6"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rsw-lF-VZi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1620" y="585"/>
-        </scene>
         <!--View Controller - UserInfo-->
         <scene sceneID="lUq-Xg-vv3">
             <objects>
@@ -339,11 +358,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fKk-AC-WVW"/>
+                    <navigationItem key="navigationItem" title="User Info" id="fKk-AC-WVW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZDK-b5-HQj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1596" y="-276"/>
+            <point key="canvasLocation" x="1620" y="-112"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qiJ-Bs-pNV">

@@ -76,7 +76,7 @@ NSMutableArray* tableArray;
     CGPoint location = [recognizer locationInView:imageView];
     for (UIImageView *indicator in tableIndicatorArray)
     {
-        if ([Shared distanceBetween:location and:indicator.center] < self.indicatorRadius) {
+        if ([Model distanceBetween:location and:indicator.center] < self.indicatorRadius) {
             [self editTable:[tableIndicatorArray indexOfObject:indicator]];
             return;
         }
@@ -108,6 +108,7 @@ NSMutableArray* tableArray;
 -(void)editTable:(NSInteger)id
 {
     NSLog(@"Editing table #%ld",(long)id);
+    [self performSegueWithIdentifier:@"editTableInfoSegue" sender:self];
     
 }
 

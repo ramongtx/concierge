@@ -20,7 +20,7 @@
 		F604D17618992A1C00038365 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F604D17418992A1C00038365 /* InfoPlist.strings */; };
 		F604D17818992A1C00038365 /* ConciergeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F604D17718992A1C00038365 /* ConciergeTests.m */; };
 		F604D18218992A3D00038365 /* iPhoneStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F604D18118992A3D00038365 /* iPhoneStoryboard.storyboard */; };
-		F604D18518992D1200038365 /* Shared.m in Sources */ = {isa = PBXBuildFile; fileRef = F604D18418992D1200038365 /* Shared.m */; };
+		F604D18518992D1200038365 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = F604D18418992D1200038365 /* Model.m */; };
 		F60E5C6518992F8100B2ACD6 /* Table.m in Sources */ = {isa = PBXBuildFile; fileRef = F60E5C6418992F8100B2ACD6 /* Table.m */; };
 		F60E5C6918992FAB00B2ACD6 /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = F60E5C6818992FAB00B2ACD6 /* Restaurant.m */; };
 		F60E5C6C18992FC900B2ACD6 /* Reservation.m in Sources */ = {isa = PBXBuildFile; fileRef = F60E5C6B18992FC900B2ACD6 /* Reservation.m */; };
@@ -28,6 +28,9 @@
 		F69A70A9189BCB4A0008F122 /* RestaurantVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F69A70A8189BCB4A0008F122 /* RestaurantVC.m */; };
 		F69A70AC189BCBEC0008F122 /* KeyboardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F69A70AB189BCBEC0008F122 /* KeyboardVC.m */; };
 		F69A70AF189BCF530008F122 /* EditMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F69A70AE189BCF530008F122 /* EditMapVC.m */; };
+		F69A70B2189BCF650008F122 /* TableMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F69A70B1189BCF650008F122 /* TableMapVC.m */; };
+		F69A70B6189BD02A0008F122 /* hotel_floor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F69A70B4189BD02A0008F122 /* hotel_floor.jpg */; };
+		F69A70B7189BD02A0008F122 /* sphere.png in Resources */ = {isa = PBXBuildFile; fileRef = F69A70B5189BD02A0008F122 /* sphere.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +61,8 @@
 		F604D17518992A1C00038365 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F604D17718992A1C00038365 /* ConciergeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConciergeTests.m; sourceTree = "<group>"; };
 		F604D18118992A3D00038365 /* iPhoneStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhoneStoryboard.storyboard; sourceTree = "<group>"; };
-		F604D18318992D1200038365 /* Shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shared.h; sourceTree = "<group>"; };
-		F604D18418992D1200038365 /* Shared.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shared.m; sourceTree = "<group>"; };
+		F604D18318992D1200038365 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		F604D18418992D1200038365 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		F60E5C6318992F8100B2ACD6 /* Table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Table.h; sourceTree = "<group>"; };
 		F60E5C6418992F8100B2ACD6 /* Table.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Table.m; sourceTree = "<group>"; };
 		F60E5C6718992FAB00B2ACD6 /* Restaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Restaurant.h; sourceTree = "<group>"; };
@@ -74,6 +77,10 @@
 		F69A70AB189BCBEC0008F122 /* KeyboardVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardVC.m; sourceTree = "<group>"; };
 		F69A70AD189BCF530008F122 /* EditMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditMapVC.h; sourceTree = "<group>"; };
 		F69A70AE189BCF530008F122 /* EditMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditMapVC.m; sourceTree = "<group>"; };
+		F69A70B0189BCF650008F122 /* TableMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableMapVC.h; sourceTree = "<group>"; };
+		F69A70B1189BCF650008F122 /* TableMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableMapVC.m; sourceTree = "<group>"; };
+		F69A70B4189BD02A0008F122 /* hotel_floor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hotel_floor.jpg; sourceTree = "<group>"; };
+		F69A70B5189BD02A0008F122 /* sphere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sphere.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,13 +140,14 @@
 		F604D15818992A1C00038365 /* Concierge */ = {
 			isa = PBXGroup;
 			children = (
+				F69A70B3189BCFFF0008F122 /* Extras */,
 				F69A70A6189BCB1C0008F122 /* Control */,
 				F60E5C6618992F8900B2ACD6 /* Model */,
+				F604D15918992A1C00038365 /* Supporting Files */,
 				F604D16118992A1C00038365 /* AppDelegate.h */,
 				F604D16218992A1C00038365 /* AppDelegate.m */,
 				F604D18118992A3D00038365 /* iPhoneStoryboard.storyboard */,
 				F604D16418992A1C00038365 /* Images.xcassets */,
-				F604D15918992A1C00038365 /* Supporting Files */,
 			);
 			path = Concierge;
 			sourceTree = "<group>";
@@ -176,8 +184,8 @@
 		F60E5C6618992F8900B2ACD6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F604D18318992D1200038365 /* Shared.h */,
-				F604D18418992D1200038365 /* Shared.m */,
+				F604D18318992D1200038365 /* Model.h */,
+				F604D18418992D1200038365 /* Model.m */,
 				F60E5C6318992F8100B2ACD6 /* Table.h */,
 				F60E5C6418992F8100B2ACD6 /* Table.m */,
 				F60E5C6718992FAB00B2ACD6 /* Restaurant.h */,
@@ -199,8 +207,19 @@
 				F69A70AB189BCBEC0008F122 /* KeyboardVC.m */,
 				F69A70AD189BCF530008F122 /* EditMapVC.h */,
 				F69A70AE189BCF530008F122 /* EditMapVC.m */,
+				F69A70B0189BCF650008F122 /* TableMapVC.h */,
+				F69A70B1189BCF650008F122 /* TableMapVC.m */,
 			);
 			name = Control;
+			sourceTree = "<group>";
+		};
+		F69A70B3189BCFFF0008F122 /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				F69A70B4189BD02A0008F122 /* hotel_floor.jpg */,
+				F69A70B5189BD02A0008F122 /* sphere.png */,
+			);
+			name = Extras;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +300,8 @@
 				F604D15D18992A1C00038365 /* InfoPlist.strings in Resources */,
 				F604D16518992A1C00038365 /* Images.xcassets in Resources */,
 				F604D18218992A3D00038365 /* iPhoneStoryboard.storyboard in Resources */,
+				F69A70B6189BD02A0008F122 /* hotel_floor.jpg in Resources */,
+				F69A70B7189BD02A0008F122 /* sphere.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,13 +322,14 @@
 			files = (
 				F60E5C6C18992FC900B2ACD6 /* Reservation.m in Sources */,
 				F60E5C6F18992FD500B2ACD6 /* User.m in Sources */,
-				F604D18518992D1200038365 /* Shared.m in Sources */,
+				F604D18518992D1200038365 /* Model.m in Sources */,
 				F69A70A9189BCB4A0008F122 /* RestaurantVC.m in Sources */,
 				F60E5C6918992FAB00B2ACD6 /* Restaurant.m in Sources */,
 				F69A70AC189BCBEC0008F122 /* KeyboardVC.m in Sources */,
 				F604D16318992A1C00038365 /* AppDelegate.m in Sources */,
 				F69A70AF189BCF530008F122 /* EditMapVC.m in Sources */,
 				F60E5C6518992F8100B2ACD6 /* Table.m in Sources */,
+				F69A70B2189BCF650008F122 /* TableMapVC.m in Sources */,
 				F604D15F18992A1C00038365 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

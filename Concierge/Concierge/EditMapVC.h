@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Shared.h"
+#import "Model.h"
 
 #define MAP_IMAGE "hotel_floor.jpg"
 #define ROOM_INDICATOR "sphere.png"
