@@ -31,6 +31,7 @@
 		F69A70B2189BCF650008F122 /* TableMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F69A70B1189BCF650008F122 /* TableMapVC.m */; };
 		F69A70B6189BD02A0008F122 /* hotel_floor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F69A70B4189BD02A0008F122 /* hotel_floor.jpg */; };
 		F69A70B7189BD02A0008F122 /* sphere.png in Resources */ = {isa = PBXBuildFile; fileRef = F69A70B5189BD02A0008F122 /* sphere.png */; };
+		F69A70B9189BDAC90008F122 /* restaurant_plan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F69A70B8189BDAC90008F122 /* restaurant_plan.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		F69A70B1189BCF650008F122 /* TableMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableMapVC.m; sourceTree = "<group>"; };
 		F69A70B4189BD02A0008F122 /* hotel_floor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hotel_floor.jpg; sourceTree = "<group>"; };
 		F69A70B5189BD02A0008F122 /* sphere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sphere.png; sourceTree = "<group>"; };
+		F69A70B8189BDAC90008F122 /* restaurant_plan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = restaurant_plan.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +218,7 @@
 		F69A70B3189BCFFF0008F122 /* Extras */ = {
 			isa = PBXGroup;
 			children = (
+				F69A70B8189BDAC90008F122 /* restaurant_plan.jpg */,
 				F69A70B4189BD02A0008F122 /* hotel_floor.jpg */,
 				F69A70B5189BD02A0008F122 /* sphere.png */,
 			);
@@ -298,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F604D15D18992A1C00038365 /* InfoPlist.strings in Resources */,
+				F69A70B9189BDAC90008F122 /* restaurant_plan.jpg in Resources */,
 				F604D16518992A1C00038365 /* Images.xcassets in Resources */,
 				F604D18218992A3D00038365 /* iPhoneStoryboard.storyboard in Resources */,
 				F69A70B6189BD02A0008F122 /* hotel_floor.jpg in Resources */,

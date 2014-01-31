@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Model.h"
 
-#define MAP_IMAGE "hotel_floor.jpg"
+#define MAP_IMAGE "restaurant_plan.jpg"
 #define ROOM_INDICATOR "sphere.png"
 #define INDICATOR_SIZE 20
 #define INDICATOR_RADIUS 40
