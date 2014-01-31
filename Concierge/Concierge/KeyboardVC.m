@@ -14,7 +14,7 @@
 
 @implementation KeyboardVC
 
-UITapGestureRecognizer* tapRecognizer;
+UITapGestureRecognizer* keyTapRecognizer;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,7 +36,7 @@ UITapGestureRecognizer* tapRecognizer;
     [nc addObserver:self selector:@selector(keyboardWillHide:) name:
      UIKeyboardWillHideNotification object:nil];
     
-    tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
+    keyTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                             action:@selector(didTapAnywhere:)];
 	// Do any additional setup after loading the view.
 }
@@ -48,12 +48,12 @@ UITapGestureRecognizer* tapRecognizer;
 }
 
 -(void) keyboardWillShow:(NSNotification *) note {
-    [self.view addGestureRecognizer:tapRecognizer];
+    [self.view addGestureRecognizer:keyTapRecognizer];
 }
 
 -(void) keyboardWillHide:(NSNotification *) note
 {
-    [self.view removeGestureRecognizer:tapRecognizer];
+    [self.view removeGestureRecognizer:keyTapRecognizer];
 }
 
 -(void)didTapAnywhere: (UITapGestureRecognizer*) recognizer {

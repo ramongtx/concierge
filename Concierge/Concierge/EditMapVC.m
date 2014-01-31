@@ -1,19 +1,18 @@
 //
-//  RestaurantVC.m
+//  EditMapVC.m
 //  Concierge
 //
 //  Created by Ramon Carvalho Maciel on 1/31/14.
 //  Copyright (c) 2014 Pathfinders. All rights reserved.
 //
 
-#import "RestaurantVC.h"
+#import "EditMapVC.h"
 
-@interface RestaurantVC ()
-@property (weak, nonatomic) IBOutlet UITextView *detailsTextView;
+@interface EditMapVC ()
 
 @end
 
-@implementation RestaurantVC
+@implementation EditMapVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,9 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.view endEditing:YES];
-    self.detailsTextView.layer.borderWidth = 0.5f;
-    self.detailsTextView.layer.borderColor = [[UIColor grayColor] CGColor];;
 	// Do any additional setup after loading the view.
 }
 

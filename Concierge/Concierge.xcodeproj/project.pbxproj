@@ -27,6 +27,7 @@
 		F60E5C6F18992FD500B2ACD6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F60E5C6E18992FD500B2ACD6 /* User.m */; };
 		F69A70A9189BCB4A0008F122 /* RestaurantVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F69A70A8189BCB4A0008F122 /* RestaurantVC.m */; };
 		F69A70AC189BCBEC0008F122 /* KeyboardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F69A70AB189BCBEC0008F122 /* KeyboardVC.m */; };
+		F69A70AF189BCF530008F122 /* EditMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F69A70AE189BCF530008F122 /* EditMapVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		F69A70A8189BCB4A0008F122 /* RestaurantVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantVC.m; sourceTree = "<group>"; };
 		F69A70AA189BCBEC0008F122 /* KeyboardVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardVC.h; sourceTree = "<group>"; };
 		F69A70AB189BCBEC0008F122 /* KeyboardVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardVC.m; sourceTree = "<group>"; };
+		F69A70AD189BCF530008F122 /* EditMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditMapVC.h; sourceTree = "<group>"; };
+		F69A70AE189BCF530008F122 /* EditMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditMapVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +197,8 @@
 				F69A70A8189BCB4A0008F122 /* RestaurantVC.m */,
 				F69A70AA189BCBEC0008F122 /* KeyboardVC.h */,
 				F69A70AB189BCBEC0008F122 /* KeyboardVC.m */,
+				F69A70AD189BCF530008F122 /* EditMapVC.h */,
+				F69A70AE189BCF530008F122 /* EditMapVC.m */,
 			);
 			name = Control;
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 				F60E5C6918992FAB00B2ACD6 /* Restaurant.m in Sources */,
 				F69A70AC189BCBEC0008F122 /* KeyboardVC.m in Sources */,
 				F604D16318992A1C00038365 /* AppDelegate.m in Sources */,
+				F69A70AF189BCF530008F122 /* EditMapVC.m in Sources */,
 				F60E5C6518992F8100B2ACD6 /* Table.m in Sources */,
 				F604D15F18992A1C00038365 /* main.m in Sources */,
 			);
