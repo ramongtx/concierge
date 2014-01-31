@@ -10,43 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nodeComunication/RestaurantRequest.m"
-            timestampString = "412796645.302457"
+            timestampString = "412881531.938916"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
-            landmarkName = "@implementation RestaurantRequest"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[RestaurantRequest connectionDidFinishLoading:]"
-                  moduleName = "nodeComunication"
-                  urlString = "file:///Users/BrunoVargas/Documents/BEPiD/projetoConcierge/nodeComunication/nodeComunication/RestaurantRequest.m"
-                  timestampString = "412798998.100646"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "94"
-                  endingLineNumber = "94"
-                  offsetFromSymbolStart = "669">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[RestaurantRequest connectionDidFinishLoading:]"
-                  moduleName = "nodeComunication"
-                  urlString = "file:///Users/BrunoVargas/Documents/BEPiD/projetoConcierge/nodeComunication/nodeComunication/RestaurantRequest.m"
-                  timestampString = "412798998.10095"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "94"
-                  endingLineNumber = "94"
-                  offsetFromSymbolStart = "865">
-               </Location>
-            </Locations>
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "-enviarRestaurante:andDelegate:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -56,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nodeComunication/RestaurantRequest.m"
-            timestampString = "412797674.048303"
+            timestampString = "412882566.306723"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "-connection:didReceiveResponse:"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "-enviarRestaurante:andDelegate:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -8,7 +8,6 @@
 
 #import "RestaurantRequest.h"
 
-
 @interface RestaurantRequest ()
 {
     NSMutableData *_responseData;
@@ -29,8 +28,8 @@
     self = [super init];
     if (self)
     {
-        //self.serverInfo = @"http://172.16.3.72:8080";
-        self.serverInfo = @"http://192.168.1.53:8080";
+        self.serverInfo = @"http://172.16.3.72:8080";   //Eldorado
+       // self.serverInfo = @"http://192.168.1.53:8080"; //Casa
     }
     return self;
 }
@@ -49,41 +48,45 @@
 }
 
 
--(void)enviarRestaurante: (NSDictionary *) dictionaryRestaurant
+-(void) enviarRestaurante: (NSDictionary *) dictionaryRestaurant andDelegate: (id<RestaurantRequestDelegate>) delegate
 {
-    //I prepare the string
     
-    NSString *preparedString=[NSString stringWithFormat:@"%@ %@", self.lastDate, self.currentCategory];
-    NSDictionary *jsonDict = [NSDictionary dictionaryWithObject:preparedString forKey:@"request"];
-    //Prepare convert to json string
-    NSString *jsonRequest = [jsonDict JSONRepresentation];
+    NSLog(@"nsdicitionary enviado: %@", dictionaryRestaurant);
     
-    NSLog(@"jsonRequest is %@", jsonRequest);
+    //montando Json
+    NSError *error = nil;
+    NSData *jsonRestaurantData = [NSJSONSerialization dataWithJSONObject:dictionaryRestaurant options:0 error: &error]; //montar json
+    NSLog(@" json montado : %@", jsonRestaurantData);
     
-    //Set the URL YOU WILL PROVIDE
+
+    //montando URL
+    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat: @"%@/restaurants",self.serverInfo]];
     
-    NSURL *url = [NSURL URLWithString:@"http:xxxxxxxxxxxxxxxxxxx"];
-    
-    //PREPARE the request
+    //preparando a requisicao
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
     
     //Prepare data which will contain the json request string.
-    NSData *requestData = [NSData dataWithBytes:[jsonRequest UTF8String] length:[jsonRequest length]];
     
-    //Set the propreties of the request
+    //NSData *requestData = [NSData dataWithBytes:[jsonRequest UTF8String] length:[jsonRequest length]];
+    
+    //cofigurando envio!
     [request setHTTPMethod:@"POST"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [request setValue:[NSString stringWithFormat:@"%d", [requestData length]] forHTTPHeaderField:@"Content-Length"];
-    [request setValue:jsonRequest forHTTPHeaderField:@"Query-string"];
+    [request setValue:[NSString stringWithFormat:@"%d", [jsonRestaurantData length]] forHTTPHeaderField:@"Content-Length"];
+   
+//    NSString *string = [[NSString alloc] initWithData:jsonRestaurantData encoding:NSUTF8StringEncoding];
+
+  //  [request setValue:string forHTTPHeaderField:@"Query-string"];
     //set the data prepared
-    [request setHTTPBody: requestData];
+    [request setHTTPBody: jsonRestaurantData];
     
     //Initialize the connection with request
     NSURLConnection *connection = [[NSURLConnection alloc]initWithRequest:request delegate:self];
     //Start the connection
-    [delegate showIndicator];
+    
+    //[delegate showIndicator];   Nao sei o que isso faz
     [connection start];
     
 }
@@ -91,41 +94,41 @@
 
 //delegate methods:
 
-//METHODS TO HANßDLE RESPONSE
-#pragma mark NSURLConnection delegate methods
-//WHen receiving the response
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    
-    NSLog(@" Did receive response");
-    [responseData setLength:0];
-    
-    
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    //While receiving the response data
-    [responseData appendData:data];
-}
-
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    //When failed just log
-    [delegate hideIndicator];
-    NSLog(@"Connection failed!");
-    NSLog(@"Error %@", error);
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    //When the response data is downloaded
-    // NSLog(@" Data obtained %@", responseData);
-    NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-    // NSLog(@" Response String %@", responseString);
-    //converted response json string to a simple NSdictionary
-    //If the response string is really JSONABLE I will have the data u sent me displayed succefully
-    
-    NSMutableArray *results = [responseString JSONValue];
-    NSLog(@"Response: %@", results);
-    /// la la al alal alaa
-}
+////METHODS TO HANßDLE RESPONSE
+//#pragma mark NSURLConnection delegate methods
+////WHen receiving the response
+//- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+//    
+//    NSLog(@" Did receive response");
+//    [responseData setLength:0];
+//    
+//    
+//}
+//
+//- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+//    //While receiving the response data
+//    [responseData appendData:data];
+//}
+//
+//- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+//    //When failed just log
+//    [delegate hideIndicator];
+//    NSLog(@"Connection failed!");
+//    NSLog(@"Error %@", error);
+//}
+//
+//- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+//    //When the response data is downloaded
+//    // NSLog(@" Data obtained %@", responseData);
+//    NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+//    // NSLog(@" Response String %@", responseString);
+//    //converted response json string to a simple NSdictionary
+//    //If the response string is really JSONABLE I will have the data u sent me displayed succefully
+//    
+//    NSMutableArray *results = [responseString JSONValue];
+//    NSLog(@"Response: %@", results);
+//    /// la la al alal alaa
+//}
 
 
 

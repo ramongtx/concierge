@@ -25,4 +25,6 @@
 -(void) pedirInformacoesRestaurant:(NSString*) nomeRestaurant delegate:(id<RestaurantRequestDelegate >) delegate;
 
 -(void) pedirTodasInformacoes:(id<RestaurantRequestDelegate >) delegate;
+-(void) enviarRestaurante: (NSDictionary *) dictionaryRestaurant andDelegate: (id<RestaurantRequestDelegate>) delegate;
+
 @end

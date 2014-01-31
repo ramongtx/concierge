@@ -38,8 +38,13 @@
     
     [self.buscador pedirTodasInformacoes:self];
     
-    NSLog(@"objeto buscado");
     
+}
+- (IBAction)pushButtonSend:(id)sender {
+
+    NSLog(@"objeto enviado %@", self.todosRestaurantes);
+    [self.buscador enviarRestaurante:self.todosRestaurantes andDelegate:self];
+
 }
 
 -(void) viewDidDisappear:(BOOL)animated

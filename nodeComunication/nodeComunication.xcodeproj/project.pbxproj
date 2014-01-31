@@ -13,7 +13,6 @@
 		F9A7B808189AA6A600460416 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9A7B806189AA6A600460416 /* InfoPlist.strings */; };
 		F9A7B80A189AA6A600460416 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A7B809189AA6A600460416 /* main.m */; };
 		F9A7B80E189AA6A600460416 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A7B80D189AA6A600460416 /* AppDelegate.m */; };
-		F9A7B811189AA6A600460416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9A7B80F189AA6A600460416 /* Main.storyboard */; };
 		F9A7B814189AA6A600460416 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A7B813189AA6A600460416 /* ViewController.m */; };
 		F9A7B816189AA6A600460416 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9A7B815189AA6A600460416 /* Images.xcassets */; };
 		F9A7B81D189AA6A600460416 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A7B81C189AA6A600460416 /* XCTest.framework */; };
@@ -25,6 +24,7 @@
 		F9A7B839189AA9A300460416 /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A7B838189AA9A300460416 /* Restaurant.m */; };
 		F9A7B83C189AA9BE00460416 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A7B83B189AA9BE00460416 /* User.m */; };
 		F9A7B83F189ABB7D00460416 /* RestaurantRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A7B83E189ABB7D00460416 /* RestaurantRequest.m */; };
+		F9A7B858189C0F7C00460416 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9A7B857189C0F7C00460416 /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +49,6 @@
 		F9A7B80B189AA6A600460416 /* nodeComunication-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nodeComunication-Prefix.pch"; sourceTree = "<group>"; };
 		F9A7B80C189AA6A600460416 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F9A7B80D189AA6A600460416 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F9A7B810189AA6A600460416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F9A7B812189AA6A600460416 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F9A7B813189AA6A600460416 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F9A7B815189AA6A600460416 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -66,6 +65,7 @@
 		F9A7B83B189AA9BE00460416 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		F9A7B83D189ABB7D00460416 /* RestaurantRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantRequest.h; sourceTree = "<group>"; };
 		F9A7B83E189ABB7D00460416 /* RestaurantRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantRequest.m; sourceTree = "<group>"; };
+		F9A7B857189C0F7C00460416 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +128,8 @@
 			children = (
 				F9A7B833189AA97B00460416 /* Model */,
 				F9A7B80C189AA6A600460416 /* AppDelegate.h */,
+				F9A7B857189C0F7C00460416 /* Storyboard.storyboard */,
 				F9A7B80D189AA6A600460416 /* AppDelegate.m */,
-				F9A7B80F189AA6A600460416 /* Main.storyboard */,
 				F9A7B812189AA6A600460416 /* ViewController.h */,
 				F9A7B813189AA6A600460416 /* ViewController.m */,
 				F9A7B815189AA6A600460416 /* Images.xcassets */,
@@ -260,7 +260,7 @@
 			files = (
 				F9A7B816189AA6A600460416 /* Images.xcassets in Resources */,
 				F9A7B808189AA6A600460416 /* InfoPlist.strings in Resources */,
-				F9A7B811189AA6A600460416 /* Main.storyboard in Resources */,
+				F9A7B858189C0F7C00460416 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,14 +314,6 @@
 				F9A7B807189AA6A600460416 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		F9A7B80F189AA6A600460416 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F9A7B810189AA6A600460416 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		F9A7B825189AA6A600460416 /* InfoPlist.strings */ = {
