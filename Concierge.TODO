@@ -65,11 +65,11 @@ Concièrge:
    Planejamento do Desenvolvimento:
        ✔ Início do desenvolvimento @todos @deadline (28-01-2014) @done (14-01-29 10:06)
        ✔ Storyboard @todos  @deadline (29-01-2014) @done (14-01-29 10:38)
-       ☐ Servidor @brunoversignassi @deadline (30-01-2014)
+       ✔ Servidor @brunoversignassi @deadline (30-01-2014) @done (14-01-31 13:44)
        ✔ Modelagem @todos @deadline (28-01-2014) @done (14-01-29 10:06)
 
        ☐ Primeiro protótipo @todos @deadline (31-01-2014)
-             ☐ Servidor responde requisições @brunoversignassi
+             ✔ Servidor responde requisições @brunoversignassi @done (14-01-31 13:44)
              ☐ Lado cliente @fellipecoelho
              ☐ Lado restaurante @ramongtx
 
