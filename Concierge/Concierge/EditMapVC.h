@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Shared.h"
+
+#define MAP_IMAGE "hotel_floor.jpg"
+#define ROOM_INDICATOR "sphere.png"
+#define INDICATOR_SIZE 20
+#define INDICATOR_RADIUS 40
 
 @interface EditMapVC : UIViewController
+
+@property (strong) UIImage* roomIndicator;
+@property (strong) UIImage* mapImage;
+@property NSInteger indicatorSize;
+@property NSInteger indicatorRadius;
+
+-(void)reload;
 
 @end
