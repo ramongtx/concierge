@@ -9,10 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "Table.h"
 
+@class User;
+
 @interface Restaurant : NSObject
 @property CGPoint location;
 @property (strong) NSString* name;
 @property (strong) NSMutableArray* tableArray;
 @property (strong) NSString* type;
 @property (strong) NSString* details;
+@property (strong) User* owner;
 @end
