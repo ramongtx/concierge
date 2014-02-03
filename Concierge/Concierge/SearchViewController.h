@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import "MapPoint.h"
 
-@interface SearchViewController : UIViewController
+
+@interface SearchViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
+{
+   CLLocationManager *locationManager;
+   CLLocationCoordinate2D currentCentre;
+   int currenDist;
+   BOOL firstLaunch;
+}
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
