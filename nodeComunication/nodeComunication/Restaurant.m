@@ -20,4 +20,12 @@
     }
     return self;
 }
+
+- (NSDictionary *) restaurantToDictionary
+{
+    NSDictionary *dictionaryRestaurant = [[NSDictionary alloc] init];
+    //TODO
+    
+    return dictionaryRestaurant;
+}
 @end

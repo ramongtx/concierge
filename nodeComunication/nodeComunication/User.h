@@ -12,7 +12,12 @@
 @interface User : NSObject
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *password; //ver como posso fazer isso de maneira segura.
-@property (nonatomic) Boolean *owner;
+@property (nonatomic) bool *owner;
+@property (nonatomic) UIImage *image;
 @property (nonatomic, strong) NSString *restauranId;
+@property (nonatomic, strong) NSString *feature;
 
+-(id)initWithName: (NSString *) name andPassword: (NSString *) password andImage: (UIImage *) image;
+
+-(NSDictionary *) userToDictionary;
 @end

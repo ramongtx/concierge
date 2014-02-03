@@ -24,4 +24,6 @@
        andLatitude: (float) latitude
          andTables: (NSArray *) tables
              andId: (NSString *) restaurantId;
+
+-(NSDictionary*) restaurantToDictionary;
  @end

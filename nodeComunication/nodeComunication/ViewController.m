@@ -9,9 +9,13 @@
 #import "ViewController.h"
 #import "Restaurant.h"
 #import "RestaurantRequest.h"
+#import "User.h"
+#import "UserRequest.h"
 
-@interface ViewController () <RestaurantRequestDelegate>
-@property (nonatomic) RestaurantRequest *buscador;
+@interface ViewController () <RestaurantRequestDelegate, UserRequestDelegate>
+@property (nonatomic) RestaurantRequest *buscadorRestaurant;
+@property (nonatomic) UserRequest *buscadorUser;
+@property (nonatomic) User * user;
 @property (nonatomic, strong) NSDictionary *todosRestaurantes;
 @end
 
@@ -19,14 +23,15 @@
 
 - (void)viewDidLoad
 {
-   
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void) viewWillAppear:(BOOL)animated
 {
-    self.buscador = [[RestaurantRequest alloc] init];
-
+    self.user = [User alloc];
+    self.user = [self.user initWithName:@"Bruno" andPassword:@"123" andImage:self.imageSended.image];
+    self.buscadorRestaurant = [[RestaurantRequest alloc] init];
+    self.buscadorUser = [[UserRequest alloc] init];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -36,15 +41,23 @@
 - (IBAction)pushButton:(id)sender {
     NSLog(@"apertei o botao");
     
-    [self.buscador pedirTodasInformacoes:self];
+    [self.buscadorRestaurant pedirTodasInformacoes:self];
     
     
 }
 - (IBAction)pushButtonSend:(id)sender {
 
     NSLog(@"objeto enviado %@", self.todosRestaurantes);
-    [self.buscador enviarRestaurante:self.todosRestaurantes andDelegate:self];
+    [self.buscadorRestaurant enviarRestaurante:self.todosRestaurantes andDelegate:self];
 
+}
+- (IBAction)getUser:(id)sender {
+    [self.buscadorUser  pedirTodasInformacoes:self];
+}
+
+- (IBAction)sendUser:(id)sender {
+    NSDictionary  *temp = [self.user userToDictionary];
+    [self.buscadorUser enviarUsuario: temp andDelegate:self];
 }
 
 -(void) viewDidDisappear:(BOOL)animated
