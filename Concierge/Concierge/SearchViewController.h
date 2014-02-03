@@ -10,6 +10,7 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "MapPoint.h"
+#import "Model.h"
 
 
 @interface SearchViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>

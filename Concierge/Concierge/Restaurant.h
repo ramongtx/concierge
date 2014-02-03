@@ -12,9 +12,9 @@
 @class User;
 
 @interface Restaurant : NSObject
-@property CGPoint location;
+@property CGPoint latLong;
 @property (strong) NSString* name;
-@property (strong) NSString* address;
+@property (strong) NSString* placeLocation;
 @property (strong) NSMutableArray* tableArray;
 @property (strong) NSString* type;
 @property (strong) NSString* details;

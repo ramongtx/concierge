@@ -43,6 +43,8 @@
     //Set some parameters for the location object.
     [locationManager setDistanceFilter:kCLDistanceFilterNone];
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    
+    [self plotPositions:LIST];
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,7 +53,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)plotPositions:(NSArray *)data
+-(void)plotPositions:(NSMutableArray *)data
 {
     // 1 - Remove any existing custom annotations but not the user location blue dot.
     for (id<MKAnnotation> annotation in self.mapView.annotations) {
@@ -59,24 +61,22 @@
             [self.mapView removeAnnotation:annotation];
         }
     }
-    // 2 - Loop through the array of places returned from the Google API.
+    // 2 - Loop through the array of places.
     for (int i=0; i<[data count]; i++)
     {
-        //Retrieve the NSDictionary object in each index of the array.
-        NSDictionary* place = [data objectAtIndex:i];
-        // 3 - There is a specific NSDictionary object that gives us the location info.
-        NSDictionary *geo = [place objectForKey:@"geometry"];
-        // Get the lat and long for the location.
-        NSDictionary *loc = [geo objectForKey:@"location"];
-        // 4 - Get your name and address info for adding to a pin.
-        NSString *name=[place objectForKey:@"name"];
-        NSString *vicinity=[place objectForKey:@"vicinity"];
+        
+        // 3 - Get your name and address info for adding to a pin.
+        NSString *name=[[data objectAtIndex:i] name];
+        NSString *vicinity=[[data objectAtIndex:i] placeLocation];
         // Create a special variable to hold this coordinate info.
         CLLocationCoordinate2D placeCoord;
         // Set the lat and long.
-        placeCoord.latitude=[[loc objectForKey:@"lat"] doubleValue];
-        placeCoord.longitude=[[loc objectForKey:@"lng"] doubleValue];
-        // 5 - Create a new annotation.
+        
+        CGPoint latLong = [[data objectAtIndex:i] latLong];
+        
+        placeCoord.latitude=latLong.x;
+        placeCoord.longitude=latLong.y;
+        // 4 - Create a new annotation.
         MapPoint *placeObject = [[MapPoint alloc] initWithName:name address:vicinity coordinate:placeCoord];
         [self.mapView addAnnotation:placeObject];
     }
