@@ -109,21 +109,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vJZ-96-Hyu">
-                                <rect key="frame" x="0.0" y="66" width="320" height="543"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vJZ-96-Hyu">
+                                <rect key="frame" x="0.0" y="65" width="320" height="383"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yKU-PJ-SOW">
+                                <rect key="frame" x="66" y="485" width="188" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Search restaurant types:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iv-GA-yat">
+                                <rect key="frame" x="66" y="456" width="188" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZs-qI-vvu">
+                                <rect key="frame" x="145" y="523" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="GO">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="vJZ-96-Hyu" secondAttribute="bottom" constant="-41" id="CrC-mq-uXu"/>
-                            <constraint firstItem="vJZ-96-Hyu" firstAttribute="top" secondItem="lwD-2f-H31" secondAttribute="bottom" constant="2" id="HGD-xD-atQ"/>
-                            <constraint firstItem="vJZ-96-Hyu" firstAttribute="top" secondItem="lwD-2f-H31" secondAttribute="bottom" constant="2" id="J93-dX-LPZ"/>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vJZ-96-Hyu" secondAttribute="bottom" constant="-41" id="JLb-TE-aHA"/>
-                            <constraint firstItem="vJZ-96-Hyu" firstAttribute="leading" secondItem="fwu-eV-WDK" secondAttribute="leading" id="Kj4-J1-OoB"/>
-                            <constraint firstItem="vJZ-96-Hyu" firstAttribute="leading" secondItem="fwu-eV-WDK" secondAttribute="leading" id="OBl-RA-adn"/>
-                            <constraint firstAttribute="trailing" secondItem="vJZ-96-Hyu" secondAttribute="trailing" id="V2e-fa-MLv"/>
-                            <constraint firstAttribute="trailing" secondItem="vJZ-96-Hyu" secondAttribute="trailing" id="ob7-rc-R2s"/>
+                            <constraint firstItem="0iv-GA-yat" firstAttribute="leading" secondItem="fwu-eV-WDK" secondAttribute="leading" constant="66" id="B7P-nH-ZDh"/>
+                            <constraint firstAttribute="trailing" secondItem="0iv-GA-yat" secondAttribute="trailing" constant="66" id="MU8-4D-nRo"/>
+                            <constraint firstItem="vJZ-96-Hyu" firstAttribute="top" secondItem="lwD-2f-H31" secondAttribute="bottom" constant="1" id="PQH-3z-ef1"/>
+                            <constraint firstItem="jZs-qI-vvu" firstAttribute="top" secondItem="yKU-PJ-SOW" secondAttribute="bottom" constant="8" id="QOR-6H-0km"/>
+                            <constraint firstItem="yKU-PJ-SOW" firstAttribute="top" secondItem="0iv-GA-yat" secondAttribute="bottom" constant="8" id="RYw-ZV-JsI"/>
+                            <constraint firstItem="yKU-PJ-SOW" firstAttribute="leading" secondItem="fwu-eV-WDK" secondAttribute="leading" constant="66" id="STV-hH-MqM"/>
+                            <constraint firstItem="vJZ-96-Hyu" firstAttribute="leading" secondItem="fwu-eV-WDK" secondAttribute="leading" id="TRu-q1-JuT"/>
+                            <constraint firstItem="0iv-GA-yat" firstAttribute="top" secondItem="vJZ-96-Hyu" secondAttribute="bottom" constant="8" id="ctB-ye-bei"/>
+                            <constraint firstAttribute="trailing" secondItem="vJZ-96-Hyu" secondAttribute="trailing" id="haq-vk-sTt"/>
+                            <constraint firstAttribute="trailing" secondItem="yKU-PJ-SOW" secondAttribute="trailing" constant="66" id="ix5-Z8-b0d"/>
+                            <constraint firstAttribute="trailing" secondItem="jZs-qI-vvu" secondAttribute="trailing" constant="145" id="nXh-bT-tay"/>
+                            <constraint firstItem="0iv-GA-yat" firstAttribute="top" secondItem="vJZ-96-Hyu" secondAttribute="bottom" constant="8" id="oOh-bm-rvZ"/>
+                            <constraint firstItem="jZs-qI-vvu" firstAttribute="leading" secondItem="fwu-eV-WDK" secondAttribute="leading" constant="145" id="wxq-eP-vH5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="Rf1-E9-bZV"/>
