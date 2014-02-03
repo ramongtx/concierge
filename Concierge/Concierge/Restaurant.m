@@ -10,6 +10,15 @@
 
 @implementation Restaurant
 
+-(id)init
+{
+    self = [super init];
+    if(self) {
+        
+    }
+    return self;
+}
+
 -(void) newTable:(Table*)tb {
     [self.tableArray addObject:tb];
 }

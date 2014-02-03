@@ -14,6 +14,7 @@
 @interface Restaurant : NSObject
 @property CGPoint location;
 @property (strong) NSString* name;
+@property (strong) NSString* address;
 @property (strong) NSMutableArray* tableArray;
 @property (strong) NSString* type;
 @property (strong) NSString* details;
