@@ -117,8 +117,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="vJZ-96-Hyu" secondAttribute="bottom" constant="-41" id="CrC-mq-uXu"/>
+                            <constraint firstItem="vJZ-96-Hyu" firstAttribute="top" secondItem="lwD-2f-H31" secondAttribute="bottom" constant="2" id="HGD-xD-atQ"/>
                             <constraint firstItem="vJZ-96-Hyu" firstAttribute="top" secondItem="lwD-2f-H31" secondAttribute="bottom" constant="2" id="J93-dX-LPZ"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vJZ-96-Hyu" secondAttribute="bottom" constant="-41" id="JLb-TE-aHA"/>
+                            <constraint firstItem="vJZ-96-Hyu" firstAttribute="leading" secondItem="fwu-eV-WDK" secondAttribute="leading" id="Kj4-J1-OoB"/>
                             <constraint firstItem="vJZ-96-Hyu" firstAttribute="leading" secondItem="fwu-eV-WDK" secondAttribute="leading" id="OBl-RA-adn"/>
+                            <constraint firstAttribute="trailing" secondItem="vJZ-96-Hyu" secondAttribute="trailing" id="V2e-fa-MLv"/>
                             <constraint firstAttribute="trailing" secondItem="vJZ-96-Hyu" secondAttribute="trailing" id="ob7-rc-R2s"/>
                         </constraints>
                     </view>
