@@ -7,6 +7,7 @@
 //
 
 #import "SearchViewController.h"
+#import "RestaurantInfoSearchViewController.h"
 
 @interface SearchViewController ()
 
@@ -44,7 +45,7 @@
     [locationManager setDistanceFilter:kCLDistanceFilterNone];
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
     
-    [self plotPositions:LIST];
+    [self performSelector:@selector(plotPositions:) withObject:LIST afterDelay:2.0];
 }
 
 - (void)didReceiveMemoryWarning
@@ -79,6 +80,26 @@
         // 4 - Create a new annotation.
         MapPoint *placeObject = [[MapPoint alloc] initWithName:name address:vicinity coordinate:placeCoord];
         [self.mapView addAnnotation:placeObject];
+    }
+    
+    NSString *name=@"Name Test";
+    NSString *vicinity=@"Address Test";
+    CLLocationCoordinate2D placeCoord;
+    placeCoord.latitude=37.78782460363909;
+    placeCoord.longitude=-122.4078183090829;
+    MapPoint *placeObject = [[MapPoint alloc] initWithName:name address:vicinity coordinate:placeCoord];
+    [self.mapView addAnnotation:placeObject];
+    
+//    [self.mapView selectAnnotation:placeObject animated:YES];
+
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"search"])
+    {
+        RestaurantInfoSearchViewController* picker  = segue.destinationViewController;
+        picker.restaurant = sender;
     }
 }
 
@@ -138,7 +159,16 @@
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 {
-    NSLog(@"Tittle = %@, Subtittle = %@", [view.annotation title],[view.annotation subtitle]);
+
+       NSLog(@"Tittle = %@, Subtittle = %@", [view.annotation title],[view.annotation subtitle]);
+    
+       Restaurant* restaurant  = [[Restaurant alloc]init];
+    
+       restaurant.name =[view.annotation title];
+       restaurant.placeLocation = [view.annotation subtitle];
+       restaurant.latLong = CGPointMake( [[view annotation] coordinate].latitude,  [[view annotation] coordinate].longitude);
+    
+       [self performSegueWithIdentifier:@"search" sender:restaurant];
 }
 
 -(void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
@@ -154,6 +184,7 @@
     //Set your current center point on the map instance variable.
     currentCentre = self.mapView.centerCoordinate;
 }
+
 
 
 

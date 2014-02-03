@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B927D117189FF5D800CD7386 /* RestaurantInfoSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B927D116189FF5D800CD7386 /* RestaurantInfoSearchViewController.m */; };
 		B9479C6C189FC4F70026A4A8 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9479C6B189FC4F70026A4A8 /* SearchViewController.m */; };
 		B9479C6E189FC5160026A4A8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9479C6D189FC5160026A4A8 /* CoreLocation.framework */; };
 		B9479C70189FC51E0026A4A8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9479C6F189FC51E0026A4A8 /* MapKit.framework */; };
@@ -50,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B927D115189FF5D800CD7386 /* RestaurantInfoSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantInfoSearchViewController.h; sourceTree = "<group>"; };
+		B927D116189FF5D800CD7386 /* RestaurantInfoSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantInfoSearchViewController.m; sourceTree = "<group>"; };
 		B9479C6A189FC4F70026A4A8 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		B9479C6B189FC4F70026A4A8 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		B9479C6D189FC5160026A4A8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -127,6 +130,8 @@
 		F604D14618992A1C00038365 = {
 			isa = PBXGroup;
 			children = (
+				B927D115189FF5D800CD7386 /* RestaurantInfoSearchViewController.h */,
+				B927D116189FF5D800CD7386 /* RestaurantInfoSearchViewController.m */,
 				F604D15818992A1C00038365 /* Concierge */,
 				F604D17118992A1C00038365 /* ConciergeTests */,
 				F604D15118992A1C00038365 /* Frameworks */,
@@ -351,6 +356,7 @@
 				B9479C6C189FC4F70026A4A8 /* SearchViewController.m in Sources */,
 				F61680B8189FC196006C03C7 /* TableInfoVC.m in Sources */,
 				F60E5C6F18992FD500B2ACD6 /* User.m in Sources */,
+				B927D117189FF5D800CD7386 /* RestaurantInfoSearchViewController.m in Sources */,
 				F604D18518992D1200038365 /* Model.m in Sources */,
 				F69A70A9189BCB4A0008F122 /* RestaurantVC.m in Sources */,
 				F60E5C6918992FAB00B2ACD6 /* Restaurant.m in Sources */,
