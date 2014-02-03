@@ -22,5 +22,5 @@
 
 +(Model*)shared;
 +(float)distanceBetween:(CGPoint)p1 and:(CGPoint)p2;
-
+-(void)addRestaurantToList:(Restaurant*)restaurant;
 @end

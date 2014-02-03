@@ -60,6 +60,10 @@
 - (IBAction)editingFinished:(id)sender {
     [self saveRestaurant];
 }
+- (IBAction)saveAndBack:(id)sender {
+    [MODEL addRestaurantToList:RESTAURANT];
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
+}
 
 -(void)saveRestaurant
 {

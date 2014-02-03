@@ -33,4 +33,9 @@ static Model* sharedModel = nil;
     return sqrt(((p1.x-p2.x)*(p1.x-p2.x))+((p1.y-p2.y)*(p1.y-p2.y)));
 }
 
+-(void)addRestaurantToList:(Restaurant*)restaurant
+{
+    [[self listOfRestaurants] addObject:restaurant];
+}
+
 @end
