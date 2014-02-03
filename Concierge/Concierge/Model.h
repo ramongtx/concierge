@@ -11,10 +11,12 @@
 
 #define MODEL [Model shared]
 #define RESTAURANT [MODEL selectedRestaurant]
-#define TABLE [MODEL selectedTable];
+#define TABLE [MODEL selectedTable]
+#define LIST [MODEL listOfRestaurants]
 
 @interface Model : NSObject
 
+@property (strong) NSMutableArray* listOfRestaurants;
 @property (strong) Restaurant* selectedRestaurant;
 @property (strong) Table* selectedTable;
 

@@ -29,6 +29,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.detailsTextView.layer.borderWidth = 0.5f;
+    self.detailsTextView.layer.borderColor = [[UIColor grayColor] CGColor];;
+    
+    [self.detailsTextView setDelegate:self];
 	// Do any additional setup after loading the view.
 }
 
@@ -36,6 +40,21 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)textViewDidEndEditing:(UITextView *)textView
+{
+    [self saveTable];
+}
+- (IBAction)editingFinished:(id)sender {
+    [self saveTable];
+}
+
+-(void) saveTable
+{
+    [TABLE setNumberOfChairs:[[self.numberTextView text] integerValue]];
+    [TABLE setTableNumber:[[self.numberTextView text] integerValue]];
+    [TABLE setDetails:[self.detailsTextView text]];
 }
 
 @end

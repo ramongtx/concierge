@@ -14,7 +14,11 @@ static Model* sharedModel = nil;
 -(id)init
 {
     self = [super init];
-    self.selectedRestaurant = [[Restaurant alloc] init];
+    if (self) {
+        self.selectedRestaurant = [[Restaurant alloc] init];
+        self.listOfRestaurants = [[NSMutableArray alloc] init];
+        self.selectedTable = NULL;
+    }
     return self;
 }
 

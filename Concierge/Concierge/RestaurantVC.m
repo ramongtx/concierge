@@ -33,20 +33,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.view endEditing:YES];
     self.detailsTextView.layer.borderWidth = 0.5f;
     self.detailsTextView.layer.borderColor = [[UIColor grayColor] CGColor];;
     
-    self.nameTextView.text = [RESTAURANT name];
-    self.typeTextView.text = [RESTAURANT type];
+
     [self.detailsTextView setDelegate:self];
-    self.detailsTextView.text = [RESTAURANT details];
 }
 
-- (void)didReceiveMemoryWarning
+-(void)viewWillAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [super viewWillAppear:animated];
+    [self reload];
+}
+
+-(void) reload {
+    self.nameTextView.text = [RESTAURANT name];
+    self.typeTextView.text = [RESTAURANT type];
+    self.detailsTextView.text = [RESTAURANT details];
 }
 
 -(void)textViewDidEndEditing:(UITextView *)textView

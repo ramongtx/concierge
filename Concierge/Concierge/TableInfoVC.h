@@ -7,6 +7,7 @@
 //
 
 #import "KeyboardVC.h"
+#import "Model.h"
 
 @interface TableInfoVC : KeyboardVC
 
