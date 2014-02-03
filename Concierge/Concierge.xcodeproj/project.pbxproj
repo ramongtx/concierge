@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B9479C6C189FC4F70026A4A8 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9479C6B189FC4F70026A4A8 /* SearchViewController.m */; };
+		B9479C6E189FC5160026A4A8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9479C6D189FC5160026A4A8 /* CoreLocation.framework */; };
+		B9479C70189FC51E0026A4A8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9479C6F189FC51E0026A4A8 /* MapKit.framework */; };
+		B9479C73189FC86F0026A4A8 /* MapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = B9479C72189FC86F0026A4A8 /* MapPoint.m */; };
 		F604D15318992A1C00038365 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F604D15218992A1C00038365 /* Foundation.framework */; };
 		F604D15518992A1C00038365 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F604D15418992A1C00038365 /* CoreGraphics.framework */; };
 		F604D15718992A1C00038365 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F604D15618992A1C00038365 /* UIKit.framework */; };
@@ -46,6 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B9479C6A189FC4F70026A4A8 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		B9479C6B189FC4F70026A4A8 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		B9479C6D189FC5160026A4A8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B9479C6F189FC51E0026A4A8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B9479C71189FC86F0026A4A8 /* MapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPoint.h; sourceTree = "<group>"; };
+		B9479C72189FC86F0026A4A8 /* MapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPoint.m; sourceTree = "<group>"; };
 		F604D14F18992A1C00038365 /* Concierge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concierge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F604D15218992A1C00038365 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F604D15418992A1C00038365 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -93,6 +103,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9479C70189FC51E0026A4A8 /* MapKit.framework in Frameworks */,
+				B9479C6E189FC5160026A4A8 /* CoreLocation.framework in Frameworks */,
 				F604D15518992A1C00038365 /* CoreGraphics.framework in Frameworks */,
 				F604D15718992A1C00038365 /* UIKit.framework in Frameworks */,
 				F604D15318992A1C00038365 /* Foundation.framework in Frameworks */,
@@ -134,6 +146,8 @@
 		F604D15118992A1C00038365 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B9479C6F189FC51E0026A4A8 /* MapKit.framework */,
+				B9479C6D189FC5160026A4A8 /* CoreLocation.framework */,
 				F604D15218992A1C00038365 /* Foundation.framework */,
 				F604D15418992A1C00038365 /* CoreGraphics.framework */,
 				F604D15618992A1C00038365 /* UIKit.framework */,
@@ -145,6 +159,8 @@
 		F604D15818992A1C00038365 /* Concierge */ = {
 			isa = PBXGroup;
 			children = (
+				B9479C71189FC86F0026A4A8 /* MapPoint.h */,
+				B9479C72189FC86F0026A4A8 /* MapPoint.m */,
 				F69A70B3189BCFFF0008F122 /* Extras */,
 				F69A70A6189BCB1C0008F122 /* Control */,
 				F60E5C6618992F8900B2ACD6 /* Model */,
@@ -206,6 +222,8 @@
 		F69A70A6189BCB1C0008F122 /* Control */ = {
 			isa = PBXGroup;
 			children = (
+				B9479C6A189FC4F70026A4A8 /* SearchViewController.h */,
+				B9479C6B189FC4F70026A4A8 /* SearchViewController.m */,
 				F69A70A7189BCB4A0008F122 /* RestaurantVC.h */,
 				F69A70A8189BCB4A0008F122 /* RestaurantVC.m */,
 				F69A70AA189BCBEC0008F122 /* KeyboardVC.h */,
@@ -330,11 +348,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F60E5C6C18992FC900B2ACD6 /* Reservation.m in Sources */,
+				B9479C6C189FC4F70026A4A8 /* SearchViewController.m in Sources */,
 				F61680B8189FC196006C03C7 /* TableInfoVC.m in Sources */,
 				F60E5C6F18992FD500B2ACD6 /* User.m in Sources */,
 				F604D18518992D1200038365 /* Model.m in Sources */,
 				F69A70A9189BCB4A0008F122 /* RestaurantVC.m in Sources */,
 				F60E5C6918992FAB00B2ACD6 /* Restaurant.m in Sources */,
+				B9479C73189FC86F0026A4A8 /* MapPoint.m in Sources */,
 				F69A70AC189BCBEC0008F122 /* KeyboardVC.m in Sources */,
 				F604D16318992A1C00038365 /* AppDelegate.m in Sources */,
 				F69A70AF189BCF530008F122 /* EditMapVC.m in Sources */,
