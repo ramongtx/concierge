@@ -18,4 +18,8 @@
 @property (strong) NSString* type;
 @property (strong) NSString* details;
 @property (strong) User* owner;
+
+-(void) newTable:(Table*)tb;
+-(Table*) tableWithLocation:(CGPoint)location;
+
 @end

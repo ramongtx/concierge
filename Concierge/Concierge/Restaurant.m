@@ -10,4 +10,16 @@
 
 @implementation Restaurant
 
+-(void) newTable:(Table*)tb {
+    [self.tableArray addObject:tb];
+}
+
+-(Table*) tableWithLocation:(CGPoint)location
+{
+    for (Table* tb in [self tableArray]) {
+        if ((tb.location.x == location.x) && (tb.location.y == location.y)) return tb;
+    }
+    return NULL;
+}
+
 @end

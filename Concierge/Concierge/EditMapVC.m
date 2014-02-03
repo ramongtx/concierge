@@ -17,7 +17,6 @@
 
 UIImageView* imageView;
 NSMutableArray* tableIndicatorArray;
-NSMutableArray* tableArray;
 
 #pragma mark - Constructors
 
@@ -60,6 +59,12 @@ NSMutableArray* tableArray;
     self.scrollView.zoomScale = self.scrollView.frame.size.height/imageView.frame.size.height;
     
     [self.scrollView addSubview:imageView];
+    
+    [tableIndicatorArray removeAllObjects];
+    
+    for (Table* tb in [RESTAURANT tableArray]) {
+        [self markTable:tb.location];
+    }
 }
 
 #pragma mark - UIScrollView Delegate
@@ -77,7 +82,7 @@ NSMutableArray* tableArray;
     for (UIImageView *indicator in tableIndicatorArray)
     {
         if ([Model distanceBetween:location and:indicator.center] < self.indicatorRadius) {
-            [self editTable:[tableIndicatorArray indexOfObject:indicator]];
+            [self editTable:[RESTAURANT tableWithLocation:indicator.center]];
             return;
         }
     }
@@ -86,6 +91,26 @@ NSMutableArray* tableArray;
 }
 
 -(void)createTable:(CGPoint) location
+{
+    [self markTable:location];
+
+    Table* table = [[Table alloc] init];
+    [table setLocation:location];
+    
+    [RESTAURANT newTable:table];
+    
+    [self editTable:table];
+    
+}
+
+-(void)editTable:(Table*) tb
+{
+    [MODEL setSelectedTable:tb];
+    [self performSegueWithIdentifier:@"editTableInfoSegue" sender:self];
+    
+}
+
+-(void) markTable:(CGPoint)location
 {
     CGRect rect;
     rect.origin = location;
@@ -96,20 +121,6 @@ NSMutableArray* tableArray;
     [indicator setImage:self.roomIndicator];
     [indicator setCenter:location];
     [tableIndicatorArray addObject:indicator];
-
-    Table* table = [[Table alloc] init];
-    [table setDetails:@"Table created sucesfully."];
-    [tableArray addObject:table];
-    
-    [self editTable:[tableIndicatorArray indexOfObject:indicator]];
-    
-}
-
--(void)editTable:(NSInteger)id
-{
-    NSLog(@"Editing table #%ld",(long)id);
-    [self performSegueWithIdentifier:@"editTableInfoSegue" sender:self];
-    
 }
 
 

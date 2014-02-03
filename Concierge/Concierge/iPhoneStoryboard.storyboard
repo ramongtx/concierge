@@ -228,7 +228,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="sv2-Hp-say"/>
                                 </constraints>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -326,10 +326,10 @@
             </objects>
             <point key="canvasLocation" x="2048" y="1339"/>
         </scene>
-        <!--View Controller - TableInfo-->
+        <!--Table InfoVC - TableInfo-->
         <scene sceneID="gd9-1E-zLy">
             <objects>
-                <viewController title="TableInfo" id="2hD-bS-9M1" sceneMemberID="viewController">
+                <viewController title="TableInfo" id="2hD-bS-9M1" customClass="TableInfoVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wan-W3-LQA"/>
                         <viewControllerLayoutGuide type="bottom" id="4Mg-db-KVV"/>
@@ -337,9 +337,75 @@
                     <view key="view" contentMode="scaleToFill" id="bzN-cs-WSG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A7T-uH-ilP">
+                                <rect key="frame" x="164" y="72" width="136" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ugt-jf-Gc2">
+                                <rect key="frame" x="81" y="148" width="219" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="2JZ-Lz-oeg"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E1Y-Bt-Zve">
+                                <rect key="frame" x="164" y="110" width="136" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Table Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNf-T6-1sS">
+                                <rect key="frame" x="20" y="77" width="107" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Chairs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZN-gI-4ee">
+                                <rect key="frame" x="20" y="115" width="136" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lq-b5-GuG">
+                                <rect key="frame" x="20" y="202" width="53" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7lq-b5-GuG" firstAttribute="leading" secondItem="bzN-cs-WSG" secondAttribute="leading" constant="20" symbolic="YES" id="6Z3-L7-cTQ"/>
+                            <constraint firstItem="SZN-gI-4ee" firstAttribute="centerY" secondItem="E1Y-Bt-Zve" secondAttribute="centerY" id="9g2-bJ-1rb"/>
+                            <constraint firstAttribute="trailing" secondItem="E1Y-Bt-Zve" secondAttribute="trailing" constant="20" symbolic="YES" id="FgB-gu-gzZ"/>
+                            <constraint firstItem="Ugt-jf-Gc2" firstAttribute="leading" secondItem="7lq-b5-GuG" secondAttribute="trailing" constant="8" symbolic="YES" id="Gua-9N-WFh"/>
+                            <constraint firstItem="E1Y-Bt-Zve" firstAttribute="leading" secondItem="SZN-gI-4ee" secondAttribute="trailing" constant="8" symbolic="YES" id="Ikn-oh-tkD"/>
+                            <constraint firstAttribute="trailing" secondItem="A7T-uH-ilP" secondAttribute="trailing" constant="20" symbolic="YES" id="Maf-Nz-Ear"/>
+                            <constraint firstItem="E1Y-Bt-Zve" firstAttribute="top" secondItem="A7T-uH-ilP" secondAttribute="bottom" constant="8" symbolic="YES" id="VXy-9r-LQ5"/>
+                            <constraint firstItem="Ugt-jf-Gc2" firstAttribute="centerY" secondItem="7lq-b5-GuG" secondAttribute="centerY" id="eqG-oQ-Ngl"/>
+                            <constraint firstItem="Ugt-jf-Gc2" firstAttribute="top" secondItem="E1Y-Bt-Zve" secondAttribute="bottom" constant="8" symbolic="YES" id="hiD-4r-tZP"/>
+                            <constraint firstItem="tNf-T6-1sS" firstAttribute="leading" secondItem="bzN-cs-WSG" secondAttribute="leading" constant="20" symbolic="YES" id="jVA-sP-oaM"/>
+                            <constraint firstItem="A7T-uH-ilP" firstAttribute="leading" secondItem="E1Y-Bt-Zve" secondAttribute="leading" id="lcK-0P-KKv"/>
+                            <constraint firstItem="A7T-uH-ilP" firstAttribute="centerY" secondItem="tNf-T6-1sS" secondAttribute="centerY" id="nlH-qW-tJY"/>
+                            <constraint firstItem="A7T-uH-ilP" firstAttribute="top" secondItem="wan-W3-LQA" secondAttribute="bottom" constant="20" symbolic="YES" id="oif-tM-g35"/>
+                            <constraint firstItem="SZN-gI-4ee" firstAttribute="leading" secondItem="bzN-cs-WSG" secondAttribute="leading" constant="20" symbolic="YES" id="pIX-0M-dhH"/>
+                            <constraint firstAttribute="trailing" secondItem="Ugt-jf-Gc2" secondAttribute="trailing" constant="20" symbolic="YES" id="wUL-Lw-3wK"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Table Info" id="juY-d9-vQE"/>
+                    <connections>
+                        <outlet property="chairsTextView" destination="E1Y-Bt-Zve" id="wsR-Z3-T7t"/>
+                        <outlet property="detailsTextView" destination="Ugt-jf-Gc2" id="Aiv-o7-fUe"/>
+                        <outlet property="numberTextView" destination="A7T-uH-ilP" id="Ree-lJ-4Ao"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Jr-aM-Xqm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

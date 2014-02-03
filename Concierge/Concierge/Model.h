@@ -11,6 +11,7 @@
 
 #define MODEL [Model shared]
 #define RESTAURANT [MODEL selectedRestaurant]
+#define TABLE [MODEL selectedTable];
 
 @interface Model : NSObject
 
