@@ -90,8 +90,8 @@
     MapPoint *placeObject = [[MapPoint alloc] initWithName:name address:vicinity coordinate:placeCoord];
     [self.mapView addAnnotation:placeObject];
     
-//    [self.mapView selectAnnotation:placeObject animated:YES];
-
+    [self.mapView selectAnnotation:placeObject animated:YES];
+    
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -107,11 +107,17 @@
 #pragma mark - MKMapViewDelegate methods.
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
-    MapPoint *location = (MapPoint*)view.annotation;
+
+    NSLog(@"Tittle = %@, Subtittle = %@", [view.annotation title],[view.annotation subtitle]);
     
-    NSDictionary *launchOptions = @{MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving};
+    Restaurant* restaurant  = [[Restaurant alloc]init];
     
-    [[location mapItem] openInMapsWithLaunchOptions:launchOptions];
+    restaurant.name =[view.annotation title];
+    restaurant.placeLocation = [view.annotation subtitle];
+    restaurant.latLong = CGPointMake( [[view annotation] coordinate].latitude,  [[view annotation] coordinate].longitude);
+    
+    [self performSegueWithIdentifier:@"search" sender:restaurant];
+    
 }
 
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
@@ -129,9 +135,13 @@
         annotationView.canShowCallout = YES;
         annotationView.animatesDrop = YES; //it doesn`t work when using a image instead of the default pins
         //        annotationView.image=[UIImage imageNamed:@"Restaurant.png"];//here we use a nice image instead of the default pins
+        annotationView.multipleTouchEnabled = NO;
         
         // Add to mapView:viewForAnnotation: after setting the image on the annotation view
         annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+        
+        UIButton *btnViewVenue = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+        annotationView.rightCalloutAccessoryView=btnViewVenue;
         
         return annotationView;
     }
@@ -159,16 +169,8 @@
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 {
+ //when a pin is selected
 
-       NSLog(@"Tittle = %@, Subtittle = %@", [view.annotation title],[view.annotation subtitle]);
-    
-       Restaurant* restaurant  = [[Restaurant alloc]init];
-    
-       restaurant.name =[view.annotation title];
-       restaurant.placeLocation = [view.annotation subtitle];
-       restaurant.latLong = CGPointMake( [[view annotation] coordinate].latitude,  [[view annotation] coordinate].longitude);
-    
-       [self performSegueWithIdentifier:@"search" sender:restaurant];
 }
 
 -(void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
