@@ -36,6 +36,19 @@
 	// Do any additional setup after loading the view.
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self reload];
+}
+
+-(void)reload
+{
+    [self.numberTextView setText:[NSString stringWithFormat:@"%ld",[TABLE numberOfChairs]]];
+    [self.chairsTextView setText:[NSString stringWithFormat:@"%ld",[TABLE tableNumber]]];
+    [self.detailsTextView setText:[TABLE details]];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -52,7 +65,7 @@
 
 -(void) saveTable
 {
-    [TABLE setNumberOfChairs:[[self.numberTextView text] integerValue]];
+    [TABLE setNumberOfChairs:[[self.chairsTextView text] integerValue]];
     [TABLE setTableNumber:[[self.numberTextView text] integerValue]];
     [TABLE setDetails:[self.detailsTextView text]];
 }

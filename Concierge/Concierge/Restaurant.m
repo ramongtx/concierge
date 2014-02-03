@@ -14,7 +14,7 @@
 {
     self = [super init];
     if(self) {
-        
+        [self setTableArray:[[NSMutableArray alloc] init]];
     }
     return self;
 }

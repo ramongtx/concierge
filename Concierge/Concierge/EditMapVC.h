@@ -12,7 +12,7 @@
 #define MAP_IMAGE "restaurant_plan.jpg"
 #define ROOM_INDICATOR "sphere.png"
 #define INDICATOR_SIZE 20
-#define INDICATOR_RADIUS 40
+#define INDICATOR_RADIUS 50
 
 @interface EditMapVC : UIViewController
 
