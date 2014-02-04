@@ -16,6 +16,7 @@
 @property (nonatomic) RestaurantRequest *buscadorRestaurant;
 @property (nonatomic) UserRequest *buscadorUser;
 @property (nonatomic) User * user;
+@property (nonatomic) Restaurant * restaurant;
 @property (nonatomic, strong) NSDictionary *todosRestaurantes;
 @end
 
@@ -29,7 +30,9 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     self.user = [User alloc];
-    self.user = [self.user initWithName:@"Bruno" andPassword:@"123" andImage:self.imageSended.image];
+    self.user = [self.user initWithName:@"Joao" andPassword:@"123" hasRestaurant: TRUE];
+    self.restaurant = [Restaurant alloc];
+    self.restaurant = [self.restaurant initWithName:@"cantina do ze" andPictureString:@"/Users/brunoversignassi/Desktop/2espada" andLongitude:@"1323" andLatitude:@"1548" andTables:[[NSArray alloc]initWithObjects:@"bla", nil ] andId:@"00000000"];
     self.buscadorRestaurant = [[RestaurantRequest alloc] init];
     self.buscadorUser = [[UserRequest alloc] init];
 }
@@ -39,16 +42,13 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)pushButton:(id)sender {
-    NSLog(@"apertei o botao");
-    
     [self.buscadorRestaurant pedirTodasInformacoes:self];
     
     
 }
 - (IBAction)pushButtonSend:(id)sender {
 
-    NSLog(@"objeto enviado %@", self.todosRestaurantes);
-    [self.buscadorRestaurant enviarRestaurante:self.todosRestaurantes andDelegate:self];
+    [self.buscadorRestaurant enviarRestaurante:self.restaurant andDelegate:self];
 
 }
 - (IBAction)getUser:(id)sender {
@@ -56,8 +56,7 @@
 }
 
 - (IBAction)sendUser:(id)sender {
-    NSDictionary  *temp = [self.user userToDictionary];
-    [self.buscadorUser enviarUsuario: temp andDelegate:self];
+    [self.buscadorUser enviarUsuario: self.user andDelegate:self];
 }
 
 -(void) viewDidDisappear:(BOOL)animated
@@ -75,38 +74,6 @@
     
     NSLog(@"Objeto de retorno %@", self.todosRestaurantes);
     
-//    NSBlockOperation *operation = [[NSBlockOperation alloc] init];
-//   __weak NSBlockOperation *weakOperation = operation;
-//
-//    [operation addExecutionBlock:^{
-//        NSMutableArray * tempArray = [[NSMutableArray alloc] init];
-//        
-//        for(NSDictionary *flickrPhoto in object)
-//        {
-//            if([weakOperation isCancelled])
-//            {
-//                return ;
-//            }
-//            if (![flickrPhoto isKindOfClass:[NSDictionary class]])
-//            {
-//                continue;
-//            }
-//            Restaurant * novoRestaurant = [[Restaurant alloc] initWithFlickrFoto:flickrPhoto];
-//            [tempArray addObject: novaFoto];
-//            
-//        }
-//        
-//        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-//            fotosGrupo = [tempArray copy];
-//            
-//            NSLog(@"mandei recarregar a collection view");
-//            [[self myCollectionView] reloadData];
-//            
-//        }];
-//        
-//    }];
-//    
-//    [_queue addOperation:operation];
     
 }
 

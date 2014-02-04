@@ -7,6 +7,7 @@
 //
 
 #import "UserRequest.h"
+#import "ASIFormDataRequest.h"
 @interface UserRequest ()
 {
     NSMutableData *_responseData;
@@ -27,8 +28,8 @@
     self = [super init];
     if (self)
     {
-        self.serverInfo = @"http://172.16.3.72:8080";   //Eldorado
-        // self.serverInfo = @"http://192.168.1.53:8080"; //Casa
+        //self.serverInfo = @"http://172.16.3.72:8080";   //Eldorado
+        self.serverInfo = @"http://192.168.1.53:8080"; //Casa
     
         self.usuario = [[User alloc] init];
     }
@@ -49,44 +50,20 @@
 }
 
 
--(void) enviarUsuario: (NSDictionary *) dictionaryUser andDelegate: (id<UserRequestDelegate>) delegate
+-(void) enviarUsuario: (User *) user andDelegate: (id<UserRequestDelegate>) delegate
 {
     
     
-    NSLog(@"nsdicitionary enviado: %@", dictionaryUser);
-    
-    //montando Json
-    NSError *error = nil;
-    NSData *jsonUserData = [NSJSONSerialization dataWithJSONObject:dictionaryUser options:0 error: &error]; //montar json
-    NSLog(@" json montado : %@", jsonUserData);
-    
-
     //montando URL
     NSURL *url = [NSURL URLWithString: [NSString stringWithFormat: @"%@/users",self.serverInfo]];
     
-    //preparando a requisicao
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
-                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
-    
-    //Prepare data which will contain the json request string.
-    
-    //NSData *requestData = [NSData dataWithBytes:[jsonRequest UTF8String] length:[jsonRequest length]];
-    
-    //cofigurando envio!
-    [request setHTTPMethod:@"POST"];
-    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [request setValue:[NSString stringWithFormat:@"%d", [jsonUserData length]] forHTTPHeaderField:@"Content-Length"];
-    
-    //set the data prepared
-    [request setHTTPBody: jsonUserData];
-    
-    //Initialize the connection with request
-    NSURLConnection *connection = [[NSURLConnection alloc]initWithRequest:request delegate:self];
-    //Start the connection
-    
-    //[delegate showIndicator];   Nao sei o que isso faz
-    [connection start];
+    //fazendo a request
+    ASIFormDataRequest *newRequest = [ASIFormDataRequest requestWithURL:url];
+    [newRequest postFormat];
+    [newRequest setPostValue: user.name forKey:@"name"];
+    [newRequest setPostValue: user.password forKey:@"password"];
+    [newRequest setRequestMethod:@"POST"];
+    [newRequest startAsynchronous];
     
 }
 

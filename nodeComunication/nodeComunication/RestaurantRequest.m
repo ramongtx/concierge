@@ -7,7 +7,7 @@
 //
 
 #import "RestaurantRequest.h"
-
+#import "ASIFormDataRequest.h"
 @interface RestaurantRequest ()
 {
     NSMutableData *_responseData;
@@ -28,8 +28,8 @@
     self = [super init];
     if (self)
     {
-        self.serverInfo = @"http://172.16.3.72:8080";   //Eldorado
-       // self.serverInfo = @"http://192.168.1.53:8080"; //Casa
+       // self.serverInfo = @"http://172.16.3.72:8080";   //Eldorado
+        self.serverInfo = @"http://192.168.1.53:8080"; //Casa
     }
     return self;
 }
@@ -48,46 +48,29 @@
 }
 
 
--(void) enviarRestaurante: (NSDictionary *) dictionaryRestaurant andDelegate: (id<RestaurantRequestDelegate>) delegate
+-(void) enviarRestaurante: (Restaurant *) restaurant andDelegate: (id<RestaurantRequestDelegate>) delegate
 {
     
-    NSLog(@"nsdicitionary enviado: %@", dictionaryRestaurant);
-    
-    //montando Json
-    NSError *error = nil;
-    NSData *jsonRestaurantData = [NSJSONSerialization dataWithJSONObject:dictionaryRestaurant options:0 error: &error]; //montar json
-    NSLog(@" json montado : %@", jsonRestaurantData);
-    
-
     //montando URL
     NSURL *url = [NSURL URLWithString: [NSString stringWithFormat: @"%@/restaurants",self.serverInfo]];
+    //fazendo a request
     
-    //preparando a requisicao
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
-                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+    ASIFormDataRequest *newRequest = [ASIFormDataRequest requestWithURL:url];
+    [newRequest postFormat];
+    [newRequest setPostValue: restaurant.name forKey:@"name"];
+    [newRequest setPostValue: restaurant.latitude forKey:@"latitude"];
+    [newRequest setPostValue: restaurant.longitude forKey:@"longitude"];
+    [newRequest setFile:@"/Users/brunoversignassi/Desktop/2espada.png" forKey:@"picture"];
+    [newRequest setRequestMethod:@"POST"];
+    [newRequest startAsynchronous];
     
-    //----------------------------------codigo de estudo -----------------------------------------------------------------
-   
-    //----------------------------------codigo de estudo -----------------------------------------------------------------
-    
-    //cofigurando envio!
-    [request setHTTPMethod:@"POST"];
-    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [request setValue:[NSString stringWithFormat:@"%d", [jsonRestaurantData length]] forHTTPHeaderField:@"Content-Length"];
-
-//    NSString *string = [[NSString alloc] initWithData:jsonRestaurantData encoding:NSUTF8StringEncoding];
-
-  //  [request setValue:string forHTTPHeaderField:@"Query-string"];
-    //set the data prepared
-    [request setHTTPBody: jsonRestaurantData];
-    
-    //Initialize the connection with request
-    NSURLConnection *connection = [[NSURLConnection alloc]initWithRequest:request delegate:self];
-    //Start the connection
-    
-    //[delegate showIndicator];   Nao sei o que isso faz
-    [connection start];
+    NSError *error = [newRequest error];
+    if (!error) {
+        NSString *response = [newRequest responseString];
+        NSLog(response);
+    }else{
+        NSLog(@"error");
+    }
     
 }
 #pragma mark NSURLConnection Data Delegate Methods

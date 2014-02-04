@@ -10,22 +10,21 @@
 
 @implementation Restaurant
 
--(id) initWithName: (NSString *) name andPictureString: (NSString *) pictureString andLongitude: (float) longitude andLatitude: (float) latitude andTables: (NSArray *) tables andId: (NSString *) restaurantId
+-(id) initWithName: (NSString *) name andPictureString: (NSString *) pictureString andLongitude: (NSString *) longitude andLatitude: (NSString *) latitude andTables: (NSArray *) tables andId: (NSString *) restaurantId
 {
     self = [super init];
     
     if (self)
     {
+        self.name = name;
+        self.picture = pictureString;
+        self.longitude = longitude;
+        self.latitude = latitude;
+        self.tables = [[NSArray alloc] initWithObjects:@"bla", nil];
+        self.restaurantId = restaurantId;
     
     }
     return self;
 }
 
-- (NSDictionary *) restaurantToDictionary
-{
-    NSDictionary *dictionaryRestaurant = [[NSDictionary alloc] init];
-    //TODO
-    
-    return dictionaryRestaurant;
-}
 @end

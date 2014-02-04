@@ -27,5 +27,5 @@
 -(void) pedirInformacoesUsuario:(NSString*) nomeUsuario delegate:(id<UserRequestDelegate >) delegate;
 
 -(void) pedirTodasInformacoes:(id<UserRequestDelegate >) delegate;
--(void) enviarUsuario: (NSDictionary *) dictionaryuser andDelegate: (id<UserRequestDelegate>) delegate;
+-(void) enviarUsuario: (User *) user andDelegate: (id<UserRequestDelegate>) delegate;
 @end

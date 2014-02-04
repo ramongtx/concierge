@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Restaurant.h"
 
 @class RestaurantRequest;
 @protocol RestaurantRequestDelegate <NSObject>
@@ -25,6 +26,6 @@
 -(void) pedirInformacoesRestaurant:(NSString*) nomeRestaurant delegate:(id<RestaurantRequestDelegate >) delegate;
 
 -(void) pedirTodasInformacoes:(id<RestaurantRequestDelegate >) delegate;
--(void) enviarRestaurante: (NSDictionary *) dictionaryRestaurant andDelegate: (id<RestaurantRequestDelegate>) delegate;
+-(void) enviarRestaurante: (Restaurant *) restaurant andDelegate: (id<RestaurantRequestDelegate>) delegate;
 
 @end
