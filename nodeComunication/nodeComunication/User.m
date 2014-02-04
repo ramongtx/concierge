@@ -9,30 +9,20 @@
 #import "User.h"
 
 @implementation User
- -(id) init
-{
-    self = [super init];
-    if (self)
-    {
-    }
-    
-    return  self;
-}
-
-
-
--(id) initWithName:(NSString *)name andPassword:(NSString *)password hasRestaurant: (int) boolean
+-(id)initWithName:(NSString *)name andPhone:(NSString *)phone andEmail:(NSString *)email hasRestaurant:(BOOL)isOwner andRestaurant:(Restaurant *)restaurant
 {
     self = [super init];
     if (self)
     {
         self.name = name;
-        self.password = password;
-        self.owner =  boolean;
-        self.restauranId = @"blablabla";
-
+        self.phone = phone;
+        self.email = email;
+        self.isOwner =  isOwner;
+        self.restaurant = restaurant;
+        
     }
     return self;
+
 }
 
 //-(NSDictionary*) userToDictionary

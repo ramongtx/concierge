@@ -9,18 +9,17 @@
 #import <Foundation/Foundation.h>
 
 @interface Table : NSObject
-@property (nonatomic, strong)NSString *number;
+@property (nonatomic) NSInteger *tableNumber;
+@property (nonatomic) NSInteger *numberOfChairs;
 @property (nonatomic) Boolean *status;
-@property (nonatomic) NSInteger *chairs;
-@property (nonatomic) Boolean *connected;
-@property (nonatomic, strong) NSMutableArray *tableConnections;
-@property (nonatomic) float longitude;
-@property (nonatomic) float latitude;
+@property (nonatomic) CGPoint * coordinates;
+@property (nonatomic) NSString * details;
 
 
--(id) initWithNumer: (NSString *) number
-          andStatus: (Boolean *) status
-          andChairs: (NSInteger *) chairs
-        andLatitude: (float) latitude
-       andLongitude: (float) longitude;
+-(id) initWithNumer: (NSInteger *) tableNumber
+            andStatus: (Boolean *) status
+          andChairs: (NSInteger *) numberOfChairs
+        andCoorinates: (CGPoint *) coordinates
+          andDetails: (NSString *) details;
+
 @end

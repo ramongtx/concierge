@@ -11,18 +11,18 @@
 @implementation Table
 
 
--(id) initWithNumer: (NSString *) number andStatus: (Boolean *) status andChairs: (NSInteger *) chairs andLatitude: (float) latitude andLongitude: (float) longitude
+-(id) initWithNumer:(NSInteger *)tableNumber andStatus:(Boolean *)status andChairs:(NSInteger *)numberOfChairs andCoorinates:(CGPoint *)coordinates andDetails:(NSString *)details
 {
     self = [super init];
     if (self)
     {
-        self.number = number;
+        self.tableNumber = tableNumber;
         self.status = status;
-        self.chairs = chairs;
-        self.longitude = longitude;
-        self.latitude = latitude;
+        self.numberOfChairs = numberOfChairs;
+        self.coordinates= coordinates;
+        self.details = details;
     }
-    
     return self;
 }
+
 @end

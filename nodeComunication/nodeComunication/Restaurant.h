@@ -8,21 +8,29 @@
 
 #import <Foundation/Foundation.h>
 #import "Table.h"
+#import "User.h"
+@class User;
 
 @interface Restaurant : NSObject
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *picture; //endereco que deve ser chamado para baixar a foto deste restaurante
-@property (nonatomic, strong) NSString *longitude;
-@property (nonatomic, strong) NSString *latitude;
-@property (nonatomic, strong) NSArray *tables;
+@property (nonatomic) CGPoint  coordinates;
+@property (nonatomic, strong) NSString *placeLocation;
+@property (nonatomic, strong) NSMutableArray *tableArrays;
+@property (nonatomic) NSString *type;
+@property (nonatomic) NSString *details;
 @property (nonatomic, strong) NSString *restaurantId;
+@property (nonatomic) User* owner;
 
 -(id) initWithName: (NSString *) name
   andPictureString: (NSString *) pictureString
-      andLongitude: (NSString *) longitude
-       andLatitude: (NSString *) latitude
-         andTables: (NSArray *) tables
-             andId: (NSString *) restaurantId;
+       andCoordinates: (CGPoint) coordinates
+           andType: (NSString *) type
+        andDetails: (NSString *) details
+   andTables: (NSMutableArray *) tableArrays
+             andId: (NSString *) restaurantId
+              andOwner: (User *) owner
+  andPlaceLocation: (NSString *) location;
 
  @end

@@ -8,6 +8,8 @@
 
 #import "RestaurantRequest.h"
 #import "ASIFormDataRequest.h"
+#import "Coordinate.h"
+
 @interface RestaurantRequest ()
 {
     NSMutableData *_responseData;
@@ -28,8 +30,8 @@
     self = [super init];
     if (self)
     {
-       // self.serverInfo = @"http://172.16.3.72:8080";   //Eldorado
-        self.serverInfo = @"http://192.168.1.53:8080"; //Casa
+        self.serverInfo = @"http://172.16.3.72:8080";   //Eldorado
+       // self.serverInfo = @"http://192.168.1.53:8080"; //Casa
     }
     return self;
 }
@@ -58,11 +60,15 @@
     ASIFormDataRequest *newRequest = [ASIFormDataRequest requestWithURL:url];
     [newRequest postFormat];
     [newRequest setPostValue: restaurant.name forKey:@"name"];
-    [newRequest setPostValue: restaurant.latitude forKey:@"latitude"];
-    [newRequest setPostValue: restaurant.longitude forKey:@"longitude"];
-    [newRequest setFile:@"/Users/brunoversignassi/Desktop/2espada.png" forKey:@"picture"];
+    [newRequest setPostValue: [self convertCGPointToCoordinate:restaurant.coordinates] forKey:@"coordinates"];
+    [newRequest setPostValue:[self convertToString64bits:[UIImage imageNamed:@"cinema.jpg"]] forKey:@"picture"];
+    [newRequest setPostValue:restaurant.placeLocation forKey:@"location"];
+    [newRequest setPostValue:restaurant.type forKey:@"type"];
+    [newRequest setPostValue:restaurant.details forKey:@"details"];
+    [newRequest setPostValue:restaurant.tableArrays forKey:@"tables"];
     [newRequest setRequestMethod:@"POST"];
     [newRequest startAsynchronous];
+
     
     NSError *error = [newRequest error];
     if (!error) {
@@ -127,5 +133,23 @@
     }
 }
 
+
+#pragma mark- Support methods
+
+-(NSString *) convertToString64bits:(UIImage *) image
+{
+    NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
+    NSString *encodedString = [imageData base64EncodedStringWithOptions:0];
+    
+    return encodedString;
+}
+
+-(Coordinate *) convertCGPointToCoordinate: (CGPoint) point
+{
+    Coordinate * coordinate = [[Coordinate   alloc] init];
+    coordinate.latitude = point.y;
+    coordinate.longitude = point.x;
+    return coordinate;
+}
 @end
 

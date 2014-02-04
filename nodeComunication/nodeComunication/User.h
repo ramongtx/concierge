@@ -7,15 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Restaurant.h"
+//#import "Restaurant.h"
+@class Restaurant;
 
 @interface User : NSObject
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *password; //ver como posso fazer isso de maneira segura.
-@property (nonatomic) int owner;
-@property (nonatomic, strong) NSString *restauranId;
+@property (nonatomic, strong) NSString *phone;
+@property (nonatomic, strong) NSString *email;
+@property (nonatomic) BOOL isOwner;
+@property (nonatomic) Restaurant* restaurant;
 
--(id)initWithName: (NSString *) name andPassword: (NSString *) password hasRestaurant: (int) boolean;
+//if isOwner is false, the attribute restaurant must be nil;
+-(id)initWithName: (NSString *) name andPhone: (NSString *) phone andEmail: (NSString *) email hasRestaurant: (BOOL) isOwner andRestaurant:(Restaurant*) restaurant;
 
 //-(NSDictionary *) userToDictionary;
 @end

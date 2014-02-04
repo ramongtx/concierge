@@ -30,9 +30,13 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     self.user = [User alloc];
-    self.user = [self.user initWithName:@"Joao" andPassword:@"123" hasRestaurant: TRUE];
+    
+    self.user = [self.user initWithName:@"Bruno" andPhone:@"+55019983355385" andEmail:@"brunoversignassi@gmail.com" hasRestaurant:TRUE andRestaurant:nil];
     self.restaurant = [Restaurant alloc];
-    self.restaurant = [self.restaurant initWithName:@"cantina do ze" andPictureString:@"/Users/brunoversignassi/Desktop/2espada" andLongitude:@"1323" andLatitude:@"1548" andTables:[[NSArray alloc]initWithObjects:@"bla", nil ] andId:@"00000000"];
+    CGPoint point = CGPointMake(123, 321);
+    self.restaurant = [self.restaurant initWithName:@"cantina do ze" andPictureString:@"cinema.png" andCoordinates:point andType:@"italiana" andDetails:@"bom ba garai" andTables:nil andId:@"funfou porra" andOwner:@"Bruno" andPlaceLocation:@"Zelandia,123"];
+    
+    //self.restaurant = [self.restaurant initWithName:@"cantina do ze" andPictureString:@"/Users/brunoversignassi/Desktop/2espada" andLongitude:@"1323" andLatitude:@"1548" andTables:[[NSArray alloc]initWithObjects:@"bla", nil ] andId:@"00000000"];
     self.buscadorRestaurant = [[RestaurantRequest alloc] init];
     self.buscadorUser = [[UserRequest alloc] init];
 }

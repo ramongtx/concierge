@@ -28,8 +28,8 @@
     self = [super init];
     if (self)
     {
-        //self.serverInfo = @"http://172.16.3.72:8080";   //Eldorado
-        self.serverInfo = @"http://192.168.1.53:8080"; //Casa
+        self.serverInfo = @"http://172.16.3.72:8080";   //Eldorado
+       // self.serverInfo = @"http://192.168.1.53:8080"; //Casa
     
         self.usuario = [[User alloc] init];
     }
@@ -61,7 +61,10 @@
     ASIFormDataRequest *newRequest = [ASIFormDataRequest requestWithURL:url];
     [newRequest postFormat];
     [newRequest setPostValue: user.name forKey:@"name"];
-    [newRequest setPostValue: user.password forKey:@"password"];
+    [newRequest setPostValue: user.phone forKey:@"phone"];
+    [newRequest setPostValue: user.email forKey:@"email"];
+    [newRequest setPostValue: [NSNumber numberWithBool:user.isOwner] forKey:@"owner"];
+    [newRequest setPostValue: user.restaurant forKey:@"restaurant"];
     [newRequest setRequestMethod:@"POST"];
     [newRequest startAsynchronous];
     

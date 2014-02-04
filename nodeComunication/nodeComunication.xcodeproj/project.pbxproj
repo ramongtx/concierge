@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F9A3CE4A18A138E10091FD1B /* Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A3CE4918A138E10091FD1B /* Coordinate.m */; };
 		F9A7B7FE189AA6A600460416 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A7B7FD189AA6A600460416 /* Foundation.framework */; };
 		F9A7B800189AA6A600460416 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A7B7FF189AA6A600460416 /* CoreGraphics.framework */; };
 		F9A7B802189AA6A600460416 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A7B801189AA6A600460416 /* UIKit.framework */; };
@@ -54,6 +55,8 @@
 
 /* Begin PBXFileReference section */
 		DBA48C2F189B25610031EB9E /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F9A3CE4818A138E10091FD1B /* Coordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coordinate.h; sourceTree = "<group>"; };
+		F9A3CE4918A138E10091FD1B /* Coordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coordinate.m; sourceTree = "<group>"; };
 		F9A7B7FA189AA6A600460416 /* nodeComunication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nodeComunication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A7B7FD189AA6A600460416 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F9A7B7FF189AA6A600460416 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -234,6 +237,8 @@
 				F9A7B83B189AA9BE00460416 /* User.m */,
 				F9A7B859189FB13A00460416 /* UserRequest.h */,
 				F9A7B85A189FB13A00460416 /* UserRequest.m */,
+				F9A3CE4818A138E10091FD1B /* Coordinate.h */,
+				F9A3CE4918A138E10091FD1B /* Coordinate.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -366,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9A7B88C18A0157100460416 /* ASIDataCompressor.m in Sources */,
+				F9A3CE4A18A138E10091FD1B /* Coordinate.m in Sources */,
 				F9A7B89E18A0160700460416 /* ASIAuthenticationDialog.m in Sources */,
 				F9A7B85B189FB13A00460416 /* UserRequest.m in Sources */,
 				F9A7B89B18A015EA00460416 /* ASIDownloadCache.m in Sources */,
