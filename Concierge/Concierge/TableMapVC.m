@@ -75,6 +75,14 @@ NSMutableArray* tableIndicatorArray;
 
 -(IBAction)tapGesture:(UITapGestureRecognizer *)recognizer
 {
+    
+    
+    
+    
+    [self reserveTable:TABLE];
+    
+    
+    
     CGPoint location = [recognizer locationInView:imageView];
     for (UIImageView *indicator in tableIndicatorArray)
     {
@@ -89,6 +97,10 @@ NSMutableArray* tableIndicatorArray;
 -(void)reserveTable:(Table*) tb
 {
     [MODEL setSelectedTable:tb];
+    [RESERVATION setTable:tb];
+    [RESERVATION setRestaurant:RESTAURANT];
+    [RESERVATION setClient:USER];
+    
     [self performSegueWithIdentifier:@"toReservationVC" sender:self];
     
 }
