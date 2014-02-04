@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="l6F-pu-1XZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="l6F-pu-1XZ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
         <!--View Controller - Login-->
@@ -258,10 +258,10 @@
             </objects>
             <point key="canvasLocation" x="2048" y="585"/>
         </scene>
-        <!--View Controller - TableMap-->
+        <!--Table MapVC - TableMap-->
         <scene sceneID="YQ8-Qu-ZPo">
             <objects>
-                <viewController title="TableMap" id="7bu-4U-mXG" sceneMemberID="viewController">
+                <viewController title="TableMap" id="7bu-4U-mXG" customClass="TableMapVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GMz-89-TkG"/>
                         <viewControllerLayoutGuide type="bottom" id="LI8-tj-JS1"/>
@@ -269,11 +269,24 @@
                     <view key="view" contentMode="scaleToFill" id="t1I-LO-tiG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.5" maximumZoomScale="2" translatesAutoresizingMaskIntoConstraints="NO" id="RNR-Id-KDh">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LI8-tj-JS1" firstAttribute="top" secondItem="RNR-Id-KDh" secondAttribute="bottom" id="7Bz-Pa-h6b"/>
+                            <constraint firstItem="RNR-Id-KDh" firstAttribute="leading" secondItem="t1I-LO-tiG" secondAttribute="leading" id="MB1-D4-jDY"/>
+                            <constraint firstItem="RNR-Id-KDh" firstAttribute="top" secondItem="GMz-89-TkG" secondAttribute="bottom" id="a3h-Ev-qdF"/>
+                            <constraint firstAttribute="trailing" secondItem="RNR-Id-KDh" secondAttribute="trailing" id="pAm-Jp-H2s"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Table Map" id="ueQ-hU-lFB"/>
                     <connections>
-                        <segue destination="tdp-hL-Typ" kind="push" id="uJj-Q1-9Qd"/>
+                        <outlet property="scrollView" destination="RNR-Id-KDh" id="OKD-Ra-RdP"/>
+                        <segue destination="tdp-hL-Typ" kind="push" identifier="toReservationVC" id="uJj-Q1-9Qd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xci-UY-x9Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -311,12 +324,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ulW-db-WI0">
-                                <rect key="frame" x="0.0" y="66" width="320" height="502"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ulW-db-WI0">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ulW-db-WI0" firstAttribute="top" secondItem="vzF-9P-v04" secondAttribute="bottom" id="1HB-4r-DTB"/>
+                            <constraint firstItem="fkQ-zR-rpb" firstAttribute="top" secondItem="ulW-db-WI0" secondAttribute="bottom" id="Eih-Eg-qoa"/>
+                            <constraint firstAttribute="trailing" secondItem="ulW-db-WI0" secondAttribute="trailing" id="Ijw-4r-mo8"/>
+                            <constraint firstItem="ulW-db-WI0" firstAttribute="leading" secondItem="0bR-17-UIh" secondAttribute="leading" id="VlE-fV-bWv"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mQx-WM-U0Y"/>
                     <connections>

@@ -83,7 +83,7 @@
 {
     if ([segue.identifier isEqualToString:@"locate"])
     {
-        [MODEL setSelectedRestaurant:sender];
+        [RESTAURANT setLatLong:latLong];
     }
 }
 
