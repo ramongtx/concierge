@@ -47,6 +47,8 @@
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
     
     [self addGestureRecogniserToMapView];
+    
+    [locationManager startUpdatingLocation];
 }
 
 - (void)addGestureRecogniserToMapView{
@@ -83,7 +85,7 @@
 {
     if ([segue.identifier isEqualToString:@"locate"])
     {
-        [MODEL setSelectedRestaurant:sender];
+        [RESTAURANT setLatLong:latLong];
     }
 }
 
@@ -93,6 +95,16 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (IBAction)setUserCurrentLocation:(id)sender
+{
+    
+    latLong = userLocation;
+    
+    [self performSegueWithIdentifier:@"locate" sender: nil];
+}
+
 
 #pragma mark - MKMapViewDelegate methods.
 
@@ -124,6 +136,46 @@
     
     //Set your current center point on the map instance variable.
     currentCentre = self.mapView.centerCoordinate;
+}
+
+#pragma mark - CLLocationManagerDelegate
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"didFailWithError: %@", error);
+    UIAlertView *errorAlert = [[UIAlertView alloc]
+                               initWithTitle:@"Error" message:@"Failed to Get Your Location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [errorAlert show];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"didUpdateToLocation: %@", newLocation);
+    CLLocation *currentLocation = newLocation;
+
+    if (currentLocation != nil)
+    {
+       userLocation =  CGPointMake(currentLocation.coordinate.latitude, currentLocation.coordinate.longitude);
+    }
+    
+    // Stop Location Manager
+    [locationManager stopUpdatingLocation];
+    
+    // Reverse Geocoding
+    NSLog(@"Resolving the Address");
+    [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarks, NSError *error) {
+        NSLog(@"Found placemarks: %@, error: %@", placemarks, error);
+        if (error == nil && [placemarks count] > 0) {
+            placemark = [placemarks lastObject];
+//            self.addressLabel.text = [NSString stringWithFormat:@"%@ %@\n%@ %@\n%@\n%@",
+//                                      placemark.subThoroughfare, placemark.thoroughfare,
+//                                      placemark.postalCode, placemark.locality,
+//                                      placemark.administrativeArea,
+//                                      placemark.country];
+        } else {
+            NSLog(@"%@", error.debugDescription);
+        }
+    } ];
 }
 
 @end

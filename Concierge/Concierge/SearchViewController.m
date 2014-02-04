@@ -126,17 +126,19 @@
 
         
     }
+
     
      if ([control tag] == 2)//control == view.rightCalloutAccessoryView
     {// "Right Accessory Button Tapped
         
-        Restaurant* restaurant  = [[Restaurant alloc]init];
-        
-        restaurant.name =[view.annotation title];
-        restaurant.placeLocation = [view.annotation subtitle];
-        restaurant.latLong = CGPointMake( [[view annotation] coordinate].latitude,  [[view annotation] coordinate].longitude);
-        
-        [self performSegueWithIdentifier:@"search" sender:restaurant];
+        for (Restaurant* restaurant  in LIST)
+        {
+            if(restaurant.latLong.x ==[[view annotation] coordinate].latitude && restaurant.latLong.y == [[view annotation] coordinate].longitude)
+            {
+                  [self performSegueWithIdentifier:@"search" sender:restaurant];
+                return;
+            }
+        }
     }
 }
 
@@ -161,7 +163,7 @@
         // Add to mapView:viewForAnnotation: after setting the image on the annotation view
         
         //create UIImageView to use for the leftCalloutAccessoryView...
-        annotationView.leftCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+       
         UIImage *img = [UIImage imageNamed:@"rota.jpg"];
 
         UIImageView *iv = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 50)];

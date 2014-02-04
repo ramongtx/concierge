@@ -17,8 +17,10 @@
     CLLocationCoordinate2D currentCentre;
     int currenDist;
     BOOL firstLaunch;
-    
+    CLGeocoder *geocoder;
+    CLPlacemark *placemark;
     CGPoint latLong;
+    CGPoint userLocation;
 }
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
