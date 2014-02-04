@@ -80,7 +80,11 @@
         // 4 - Create a new annotation.
         MapPoint *placeObject = [[MapPoint alloc] initWithName:name address:vicinity coordinate:placeCoord];
         [self.mapView addAnnotation:placeObject];
+        
+        [self.mapView selectAnnotation:placeObject animated:YES];//here we select the pins that are added to the map
     }
+
+/****************************************Begin Test Block****************************************/
     
     NSString *name=@"Name Test";
     NSString *vicinity=@"Address Test";
@@ -89,8 +93,9 @@
     placeCoord.longitude=-122.4078183090829;
     MapPoint *placeObject = [[MapPoint alloc] initWithName:name address:vicinity coordinate:placeCoord];
     [self.mapView addAnnotation:placeObject];
+    [self.mapView selectAnnotation:placeObject animated:YES];//here we select the pins that are added to the map
     
-    [self.mapView selectAnnotation:placeObject animated:YES];
+/****************************************End Test Block****************************************/
     
 }
 
@@ -110,14 +115,30 @@
 
     NSLog(@"Tittle = %@, Subtittle = %@", [view.annotation title],[view.annotation subtitle]);
     
-    Restaurant* restaurant  = [[Restaurant alloc]init];
     
-    restaurant.name =[view.annotation title];
-    restaurant.placeLocation = [view.annotation subtitle];
-    restaurant.latLong = CGPointMake( [[view annotation] coordinate].latitude,  [[view annotation] coordinate].longitude);
+    if ([control tag] == 1) //control == view.leftCalloutAccessoryView
+    {// Left Accessory Button Tapped
+        
+        MapPoint *location = (MapPoint*)view.annotation;
+        
+        NSDictionary *launchOptions = @{MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving};
+        
+        [[location mapItem] openInMapsWithLaunchOptions:launchOptions];
+
+        
+    }
     
-    [self performSegueWithIdentifier:@"search" sender:restaurant];
-    
+    else if ([control tag] == 2)//control == view.rightCalloutAccessoryView
+    {// "Right Accessory Button Tapped
+        
+        Restaurant* restaurant  = [[Restaurant alloc]init];
+        
+        restaurant.name =[view.annotation title];
+        restaurant.placeLocation = [view.annotation subtitle];
+        restaurant.latLong = CGPointMake( [[view annotation] coordinate].latitude,  [[view annotation] coordinate].longitude);
+        
+        [self performSegueWithIdentifier:@"search" sender:restaurant];
+    }
 }
 
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
@@ -133,15 +154,28 @@
         }
         annotationView.enabled = YES;
         annotationView.canShowCallout = YES;
-        annotationView.animatesDrop = YES; //it doesn`t work when using a image instead of the default pins
-        //        annotationView.image=[UIImage imageNamed:@"Restaurant.png"];//here we use a nice image instead of the default pins
         annotationView.multipleTouchEnabled = NO;
+        annotationView.animatesDrop = YES; //it doesn`t work when using a image instead of the default pins
+        //annotationView.image=[UIImage imageNamed:@"Restaurant.png"];//here we use a nice image instead of the default pins
+        
         
         // Add to mapView:viewForAnnotation: after setting the image on the annotation view
-        annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         
-        UIButton *btnViewVenue = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-        annotationView.rightCalloutAccessoryView=btnViewVenue;
+        //create UIImageView to use for the leftCalloutAccessoryView...
+        [annotationView.leftCalloutAccessoryView setTag:1];
+        UIImage *img = [UIImage imageNamed:@"rota.jpg"];
+
+        UIImageView *iv = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 50)];
+        iv.image = img;
+        
+        annotationView.leftCalloutAccessoryView =iv;
+        [annotationView.leftCalloutAccessoryView setTag:2];
+       
+        
+        UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+        annotationView.rightCalloutAccessoryView=rightButton;
+
+        [annotationView.rightCalloutAccessoryView setTag:2];
         
         return annotationView;
     }
@@ -170,7 +204,6 @@
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 {
  //when a pin is selected
-
 }
 
 -(void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
