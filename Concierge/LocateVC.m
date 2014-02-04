@@ -7,6 +7,8 @@
 //
 
 #import "LocateVC.h"
+#import"RestaurantVC.h"
+
 
 @interface LocateVC ()
 
@@ -27,12 +29,101 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    //Make this controller the delegate for the map view.
+    self.mapView.delegate = self;
+    
+    // Ensure that you can view your own location in the map view.
+    [self.mapView setShowsUserLocation:YES];
+    
+    //Instantiate a location object.
+    locationManager = [[CLLocationManager alloc] init];
+    
+    //Make this controller the delegate for the location manager.
+    [locationManager setDelegate:self];
+    
+    //Set some parameters for the location object.
+    [locationManager setDistanceFilter:kCLDistanceFilterNone];
+    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    
+    [self addGestureRecogniserToMapView];
 }
+
+- (void)addGestureRecogniserToMapView{
+    
+    UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc]
+                                          initWithTarget:self action:@selector(addPinToMap:)];
+    lpgr.minimumPressDuration = 0.5;
+    [self.mapView addGestureRecognizer:lpgr];
+    
+}
+
+- (void)addPinToMap:(UIGestureRecognizer *)gestureRecognizer
+{
+    if (gestureRecognizer.state != UIGestureRecognizerStateBegan)
+        return;
+    
+    CGPoint touchPoint = [gestureRecognizer locationInView:self.mapView];
+    CLLocationCoordinate2D touchMapCoordinate =
+    [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
+    
+    
+    latLong =   CGPointMake(touchMapCoordinate.latitude, touchMapCoordinate.longitude);
+    
+    [self performSegueWithIdentifier:@"locate" sender: nil];
+    
+    
+//    MapPoint *toAdd = [[MapPoint alloc]initWithName:@"Title" address:@"Subtitle" coordinate:touchMapCoordinate];
+//    
+//    [self.mapView addAnnotation:toAdd];
+}
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"locate"])
+    {
+        [MODEL setSelectedRestaurant:sender];
+    }
+}
+
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - MKMapViewDelegate methods.
+
+-(void)mapView:(MKMapView *)mv didAddAnnotationViews:(NSArray *)views {
+    //Zoom back to the user location after adding a new set of annotations.
+    //Get the center point of the visible map.
+    CLLocationCoordinate2D centre = [mv centerCoordinate];
+    MKCoordinateRegion region;
+    //If this is the first launch of the app, then set the center point of the map to the user's location.
+    if (!firstLaunch) {
+        region = MKCoordinateRegionMakeWithDistance(locationManager.location.coordinate,1000,1000);
+        firstLaunch=NO;
+    }else {
+        //Set the center point to the visible region of the map and change the radius to match the search radius passed to the Google query string.
+        region = MKCoordinateRegionMakeWithDistance(centre,currenDist,currenDist);
+    }
+    //Set the visible region of the map.
+    [mv setRegion:region animated:YES];
+}
+
+-(void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
+    //Get the east and west points on the map so you can calculate the distance (zoom level) of the current map view.
+    MKMapRect mRect = self.mapView.visibleMapRect;
+    MKMapPoint eastMapPoint = MKMapPointMake(MKMapRectGetMinX(mRect), MKMapRectGetMidY(mRect));
+    MKMapPoint westMapPoint = MKMapPointMake(MKMapRectGetMaxX(mRect), MKMapRectGetMidY(mRect));
+    
+    //Set your current distance instance variable.
+    currenDist = MKMetersBetweenMapPoints(eastMapPoint, westMapPoint);
+    
+    //Set your current center point on the map instance variable.
+    currentCentre = self.mapView.centerCoordinate;
 }
 
 @end

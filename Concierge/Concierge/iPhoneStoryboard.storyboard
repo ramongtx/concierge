@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="l6F-pu-1XZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="l6F-pu-1XZ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--View Controller - Login-->
@@ -276,10 +276,10 @@
             </objects>
             <point key="canvasLocation" x="2880" y="585"/>
         </scene>
-        <!--View Controller - LocateVC-->
+        <!--LocateVC - LocateVC-->
         <scene sceneID="TLI-9J-QHw">
             <objects>
-                <viewController title="LocateVC" id="UEl-Xg-2qy" sceneMemberID="viewController">
+                <viewController title="LocateVC" id="UEl-Xg-2qy" customClass="LocateVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vzF-9P-v04"/>
                         <viewControllerLayoutGuide type="bottom" id="fkQ-zR-rpb"/>
@@ -287,16 +287,23 @@
                     <view key="view" contentMode="scaleToFill" id="0bR-17-UIh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ulW-db-WI0">
+                                <rect key="frame" x="0.0" y="66" width="320" height="502"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="mQx-WM-U0Y"/>
                     <connections>
-                        <segue destination="o3I-Xa-ynJ" kind="push" id="4eX-VV-l5I"/>
+                        <outlet property="mapView" destination="ulW-db-WI0" id="kXe-A7-J2Y"/>
+                        <segue destination="o3I-Xa-ynJ" kind="push" identifier="locate" id="4eX-VV-l5I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hac-Qr-PcU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1627" y="1325"/>
+            <point key="canvasLocation" x="1628" y="1339"/>
         </scene>
         <!--RestaurantVC - Create-->
         <scene sceneID="UCb-e3-ml0">
