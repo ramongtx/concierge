@@ -40,6 +40,8 @@
 		F69A70B6189BD02A0008F122 /* hotel_floor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F69A70B4189BD02A0008F122 /* hotel_floor.jpg */; };
 		F69A70B7189BD02A0008F122 /* sphere.png in Resources */ = {isa = PBXBuildFile; fileRef = F69A70B5189BD02A0008F122 /* sphere.png */; };
 		F69A70B9189BDAC90008F122 /* restaurant_plan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F69A70B8189BDAC90008F122 /* restaurant_plan.jpg */; };
+		F6B04BB818A1233E00C88FAB /* ReservationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B04BB718A1233E00C88FAB /* ReservationVC.m */; };
+		F6B04BBB18A1244E00C88FAB /* TableReviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B04BBA18A1244E00C88FAB /* TableReviewVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,10 @@
 		F69A70B4189BD02A0008F122 /* hotel_floor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hotel_floor.jpg; sourceTree = "<group>"; };
 		F69A70B5189BD02A0008F122 /* sphere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sphere.png; sourceTree = "<group>"; };
 		F69A70B8189BDAC90008F122 /* restaurant_plan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = restaurant_plan.jpg; sourceTree = "<group>"; };
+		F6B04BB618A1233E00C88FAB /* ReservationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReservationVC.h; sourceTree = "<group>"; };
+		F6B04BB718A1233E00C88FAB /* ReservationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReservationVC.m; sourceTree = "<group>"; };
+		F6B04BB918A1244E00C88FAB /* TableReviewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableReviewVC.h; sourceTree = "<group>"; };
+		F6B04BBA18A1244E00C88FAB /* TableReviewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableReviewVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +252,10 @@
 				F69A70B1189BCF650008F122 /* TableMapVC.m */,
 				F61680B6189FC196006C03C7 /* TableInfoVC.h */,
 				F61680B7189FC196006C03C7 /* TableInfoVC.m */,
+				F6B04BB618A1233E00C88FAB /* ReservationVC.h */,
+				F6B04BB718A1233E00C88FAB /* ReservationVC.m */,
+				F6B04BB918A1244E00C88FAB /* TableReviewVC.h */,
+				F6B04BBA18A1244E00C88FAB /* TableReviewVC.m */,
 			);
 			name = Control;
 			sourceTree = "<group>";
@@ -366,9 +376,11 @@
 				F61680B8189FC196006C03C7 /* TableInfoVC.m in Sources */,
 				F60E5C6F18992FD500B2ACD6 /* User.m in Sources */,
 				B927D117189FF5D800CD7386 /* RestaurantInfoSearchViewController.m in Sources */,
+				F6B04BB818A1233E00C88FAB /* ReservationVC.m in Sources */,
 				F604D18518992D1200038365 /* Model.m in Sources */,
 				B901A64618A10DD30011C920 /* LocateVC.m in Sources */,
 				F69A70A9189BCB4A0008F122 /* RestaurantVC.m in Sources */,
+				F6B04BBB18A1244E00C88FAB /* TableReviewVC.m in Sources */,
 				F60E5C6918992FAB00B2ACD6 /* Restaurant.m in Sources */,
 				B9479C73189FC86F0026A4A8 /* MapPoint.m in Sources */,
 				F69A70AC189BCBEC0008F122 /* KeyboardVC.m in Sources */,

@@ -45,12 +45,8 @@ NSMutableArray* tableIndicatorArray;
     
     tableIndicatorArray = [[NSMutableArray alloc] init];
     
-}
-
--(void) viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
     [self reload];
+    
 }
 
 - (void) reload
@@ -102,7 +98,7 @@ NSMutableArray* tableIndicatorArray;
     [RESERVATION setRestaurant:RESTAURANT];
     [RESERVATION setClient:USER];
     
-    [self performSegueWithIdentifier:@"toReservationVC" sender:self];
+    [self performSegueWithIdentifier:@"toTableReview" sender:self];
     
 }
 

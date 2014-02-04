@@ -286,17 +286,39 @@
                     <navigationItem key="navigationItem" title="Table Map" id="ueQ-hU-lFB"/>
                     <connections>
                         <outlet property="scrollView" destination="RNR-Id-KDh" id="OKD-Ra-RdP"/>
-                        <segue destination="tdp-hL-Typ" kind="push" identifier="toReservationVC" id="uJj-Q1-9Qd"/>
+                        <segue destination="Pr7-k7-3uh" kind="push" identifier="toTableReview" id="351-SH-Owo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xci-UY-x9Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2472" y="585"/>
         </scene>
-        <!--View Controller - Reservation-->
+        <!--Table ReviewVC - Table Review-->
+        <scene sceneID="hDH-gT-6Sm">
+            <objects>
+                <viewController title="Table Review" id="Pr7-k7-3uh" customClass="TableReviewVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="upY-4j-0Ef"/>
+                        <viewControllerLayoutGuide type="bottom" id="uPl-aP-Wca"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Uzu-QG-q0X">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Table Review" id="jqb-Cn-X6y"/>
+                    <connections>
+                        <segue destination="tdp-hL-Typ" kind="push" identifier="toReservation" id="f4K-Up-yID"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jd6-U0-Iq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2965" y="604"/>
+        </scene>
+        <!--ReservationVC - Reservation-->
         <scene sceneID="OkO-Ki-7dR">
             <objects>
-                <viewController title="Reservation" id="tdp-hL-Typ" sceneMemberID="viewController">
+                <viewController title="Reservation" id="tdp-hL-Typ" customClass="ReservationVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zB1-U8-aP4"/>
                         <viewControllerLayoutGuide type="bottom" id="lRI-e7-gfd"/>
@@ -419,7 +441,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tyu-TW-BGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2880" y="585"/>
+            <point key="canvasLocation" x="3508" y="597"/>
         </scene>
         <!--LocateVC - LocateVC-->
         <scene sceneID="TLI-9J-QHw">
@@ -434,16 +456,28 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ulW-db-WI0">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="458"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IB-eW-5mG">
+                                <rect key="frame" x="105" y="530" width="111" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Use my location">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setUserCurrentLocation:" destination="UEl-Xg-2qy" eventType="touchUpInside" id="Sru-87-cW6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ulW-db-WI0" firstAttribute="top" secondItem="vzF-9P-v04" secondAttribute="bottom" id="1HB-4r-DTB"/>
-                            <constraint firstItem="fkQ-zR-rpb" firstAttribute="top" secondItem="ulW-db-WI0" secondAttribute="bottom" id="Eih-Eg-qoa"/>
                             <constraint firstAttribute="trailing" secondItem="ulW-db-WI0" secondAttribute="trailing" id="Ijw-4r-mo8"/>
                             <constraint firstItem="ulW-db-WI0" firstAttribute="leading" secondItem="0bR-17-UIh" secondAttribute="leading" id="VlE-fV-bWv"/>
+                            <constraint firstItem="6IB-eW-5mG" firstAttribute="top" secondItem="ulW-db-WI0" secondAttribute="bottom" constant="8" symbolic="YES" id="YhC-kT-sma"/>
+                            <constraint firstAttribute="centerX" secondItem="6IB-eW-5mG" secondAttribute="centerX" id="rSQ-e9-hn5"/>
+                            <constraint firstItem="fkQ-zR-rpb" firstAttribute="top" secondItem="6IB-eW-5mG" secondAttribute="bottom" constant="20" symbolic="YES" id="uHU-LN-0Xo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mQx-WM-U0Y"/>
@@ -454,7 +488,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hac-Qr-PcU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1628" y="1339"/>
+            <point key="canvasLocation" x="1540" y="1289"/>
         </scene>
         <!--RestaurantVC - Create-->
         <scene sceneID="UCb-e3-ml0">
