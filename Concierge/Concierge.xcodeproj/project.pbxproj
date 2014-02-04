@@ -129,14 +129,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B901A64118A0FC340011C920 /* imagens */ = {
-			isa = PBXGroup;
-			children = (
-				B901A64218A0FC420011C920 /* rota.jpg */,
-			);
-			name = imagens;
-			sourceTree = "<group>";
-		};
 		F604D14618992A1C00038365 = {
 			isa = PBXGroup;
 			children = (
@@ -172,9 +164,6 @@
 		F604D15818992A1C00038365 /* Concierge */ = {
 			isa = PBXGroup;
 			children = (
-				B901A64118A0FC340011C920 /* imagens */,
-				B9479C71189FC86F0026A4A8 /* MapPoint.h */,
-				B9479C72189FC86F0026A4A8 /* MapPoint.m */,
 				F69A70B3189BCFFF0008F122 /* Extras */,
 				F69A70A6189BCB1C0008F122 /* Control */,
 				F60E5C6618992F8900B2ACD6 /* Model */,
@@ -219,6 +208,8 @@
 		F60E5C6618992F8900B2ACD6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B9479C71189FC86F0026A4A8 /* MapPoint.h */,
+				B9479C72189FC86F0026A4A8 /* MapPoint.m */,
 				F604D18318992D1200038365 /* Model.h */,
 				F604D18418992D1200038365 /* Model.m */,
 				F60E5C6318992F8100B2ACD6 /* Table.h */,
@@ -257,6 +248,7 @@
 		F69A70B3189BCFFF0008F122 /* Extras */ = {
 			isa = PBXGroup;
 			children = (
+				B901A64218A0FC420011C920 /* rota.jpg */,
 				F69A70B8189BDAC90008F122 /* restaurant_plan.jpg */,
 				F69A70B4189BD02A0008F122 /* hotel_floor.jpg */,
 				F69A70B5189BD02A0008F122 /* sphere.png */,

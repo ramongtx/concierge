@@ -44,8 +44,8 @@
 
 -(void)reload
 {
-    [self.numberTextView setText:[NSString stringWithFormat:@"%d",[TABLE numberOfChairs]]];
-    [self.chairsTextView setText:[NSString stringWithFormat:@"%d",[TABLE tableNumber]]];
+    [self.numberTextView setText:[NSString stringWithFormat:@"%ld",[TABLE numberOfChairs]]];
+    [self.chairsTextView setText:[NSString stringWithFormat:@"%ld",[TABLE tableNumber]]];
     [self.detailsTextView setText:[TABLE details]];
 }
 
