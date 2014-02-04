@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B901A64318A0FC420011C920 /* rota.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B901A64218A0FC420011C920 /* rota.jpg */; };
+		B901A64618A10DD30011C920 /* LocateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B901A64518A10DD30011C920 /* LocateVC.m */; };
 		B927D117189FF5D800CD7386 /* RestaurantInfoSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B927D116189FF5D800CD7386 /* RestaurantInfoSearchViewController.m */; };
 		B9479C6C189FC4F70026A4A8 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9479C6B189FC4F70026A4A8 /* SearchViewController.m */; };
 		B9479C6E189FC5160026A4A8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9479C6D189FC5160026A4A8 /* CoreLocation.framework */; };
@@ -53,6 +54,8 @@
 
 /* Begin PBXFileReference section */
 		B901A64218A0FC420011C920 /* rota.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rota.jpg; sourceTree = "<group>"; };
+		B901A64418A10DD30011C920 /* LocateVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocateVC.h; path = ../LocateVC.h; sourceTree = "<group>"; };
+		B901A64518A10DD30011C920 /* LocateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocateVC.m; path = ../LocateVC.m; sourceTree = "<group>"; };
 		B927D115189FF5D800CD7386 /* RestaurantInfoSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestaurantInfoSearchViewController.h; path = ../RestaurantInfoSearchViewController.h; sourceTree = "<group>"; };
 		B927D116189FF5D800CD7386 /* RestaurantInfoSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestaurantInfoSearchViewController.m; path = ../RestaurantInfoSearchViewController.m; sourceTree = "<group>"; };
 		B9479C6A189FC4F70026A4A8 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
@@ -227,6 +230,8 @@
 		F69A70A6189BCB1C0008F122 /* Control */ = {
 			isa = PBXGroup;
 			children = (
+				B901A64418A10DD30011C920 /* LocateVC.h */,
+				B901A64518A10DD30011C920 /* LocateVC.m */,
 				B927D115189FF5D800CD7386 /* RestaurantInfoSearchViewController.h */,
 				B927D116189FF5D800CD7386 /* RestaurantInfoSearchViewController.m */,
 				B9479C6A189FC4F70026A4A8 /* SearchViewController.h */,
@@ -362,6 +367,7 @@
 				F60E5C6F18992FD500B2ACD6 /* User.m in Sources */,
 				B927D117189FF5D800CD7386 /* RestaurantInfoSearchViewController.m in Sources */,
 				F604D18518992D1200038365 /* Model.m in Sources */,
+				B901A64618A10DD30011C920 /* LocateVC.m in Sources */,
 				F69A70A9189BCB4A0008F122 /* RestaurantVC.m in Sources */,
 				F60E5C6918992FAB00B2ACD6 /* Restaurant.m in Sources */,
 				B9479C73189FC86F0026A4A8 /* MapPoint.m in Sources */,
