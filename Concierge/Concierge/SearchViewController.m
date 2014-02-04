@@ -128,7 +128,7 @@
         
     }
     
-    else if ([control tag] == 2)//control == view.rightCalloutAccessoryView
+     if ([control tag] == 2)//control == view.rightCalloutAccessoryView
     {// "Right Accessory Button Tapped
         
         Restaurant* restaurant  = [[Restaurant alloc]init];
@@ -162,14 +162,14 @@
         // Add to mapView:viewForAnnotation: after setting the image on the annotation view
         
         //create UIImageView to use for the leftCalloutAccessoryView...
-        [annotationView.leftCalloutAccessoryView setTag:1];
+        annotationView.leftCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         UIImage *img = [UIImage imageNamed:@"rota.jpg"];
 
         UIImageView *iv = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 50)];
         iv.image = img;
         
         annotationView.leftCalloutAccessoryView =iv;
-        [annotationView.leftCalloutAccessoryView setTag:2];
+        [annotationView.leftCalloutAccessoryView setTag:1];
        
         
         UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
