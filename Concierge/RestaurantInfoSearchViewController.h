@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Model.h"
+#import "KeyboardVC.h"
 
-@interface RestaurantInfoSearchViewController : UIViewController
+@interface RestaurantInfoSearchViewController : KeyboardVC
 
 
 @end

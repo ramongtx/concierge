@@ -35,8 +35,6 @@
     [super viewDidLoad];
     self.detailsTextView.layer.borderWidth = 0.5f;
     self.detailsTextView.layer.borderColor = [[UIColor grayColor] CGColor];;
-    
-
     [self.detailsTextView setDelegate:self];
 }
 

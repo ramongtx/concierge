@@ -31,16 +31,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
+    self.detailsTextView.layer.borderWidth = 0.5f;
+    self.detailsTextView.layer.borderColor = [[UIColor grayColor] CGColor];;
+    self.detailsTextView.editable = NO;
     
     self.nameTextView.text = [RESTAURANT name];
     self.detailsTextView.text = [NSString stringWithFormat:@"Latitude = %f, Longitude = %f\nAddress = %@", [RESTAURANT latLong].x , [RESTAURANT latLong].y, [RESTAURANT placeLocation]];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
