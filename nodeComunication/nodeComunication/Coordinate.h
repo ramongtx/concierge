@@ -12,4 +12,7 @@
 @property (nonatomic) float latitude;
 @property (nonatomic) float longitude;
 
+
+-(id) initWithCGPoint: (CGPoint) point;
+
 @end

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F9A3CE4A18A138E10091FD1B /* Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A3CE4918A138E10091FD1B /* Coordinate.m */; };
+		F9A3CE4F18A164440091FD1B /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A3CE4E18A164440091FD1B /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F9A7B7FE189AA6A600460416 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A7B7FD189AA6A600460416 /* Foundation.framework */; };
 		F9A7B800189AA6A600460416 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A7B7FF189AA6A600460416 /* CoreGraphics.framework */; };
 		F9A7B802189AA6A600460416 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A7B801189AA6A600460416 /* UIKit.framework */; };
@@ -55,8 +55,8 @@
 
 /* Begin PBXFileReference section */
 		DBA48C2F189B25610031EB9E /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F9A3CE4818A138E10091FD1B /* Coordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coordinate.h; sourceTree = "<group>"; };
-		F9A3CE4918A138E10091FD1B /* Coordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coordinate.m; sourceTree = "<group>"; };
+		F9A3CE4D18A164440091FD1B /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		F9A3CE4E18A164440091FD1B /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		F9A7B7FA189AA6A600460416 /* nodeComunication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nodeComunication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A7B7FD189AA6A600460416 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F9A7B7FF189AA6A600460416 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -143,6 +143,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F9A3CE4C18A164330091FD1B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F9A3CE4D18A164440091FD1B /* NSData+Base64.h */,
+				F9A3CE4E18A164440091FD1B /* NSData+Base64.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		F9A7B7F1189AA6A600460416 = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +174,7 @@
 		F9A7B7FC189AA6A600460416 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F9A3CE4C18A164330091FD1B /* Data */,
 				F9A7B8A518A0167300460416 /* libz.dylib */,
 				F9A7B88218A0149700460416 /* ASI */,
 				F9A7B87E18A00E0600460416 /* MobileCoreServices.framework */,
@@ -237,8 +247,6 @@
 				F9A7B83B189AA9BE00460416 /* User.m */,
 				F9A7B859189FB13A00460416 /* UserRequest.h */,
 				F9A7B85A189FB13A00460416 /* UserRequest.m */,
-				F9A3CE4818A138E10091FD1B /* Coordinate.h */,
-				F9A3CE4918A138E10091FD1B /* Coordinate.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -371,7 +379,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9A7B88C18A0157100460416 /* ASIDataCompressor.m in Sources */,
-				F9A3CE4A18A138E10091FD1B /* Coordinate.m in Sources */,
 				F9A7B89E18A0160700460416 /* ASIAuthenticationDialog.m in Sources */,
 				F9A7B85B189FB13A00460416 /* UserRequest.m in Sources */,
 				F9A7B89B18A015EA00460416 /* ASIDownloadCache.m in Sources */,
@@ -388,6 +395,7 @@
 				F9A7B836189AA99200460416 /* Table.m in Sources */,
 				F9A7B80A189AA6A600460416 /* main.m in Sources */,
 				F9A7B8A118A0161500460416 /* Reachability.m in Sources */,
+				F9A3CE4F18A164440091FD1B /* NSData+Base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

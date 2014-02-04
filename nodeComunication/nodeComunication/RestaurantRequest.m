@@ -8,8 +8,7 @@
 
 #import "RestaurantRequest.h"
 #import "ASIFormDataRequest.h"
-#import "Coordinate.h"
-
+#import "NSData+Base64.h"
 @interface RestaurantRequest ()
 {
     NSMutableData *_responseData;
@@ -60,12 +59,12 @@
     ASIFormDataRequest *newRequest = [ASIFormDataRequest requestWithURL:url];
     [newRequest postFormat];
     [newRequest setPostValue: restaurant.name forKey:@"name"];
-    [newRequest setPostValue: [self convertCGPointToCoordinate:restaurant.coordinates] forKey:@"coordinates"];
+    [newRequest setPostValue: [restaurant transformCoordinatesOnNSDictionary] forKey:@"coordinates"];
     [newRequest setPostValue:[self convertToString64bits:[UIImage imageNamed:@"cinema.jpg"]] forKey:@"picture"];
     [newRequest setPostValue:restaurant.placeLocation forKey:@"location"];
     [newRequest setPostValue:restaurant.type forKey:@"type"];
     [newRequest setPostValue:restaurant.details forKey:@"details"];
-    [newRequest setPostValue:restaurant.tableArrays forKey:@"tables"];
+    //[newRequest setPostValue:[restaurant transformTableArraysOnNSDictionary] forKey:@"tables"];
     [newRequest setRequestMethod:@"POST"];
     [newRequest startAsynchronous];
 
@@ -144,12 +143,12 @@
     return encodedString;
 }
 
--(Coordinate *) convertCGPointToCoordinate: (CGPoint) point
+-(UIImage *)convertToUIImage:(NSString *) encodedString
 {
-    Coordinate * coordinate = [[Coordinate   alloc] init];
-    coordinate.latitude = point.y;
-    coordinate.longitude = point.x;
-    return coordinate;
+    NSData *imageData = [[NSData alloc] initWithBase64EncodedString:encodedString options:0];
+    UIImage *image = [UIImage imageWithData:imageData];
+    
+    return image;
 }
 @end
 

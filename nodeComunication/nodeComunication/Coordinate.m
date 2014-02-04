@@ -10,5 +10,11 @@
 
 @implementation Coordinate
 
+-(id) initWithCGPoint:(CGPoint)point
+{
+    self.latitude = point.y;
+    self.longitude = point.x;
+    return self;
+}
 
 @end

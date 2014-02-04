@@ -11,7 +11,7 @@
 @implementation Table
 
 
--(id) initWithNumer:(NSInteger *)tableNumber andStatus:(Boolean *)status andChairs:(NSInteger *)numberOfChairs andCoorinates:(CGPoint *)coordinates andDetails:(NSString *)details
+-(id) initWithNumer:(NSNumber*)tableNumber andStatus:(Boolean *)status andChairs:(NSNumber *)numberOfChairs andCoorinates:(CGPoint *)coordinates andDetails:(NSString *)details
 {
     self = [super init];
     if (self)
@@ -23,6 +23,21 @@
         self.details = details;
     }
     return self;
+}
+
+-(NSDictionary *) transformToDictionary
+{
+    NSMutableDictionary * mutableDictionary = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary * aux = [[NSMutableDictionary alloc] init];
+    [aux setObject:[NSNumber numberWithFloat:self.coordinates->x] forKey:@"longitude"];
+    [aux setObject:[NSNumber numberWithFloat:self.coordinates->y] forKey:@"latitude"];
+    
+    [mutableDictionary setObject:self.tableNumber forKey:@"number"];
+    [mutableDictionary setObject:[NSNumber numberWithUnsignedChar:*(self.status)] forKey:@"avaible"];
+    [mutableDictionary setObject:self.numberOfChairs forKey:@"chairs"];
+    [mutableDictionary setObject:self.details forKey:@"details"];
+    [mutableDictionary setObject:aux forKey:@"coordinate"];
+    return  mutableDictionary;
 }
 
 @end

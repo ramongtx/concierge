@@ -33,4 +33,7 @@
               andOwner: (User *) owner
   andPlaceLocation: (NSString *) location;
 
+
+-(NSDictionary *) transformTableArraysOnNSDictionary;
+-(NSDictionary *) transformCoordinatesOnNSDictionary;
  @end
