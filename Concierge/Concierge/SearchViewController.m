@@ -103,8 +103,8 @@
 {
     if ([segue.identifier isEqualToString:@"search"])
     {
+        [MODEL setSelectedRestaurant:sender];
         RestaurantInfoSearchViewController* picker  = segue.destinationViewController;
-        picker.restaurant = sender;
     }
 }
 

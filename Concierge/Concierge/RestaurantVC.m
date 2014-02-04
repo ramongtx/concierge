@@ -62,7 +62,7 @@
 }
 - (IBAction)saveAndBack:(id)sender {
     [MODEL addRestaurantToList:RESTAURANT];
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)saveRestaurant

@@ -33,8 +33,8 @@
 	// Do any additional setup after loading the view.
     
     
-    self.nameTextView.text = self.restaurant.name;
-    self.detailsTextView.text = [NSString stringWithFormat:@"Latitude = %f, Longitude = %f", self.restaurant.latLong.x , self.restaurant.latLong.y];
+    self.nameTextView.text = [RESTAURANT name];
+    self.detailsTextView.text = [NSString stringWithFormat:@"Latitude = %f, Longitude = %f\nAddress = %@", [RESTAURANT latLong].x , [RESTAURANT latLong].y, [RESTAURANT placeLocation]];
 }
 
 - (void)didReceiveMemoryWarning
