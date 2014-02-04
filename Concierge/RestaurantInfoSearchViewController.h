@@ -7,11 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Restaurant.h"
+#import "Model.h"
 
 @interface RestaurantInfoSearchViewController : UIViewController
-
-@property (nonatomic) Restaurant* restaurant;
 
 
 @end

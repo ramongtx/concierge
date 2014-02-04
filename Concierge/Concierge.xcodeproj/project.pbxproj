@@ -53,8 +53,8 @@
 
 /* Begin PBXFileReference section */
 		B901A64218A0FC420011C920 /* rota.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rota.jpg; sourceTree = "<group>"; };
-		B927D115189FF5D800CD7386 /* RestaurantInfoSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantInfoSearchViewController.h; sourceTree = "<group>"; };
-		B927D116189FF5D800CD7386 /* RestaurantInfoSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantInfoSearchViewController.m; sourceTree = "<group>"; };
+		B927D115189FF5D800CD7386 /* RestaurantInfoSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestaurantInfoSearchViewController.h; path = ../RestaurantInfoSearchViewController.h; sourceTree = "<group>"; };
+		B927D116189FF5D800CD7386 /* RestaurantInfoSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestaurantInfoSearchViewController.m; path = ../RestaurantInfoSearchViewController.m; sourceTree = "<group>"; };
 		B9479C6A189FC4F70026A4A8 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		B9479C6B189FC4F70026A4A8 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		B9479C6D189FC5160026A4A8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -140,8 +140,6 @@
 		F604D14618992A1C00038365 = {
 			isa = PBXGroup;
 			children = (
-				B927D115189FF5D800CD7386 /* RestaurantInfoSearchViewController.h */,
-				B927D116189FF5D800CD7386 /* RestaurantInfoSearchViewController.m */,
 				F604D15818992A1C00038365 /* Concierge */,
 				F604D17118992A1C00038365 /* ConciergeTests */,
 				F604D15118992A1C00038365 /* Frameworks */,
@@ -238,6 +236,8 @@
 		F69A70A6189BCB1C0008F122 /* Control */ = {
 			isa = PBXGroup;
 			children = (
+				B927D115189FF5D800CD7386 /* RestaurantInfoSearchViewController.h */,
+				B927D116189FF5D800CD7386 /* RestaurantInfoSearchViewController.m */,
 				B9479C6A189FC4F70026A4A8 /* SearchViewController.h */,
 				B9479C6B189FC4F70026A4A8 /* SearchViewController.m */,
 				F69A70A7189BCB4A0008F122 /* RestaurantVC.h */,
