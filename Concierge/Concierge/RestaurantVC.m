@@ -59,7 +59,15 @@
     [self saveRestaurant];
 }
 - (IBAction)saveAndBack:(id)sender {
+    [RESTAURANT setOwner:USER];
+    [USER setRestaurant:RESTAURANT];
+    [USER setIsOwner:YES];
     [MODEL addRestaurantToList:RESTAURANT];
+    NSLog(@"%ld",[[RESTAURANT tableArray] count]);
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (IBAction)changeLocation:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
