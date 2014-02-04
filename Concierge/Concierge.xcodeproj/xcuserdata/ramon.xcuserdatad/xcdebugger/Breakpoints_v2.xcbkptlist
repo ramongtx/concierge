@@ -25,12 +25,12 @@
                   symbolName = "-[TableMapVC reload]"
                   moduleName = "Concierge"
                   urlString = "file:///Users/ramon/Documents/Xcode/Concierge/Concierge/Concierge/TableMapVC.m"
-                  timestampString = "413211338.313239"
+                  timestampString = "413212077.257616"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "1567">
+                  offsetFromSymbolStart = "1722">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -39,12 +39,12 @@
                   symbolName = "-[TableMapVC reload]"
                   moduleName = "Concierge"
                   urlString = "file:///Users/ramon/Documents/Xcode/Concierge/Concierge/Concierge/TableMapVC.m"
-                  timestampString = "413211338.313559"
+                  timestampString = "413212077.257992"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "2143">
+                  offsetFromSymbolStart = "2298">
                </Location>
             </Locations>
          </BreakpointContent>

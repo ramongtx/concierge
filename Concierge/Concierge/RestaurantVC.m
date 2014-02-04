@@ -63,6 +63,7 @@
     [USER setRestaurant:RESTAURANT];
     [USER setIsOwner:YES];
     [MODEL addRestaurantToList:RESTAURANT];
+    NSLog(@"%ld",[[RESTAURANT tableArray] count]);
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
