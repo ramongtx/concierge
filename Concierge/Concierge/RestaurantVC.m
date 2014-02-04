@@ -59,8 +59,10 @@
     [self saveRestaurant];
 }
 - (IBAction)saveAndBack:(id)sender {
-    [MODEL addRestaurantToList:RESTAURANT];
+    [RESTAURANT setOwner:USER];
+    [USER setRestaurant:RESTAURANT];
     [USER setIsOwner:YES];
+    [MODEL addRestaurantToList:RESTAURANT];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

@@ -25,6 +25,14 @@
     return self;
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    if ([USER isOwner]) {
+        [MODEL setSelectedRestaurant:[USER restaurant]];
+        [self performSegueWithIdentifier:@"" sender:self];
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
