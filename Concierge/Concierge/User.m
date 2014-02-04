@@ -10,4 +10,14 @@
 
 @implementation User
 
+-(id)init
+{
+    self = [super init];
+    if (self)
+    {
+        self.isOwner = NO;
+    }
+    return self;
+}
+
 @end

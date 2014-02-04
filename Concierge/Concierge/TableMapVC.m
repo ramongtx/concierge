@@ -66,6 +66,7 @@ NSMutableArray* tableIndicatorArray;
     
     [tableIndicatorArray removeAllObjects];
     
+    NSLog(@"%ld",[[RESTAURANT tableArray] count]);
     for (Table* tb in [RESTAURANT tableArray]) {
         [self markTable:tb.location];
     }

@@ -60,6 +60,11 @@
 }
 - (IBAction)saveAndBack:(id)sender {
     [MODEL addRestaurantToList:RESTAURANT];
+    [USER setIsOwner:YES];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (IBAction)changeLocation:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
