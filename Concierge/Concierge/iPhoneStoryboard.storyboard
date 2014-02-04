@@ -18,7 +18,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="aa1-Zu-Ln5" kind="push" id="XK9-tT-tIo"/>
+                        <segue destination="aa1-Zu-Ln5" kind="push" identifier="toSignUpVC" id="XK9-tT-tIo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kRg-HC-kcN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -40,7 +40,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="JNm-hu-at6"/>
                     <connections>
-                        <segue destination="l6F-pu-1XZ" kind="push" id="M52-4T-dS0"/>
+                        <segue destination="l6F-pu-1XZ" kind="push" identifier="toMenuVC" id="M52-4T-dS0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3q-o3-FyE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -66,7 +66,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="wq1-sp-wLZ" kind="push" id="LV8-7E-FQx"/>
+                                    <segue destination="wq1-sp-wLZ" kind="push" identifier="toSearchVC" id="LV8-7E-FQx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nok-c1-24q">
@@ -76,7 +76,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="UEl-Xg-2qy" kind="push" id="s5B-PJ-Mym"/>
+                                    <segue destination="UEl-Xg-2qy" kind="push" identifier="toLocateVC" id="s5B-PJ-Mym"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -89,9 +89,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Concièrge" id="ELR-sc-Z3T"/>
-                    <connections>
-                        <segue destination="MBE-MN-OHu" kind="push" id="B8O-0e-itl"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DzH-Ad-psL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
