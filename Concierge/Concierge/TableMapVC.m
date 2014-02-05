@@ -73,13 +73,6 @@ NSMutableArray* tableIndicatorArray;
 -(IBAction)tapGesture:(UITapGestureRecognizer *)recognizer
 {
     
-    
-    
-    
-    [self reserveTable:TABLE];
-    
-    
-    
     CGPoint location = [recognizer locationInView:imageView];
     for (UIImageView *indicator in tableIndicatorArray)
     {
