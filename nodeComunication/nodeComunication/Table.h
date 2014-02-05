@@ -12,14 +12,14 @@
 @property (nonatomic) NSNumber *tableNumber;
 @property (nonatomic) NSNumber *numberOfChairs;
 @property (nonatomic) Boolean *status;
-@property (nonatomic) CGPoint * coordinates;
+@property (nonatomic) CGPoint  coordinates;
 @property (nonatomic) NSString * details;
 
 
 -(id) initWithNumber: (NSNumber *) tableNumber
             andStatus: (Boolean *) status
-          andChairs: (NSNumber *) numberOfChairs
-        andCoorinates: (CGPoint *) coordinates
+           andChairs: (NSNumber *) numberOfChairs
+         andCoorinates: (CGPoint ) coordinates
           andDetails: (NSString *) details;
 
 

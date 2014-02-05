@@ -39,7 +39,7 @@
     for (int i = 1; i <= 5; i ++) {
         Table * newTable = [Table alloc];
         CGPoint newPoint = CGPointMake(100, 101);
-        newTable = [newTable initWithNumber:[NSNumber numberWithInt:i ] andStatus: TRUE andChairs: [NSNumber numberWithInt:7] andCoorinates: &newPoint andDetails:@"Teste criar mesa"];
+        newTable = [newTable initWithNumber:[NSNumber numberWithInt:i ] andStatus: TRUE andChairs: [NSNumber numberWithInt:7] andCoorinates: newPoint andDetails:@"Teste criar mesa"];
         [self.restaurant.tableArrays addObject:newTable];
     }
     self.buscadorUser = [[UserRequest alloc] init];
