@@ -18,7 +18,7 @@
 #define USER [MODEL user]
 #define RESERVATION [MODEL reservation]
 
-@interface Model : NSObject
+@interface Model : NSObject <RestaurantRequestDelegate,UserRequestDelegate>
 
 @property (strong) NSMutableArray* listOfRestaurants;
 @property (strong) Restaurant* selectedRestaurant;
@@ -34,4 +34,5 @@
 -(void) pullUsersList;
 -(void) pickRestaurantWithCoordinates:(CGPoint) coordinates;
 -(void) pickUserWithName:(NSString *) userName;
+-(UIImage *) getRestaurantImage;
 @end
