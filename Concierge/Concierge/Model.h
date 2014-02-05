@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "Reservation.h"
+#import "RestaurantRequest.h"
+#import "UserRequest.h"
 
 #define MODEL [Model shared]
 #define RESTAURANT [MODEL selectedRestaurant]
@@ -26,5 +28,10 @@
 
 +(Model*)shared;
 +(float)distanceBetween:(CGPoint)p1 and:(CGPoint)p2;
--(void)addRestaurantToList:(Restaurant*)restaurant;
+-(void) addRestaurantToList:(Restaurant*)restaurant;
+-(void) addUser:(User *) newUser;
+-(void) pullRestaurantsList;
+-(void) pullUsersList;
+-(void) pickRestaurantWithCoordinates:(CGPoint) coordinates;
+-(void) pickUserWithName:(NSString *) userName;
 @end
