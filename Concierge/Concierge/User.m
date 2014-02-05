@@ -15,9 +15,10 @@
     self = [super init];
     if (self)
     {
-        self.isOwner = NO;
+        self.isOwner = dontOwn;
     }
     return self;
 }
+
 
 @end

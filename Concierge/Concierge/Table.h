@@ -8,9 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum {
+    occupieble=0,
+    occupied=1
+}STATUS;
+
 @interface Table : NSObject
 @property CGPoint location;
 @property NSInteger tableNumber;
 @property NSInteger numberOfChairs;
 @property (strong) NSString* details;
+@property (nonatomic) STATUS status;
+
+-(NSDictionary *) transformToDictionary;
+
 @end

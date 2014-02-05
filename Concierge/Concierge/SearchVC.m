@@ -73,7 +73,7 @@
         CLLocationCoordinate2D placeCoord;
         // Set the lat and long.
         
-        CGPoint latLong = [[data objectAtIndex:i] latLong];
+        CGPoint latLong = [[data objectAtIndex:i] coordinates];
         
         placeCoord.latitude=latLong.x;
         placeCoord.longitude=latLong.y;
@@ -133,7 +133,7 @@
         
         for (Restaurant* restaurant  in LIST)
         {
-            if(restaurant.latLong.x ==[[view annotation] coordinate].latitude && restaurant.latLong.y == [[view annotation] coordinate].longitude)
+            if(restaurant.coordinates.x ==[[view annotation] coordinate].latitude && restaurant.coordinates.y == [[view annotation] coordinate].longitude)
             {
                   [self performSegueWithIdentifier:@"search" sender:restaurant];
                 return;

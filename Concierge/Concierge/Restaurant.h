@@ -12,15 +12,19 @@
 @class User;
 
 @interface Restaurant : NSObject
-@property CGPoint latLong;
+@property CGPoint coordinates;
 @property (strong) NSString* name;
 @property (strong) NSString* placeLocation;
 @property (strong) NSMutableArray* tableArray;
 @property (strong) NSString* type;
 @property (strong) NSString* details;
+@property (strong) NSString* picture;
 @property (strong) User* owner;
 
 -(void) newTable:(Table*)tb;
 -(Table*) tableWithLocation:(CGPoint)location;
+
+-(NSDictionary *) transformTableArraysOnNSDictionary;
+-(NSDictionary *) transformCoordinatesOnNSDictionary;
 
 @end
