@@ -17,7 +17,7 @@
 @property (nonatomic) UserRequest *buscadorUser;
 @property (nonatomic) User * user;
 @property (nonatomic) Restaurant * restaurant;
-@property (nonatomic, strong) NSDictionary *todosRestaurantes;
+@property (nonatomic, strong) NSArray *response;
 @end
 
 @implementation ViewController
@@ -78,9 +78,22 @@
 -(void) request: (RestaurantRequest*) request didFinishWithObject:(id) object
 {
 
-    self.todosRestaurantes = object;
+    self.response = object;
+    NSLog(@"%@",self.response[0]);
+    NSDictionary *teste = self.response[0];
     
-    NSLog(@"Objeto de retorno %@", self.todosRestaurantes);
+    
+    if ([teste objectForKey:@"picture"] != nil) {
+        //_response eh um array de restaurantes!
+       UIImage *uimageReceived = [self.buscadorRestaurant convertToUIImage: [teste objectForKey:@"picture"]];
+        self.imageReceived.image = uimageReceived;
+    }
+    else if ([teste objectForKey:@"password"]){
+       // _response eh um array de usuarios
+    
+    }
+    
+    NSLog(@"Objeto de retorno %@", self.response);
     
     
 }
