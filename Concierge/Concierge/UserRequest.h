@@ -20,12 +20,11 @@
 
 @interface UserRequest : NSObject<NSURLConnectionDataDelegate>
 @property (nonatomic, strong) User * usuario;
-
 @property (nonatomic, strong) NSDictionary *dataUser;
 @property (nonatomic, strong) NSDictionary *allUsers;
 
 -(void) pedirInformacoesUsuario:(NSString*) nomeUsuario delegate:(id<UserRequestDelegate >) delegate;
 
--(void) pedirTodasInformacoes:(id<UserRequestDelegate >) delegate;
--(void) enviarUsuario: (User *) user andDelegate: (id<UserRequestDelegate>) delegate;
+-(void) pullAllUsers:(id<UserRequestDelegate >) delegate;
+-(void) insertUser: (User *) user andDelegate: (id<UserRequestDelegate>) delegate;
 @end

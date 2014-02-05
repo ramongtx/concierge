@@ -25,8 +25,8 @@
 
 -(void) pedirInformacoesRestaurant:(NSString*) nomeRestaurant delegate:(id<RestaurantRequestDelegate >) delegate;
 
--(void) pedirTodasInformacoes:(id<RestaurantRequestDelegate >) delegate;
--(void) enviarRestaurante: (Restaurant *) restaurant andDelegate: (id<RestaurantRequestDelegate>) delegate;
+-(void) pullAllRestaurants:(id<RestaurantRequestDelegate >) delegate;
+-(void) insertRestaurant: (Restaurant *) restaurant andDelegate: (id<RestaurantRequestDelegate>) delegate;
 -(UIImage *)convertToUIImage:(NSString *) encodedString;
 -(NSString *) convertToString64bits:(UIImage *) image;
 

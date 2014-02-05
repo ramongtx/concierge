@@ -21,6 +21,8 @@ static Model* sharedModel = nil;
     if (self) {
         self.selectedRestaurant = [[Restaurant alloc] init];
         self.listOfRestaurants = [[NSMutableArray alloc] init];
+        self.restaurantRequest = [[RestaurantRequest alloc] init];
+        self.userRequest = [[UserRequest alloc] init];
         self.selectedTable = NULL;
     }
     return self;
@@ -40,20 +42,21 @@ static Model* sharedModel = nil;
 -(void)addRestaurantToList:(Restaurant*)restaurant
 {
     [[self listOfRestaurants] addObject:restaurant];
+    [self.restaurantRequest insertRestaurant:restaurant andDelegate:self];
 }
 
 -(void) addUser:(User *) newUser
 {
-    //TODO
+    [self.userRequest insertUser:newUser andDelegate:self];
 }
 -(void) pullRestaurantsList
 {
-    //TODO
+    [self.restaurantRequest pullAllRestaurants:self];
 }
 
 -(void) pullUsersList
 {
-    //TODO
+    [self.userRequest pullAllUsers:self];
 }
 -(void) pickRestaurantWithCoordinates:(CGPoint) coordinates
 {

@@ -42,7 +42,7 @@
     
 }
 
--(void) pedirTodasInformacoes:(id<UserRequestDelegate>)delegate
+-(void) pullAllUsers:(id<UserRequestDelegate>)delegate
 {
     [self setDelegate:delegate];
     self.urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString: [NSString stringWithFormat:@"%@/users", self.serverInfo ]]];
@@ -50,7 +50,7 @@
 }
 
 
--(void) enviarUsuario: (User *) user andDelegate: (id<UserRequestDelegate>) delegate
+-(void) insertUser: (User *) user andDelegate: (id<UserRequestDelegate>) delegate
 {
     
     

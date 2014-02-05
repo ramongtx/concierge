@@ -42,7 +42,7 @@
     
 }
 
--(void) pedirTodasInformacoes:(id<RestaurantRequestDelegate>)delegate
+-(void) pullAllRestaurants:(id<RestaurantRequestDelegate>)delegate
 {
     [self setDelegate:delegate];
     self.urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString: [NSString stringWithFormat:@"%@/restaurants", self.serverInfo ]]];
@@ -50,7 +50,7 @@
 }
 
 
--(void) enviarRestaurante: (Restaurant *) restaurant andDelegate: (id<RestaurantRequestDelegate>) delegate
+-(void) insertRestaurant: (Restaurant *) restaurant andDelegate: (id<RestaurantRequestDelegate>) delegate
 {
     
     //montando URL
