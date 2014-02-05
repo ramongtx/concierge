@@ -28,8 +28,8 @@
     self = [super init];
     if (self)
     {
-        self.serverInfo = @"http://172.16.3.72:8080";   //Eldorado
-       // self.serverInfo = @"http://192.168.1.53:8080"; //Casa
+       // self.serverInfo = @"http://172.16.3.72:8080";   //Eldorado
+        self.serverInfo = @"http://192.168.1.53:8080"; //Casa
     
         self.usuario = [[User alloc] init];
     }

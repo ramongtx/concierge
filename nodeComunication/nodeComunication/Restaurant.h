@@ -23,12 +23,12 @@
 @property (nonatomic, strong) NSString *restaurantId;
 @property (nonatomic) User* owner;
 
+//tableArrays devem ser inseridos um a um para evitar problemas com restaurantes sem mesa
 -(id) initWithName: (NSString *) name
   andPictureString: (NSString *) pictureString
        andCoordinates: (CGPoint) coordinates
            andType: (NSString *) type
         andDetails: (NSString *) details
-   andTables: (NSMutableArray *) tableArrays
              andId: (NSString *) restaurantId
               andOwner: (User *) owner
   andPlaceLocation: (NSString *) location;

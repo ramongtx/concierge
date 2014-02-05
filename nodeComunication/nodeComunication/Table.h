@@ -16,7 +16,7 @@
 @property (nonatomic) NSString * details;
 
 
--(id) initWithNumer: (NSNumber *) tableNumber
+-(id) initWithNumber: (NSNumber *) tableNumber
             andStatus: (Boolean *) status
           andChairs: (NSNumber *) numberOfChairs
         andCoorinates: (CGPoint *) coordinates

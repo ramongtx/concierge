@@ -10,7 +10,7 @@
 
 @implementation Restaurant
 
--(id)initWithName:(NSString *)name andPictureString:(NSString *)pictureString andCoordinates:(CGPoint)coordinates andType:(NSString *)type andDetails:(NSString *)details andTables:(NSMutableArray *)tableArrays andId:(NSString *)restaurantId andOwner:(User *)owner andPlaceLocation:(NSString *)location
+-(id)initWithName:(NSString *)name andPictureString:(NSString *)pictureString andCoordinates:(CGPoint)coordinates andType:(NSString *)type andDetails:(NSString *)details andId:(NSString *)restaurantId andOwner:(User *)owner andPlaceLocation:(NSString *)location
 {
     self = [super init];
     
@@ -21,7 +21,7 @@
         self.coordinates = coordinates;
         self.type = type;
         self.details = details;
-        self.tableArrays = tableArrays;
+        self.tableArrays = [[NSMutableArray alloc] init];
         self.restaurantId = restaurantId;
         self.owner = owner;
         self.placeLocation = location;
