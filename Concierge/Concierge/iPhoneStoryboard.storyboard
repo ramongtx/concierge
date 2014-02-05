@@ -435,6 +435,9 @@ AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
 </data>
                                 </timeZone>
+                                <connections>
+                                    <action selector="dateSelected:" destination="tdp-hL-Typ" eventType="editingDidEnd" id="jQf-eM-8ry"/>
+                                </connections>
                             </datePicker>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date &amp; Time of Reservation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYe-DZ-nf6">
                                 <rect key="frame" x="56" y="72" width="209" height="21"/>
@@ -490,6 +493,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <state key="normal" title="Submit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="submit:" destination="tdp-hL-Typ" eventType="touchUpInside" id="e3Q-FZ-jeW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -519,6 +525,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Reservation" id="8eZ-8e-TO6"/>
+                    <connections>
+                        <outlet property="datePicker" destination="RkB-h4-3a2" id="TIn-on-Pul"/>
+                        <outlet property="detailsTextView" destination="HkF-TR-no2" id="A6W-MO-ofs"/>
+                        <outlet property="durationTextField" destination="seM-n4-9pJ" id="ky8-Ck-TtQ"/>
+                        <outlet property="numberTextField" destination="NTb-uI-fGd" id="snU-Aq-S56"/>
+                        <outlet property="submitButton" destination="y7K-MO-crj" id="vs9-aI-NDG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tyu-TW-BGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
