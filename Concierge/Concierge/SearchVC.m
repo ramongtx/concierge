@@ -84,18 +84,6 @@
         [self.mapView selectAnnotation:placeObject animated:YES];//here we select the pins that are added to the map
     }
 
-/****************************************Begin Test Block****************************************/
-    
-    NSString *name=@"Name Test";
-    NSString *vicinity=@"Address Test";
-    CLLocationCoordinate2D placeCoord;
-    placeCoord.latitude=37.78782460363909;
-    placeCoord.longitude=-122.4078183090829;
-    MapPoint *placeObject = [[MapPoint alloc] initWithName:name address:vicinity coordinate:placeCoord];
-    [self.mapView addAnnotation:placeObject];
-    [self.mapView selectAnnotation:placeObject animated:YES];//here we select the pins that are added to the map
-    
-/****************************************End Test Block****************************************/
     
 }
 
@@ -111,9 +99,6 @@
 #pragma mark - MKMapViewDelegate methods.
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
-
-    NSLog(@"Tittle = %@, Subtittle = %@", [view.annotation title],[view.annotation subtitle]);
-    
     
     if ([control tag] == 1) //control == view.leftCalloutAccessoryView
     {// Left Accessory Button Tapped
