@@ -305,8 +305,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Po-nb-Ayx">
-                                <rect key="frame" x="164" y="72" width="136" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Po-nb-Ayx">
+                                <rect key="frame" x="164" y="84" width="136" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -314,8 +314,8 @@
                                     <action selector="editingFinished:" destination="2hD-bS-9M1" eventType="editingDidEnd" id="jBV-rm-jbn"/>
                                 </connections>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gtc-EL-u7I">
-                                <rect key="frame" x="81" y="148" width="219" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtc-EL-u7I">
+                                <rect key="frame" x="81" y="160" width="219" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -325,8 +325,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D3v-wP-mYn">
-                                <rect key="frame" x="164" y="110" width="136" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D3v-wP-mYn">
+                                <rect key="frame" x="164" y="122" width="136" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -335,32 +335,32 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Table Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZn-fV-tuh">
-                                <rect key="frame" x="20" y="77" width="107" height="21"/>
+                                <rect key="frame" x="20" y="89" width="107" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Chairs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pa-Vq-ihy">
-                                <rect key="frame" x="20" y="113" width="136" height="21"/>
+                                <rect key="frame" x="20" y="125" width="136" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQc-ai-MCH">
-                                <rect key="frame" x="20" y="202" width="53" height="21"/>
+                                <rect key="frame" x="20" y="214" width="53" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKQ-MB-zUY">
-                                <rect key="frame" x="107" y="284" width="106" height="30"/>
+                                <rect key="frame" x="107" y="296" width="106" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Book this Table">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="tdp-hL-Typ" kind="push" id="pqZ-PM-Bto"/>
+                                    <segue destination="tdp-hL-Typ" kind="push" id="720-6L-oxK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -371,7 +371,6 @@
                             <constraint firstItem="D3v-wP-mYn" firstAttribute="top" secondItem="8Po-nb-Ayx" secondAttribute="bottom" constant="8" symbolic="YES" id="GTv-iG-G8D"/>
                             <constraint firstItem="5pa-Vq-ihy" firstAttribute="baseline" secondItem="D3v-wP-mYn" secondAttribute="baseline" id="ISL-4C-wCV"/>
                             <constraint firstItem="Gtc-EL-u7I" firstAttribute="top" secondItem="D3v-wP-mYn" secondAttribute="bottom" constant="8" symbolic="YES" id="Jmn-se-77k"/>
-                            <constraint firstItem="8Po-nb-Ayx" firstAttribute="top" secondItem="upY-4j-0Ef" secondAttribute="bottom" constant="20" symbolic="YES" id="Mf5-fy-rpB"/>
                             <constraint firstItem="8Po-nb-Ayx" firstAttribute="centerY" secondItem="yZn-fV-tuh" secondAttribute="centerY" id="MoQ-zp-Cy4"/>
                             <constraint firstItem="yZn-fV-tuh" firstAttribute="leading" secondItem="Uzu-QG-q0X" secondAttribute="leading" constant="20" symbolic="YES" id="NNi-02-jGg"/>
                             <constraint firstAttribute="centerX" secondItem="cKQ-MB-zUY" secondAttribute="centerX" id="ODp-Ht-ob2"/>
@@ -379,6 +378,7 @@
                             <constraint firstItem="D3v-wP-mYn" firstAttribute="leading" secondItem="5pa-Vq-ihy" secondAttribute="trailing" constant="8" symbolic="YES" id="RqM-IU-cjt"/>
                             <constraint firstAttribute="trailing" secondItem="D3v-wP-mYn" secondAttribute="trailing" constant="20" symbolic="YES" id="RzY-Xh-3pW"/>
                             <constraint firstItem="Gtc-EL-u7I" firstAttribute="leading" secondItem="nQc-ai-MCH" secondAttribute="trailing" constant="8" symbolic="YES" id="WPj-nr-mTv"/>
+                            <constraint firstItem="8Po-nb-Ayx" firstAttribute="top" secondItem="upY-4j-0Ef" secondAttribute="bottom" constant="20" id="XvR-TQ-sRb"/>
                             <constraint firstItem="cKQ-MB-zUY" firstAttribute="top" secondItem="Gtc-EL-u7I" secondAttribute="bottom" constant="8" symbolic="YES" id="dAc-iA-iTg"/>
                             <constraint firstItem="8Po-nb-Ayx" firstAttribute="leading" secondItem="D3v-wP-mYn" secondAttribute="leading" id="fE3-Ww-XPt"/>
                             <constraint firstAttribute="trailing" secondItem="8Po-nb-Ayx" secondAttribute="trailing" constant="20" symbolic="YES" id="lUu-d4-0fR"/>
@@ -386,6 +386,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Table Review" id="jqb-Cn-X6y"/>
+                    <connections>
+                        <outlet property="chairsTextView" destination="D3v-wP-mYn" id="tPL-Sp-qBV"/>
+                        <outlet property="detailsTextView" destination="Gtc-EL-u7I" id="nf5-HR-7Rt"/>
+                        <outlet property="numberTextView" destination="8Po-nb-Ayx" id="6WZ-p2-K0G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jd6-U0-Iq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

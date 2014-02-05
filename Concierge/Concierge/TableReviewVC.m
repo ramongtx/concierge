@@ -9,6 +9,9 @@
 #import "TableReviewVC.h"
 
 @interface TableReviewVC ()
+@property (weak, nonatomic) IBOutlet UITextField *numberTextView;
+@property (weak, nonatomic) IBOutlet UITextField *chairsTextView;
+@property (weak, nonatomic) IBOutlet UITextView *detailsTextView;
 
 @end
 
@@ -26,13 +29,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.detailsTextView.layer.borderWidth = 0.5f;
+    self.detailsTextView.layer.borderColor = [[UIColor grayColor] CGColor];
+    
+    [self reload];
+    
 	// Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
+-(void)reload
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self.numberTextView setText:[NSString stringWithFormat:@"%ld",[TABLE numberOfChairs]]];
+    [self.chairsTextView setText:[NSString stringWithFormat:@"%ld",[TABLE tableNumber]]];
+    [self.detailsTextView setText:[TABLE details]];
 }
 
 @end
