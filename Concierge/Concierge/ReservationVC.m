@@ -8,7 +8,7 @@
 
 #import "ReservationVC.h"
 
-@interface ReservationVC ()
+@interface ReservationVC () <UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (weak, nonatomic) IBOutlet UITextField *numberTextField;
 @property (weak, nonatomic) IBOutlet UITextField *durationTextField;
@@ -31,25 +31,38 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.detailsTextView.layer.borderWidth = 0.5f;
+    self.detailsTextView.layer.borderColor = [[UIColor grayColor] CGColor];;
+    
+    [self.detailsTextView setDelegate:self];
 	// Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
+- (IBAction)submit:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self saveReservation];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
-- (IBAction)submit:(id)sender {
+- (IBAction)dateSelected:(id)sender
+{
+    [self saveReservation];
 }
 
-- (IBAction)dateSelected:(id)sender {
+-(void)textViewDidEndEditing:(UITextView *)textView
+{
+    [self saveReservation];
 }
 
 -(void) saveReservation
 {
     [RESERVATION setDate:[self.datePicker date]];
     [RESERVATION setDetails:[self.detailsTextView text]];
+    [RESERVATION setDuration:60*[[self.durationTextField text] intValue]];
+    [RESERVATION setRestaurant:RESTAURANT];
+    [RESERVATION setClient:USER];
+    [RESERVATION setTable:TABLE];
+    
 }
 
 @end
