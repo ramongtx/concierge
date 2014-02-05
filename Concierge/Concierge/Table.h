@@ -20,6 +20,7 @@ typedef enum {
 @property (strong) NSString* details;
 @property (nonatomic) STATUS status;
 
+-(id)initWithDictionary:(NSDictionary *) dictionary;
 -(NSDictionary *) transformToDictionary;
 
 @end

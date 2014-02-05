@@ -24,11 +24,36 @@
     return  mutableDictionary;
 }
 
+-(id)initWithDictionary:(NSDictionary *) dictionary
+{
+    self = [super init];
+    
+    if (self) {
+        
+        self.tableNumber = [[dictionary objectForKey:@"number"] integerValue];
+        self.numberOfChairs = [[dictionary objectForKey:@"chairs"] integerValue];
+        self.details = [dictionary objectForKey:@"details"];
+        self.status = [[dictionary objectForKey:@"avaible"]integerValue];
+        self.location = [self transformNSDictionaryOnCoordinates:[dictionary objectForKey:@"coordinates"]];
+        
+        
+    }else{
+        NSLog(@"Falha ao instanciar a Table of dictionary :%@", dictionary);
+    }
+    return self;
+}
+
 -(NSDictionary *)transformCoordinatesOnNSDictionary
 {
     NSMutableDictionary *coordinates = [[NSMutableDictionary alloc] init];
     [coordinates setObject: [NSNumber numberWithFloat:self.location.x] forKey:@"longitude"];
     [coordinates setObject: [NSNumber numberWithFloat:self.location.y] forKey:@"latitude"];
+    return coordinates;
+}
+
+-(CGPoint ) transformNSDictionaryOnCoordinates: (NSDictionary *)dictionary
+{
+    CGPoint coordinates = CGPointMake( [[dictionary objectForKey:@"longitude"] floatValue],[[dictionary objectForKey:@"latitude"]floatValue]);
     return coordinates;
 }
 @end

@@ -20,6 +20,8 @@
 @property (strong) NSString* details;
 @property (strong) NSString* picture;
 @property (strong) User* owner;
+@property (strong) NSString* restaurantId;
+-(id) initWithDictionary:(NSDictionary *) dictionary;
 
 -(void) newTable:(Table*)tb;
 -(Table*) tableWithLocation:(CGPoint)location;

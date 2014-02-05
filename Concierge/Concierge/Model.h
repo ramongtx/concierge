@@ -21,6 +21,7 @@
 @interface Model : NSObject <RestaurantRequestDelegate,UserRequestDelegate>
 
 @property (strong) NSMutableArray* listOfRestaurants;
+@property (strong) NSMutableArray* listOfUsers;
 @property (strong) Restaurant* selectedRestaurant;
 @property (strong) Table* selectedTable;
 @property (strong) User* user;

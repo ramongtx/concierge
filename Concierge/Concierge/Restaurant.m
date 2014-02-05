@@ -19,6 +19,31 @@
     return self;
 }
 
+
+-(id) initWithDictionary:(NSDictionary *)dictionary
+{
+    self = [super init];
+    if (self) {
+        [self setTableArray:[[NSMutableArray alloc] init]];
+        self.name = [dictionary objectForKey:@"name"];
+        self.picture = [dictionary objectForKey:@"picture"];
+        self.coordinates = [self transformNSDictionaryOnCoordinates:[dictionary objectForKey:@"coordinates"]];
+        self.type = [dictionary objectForKey:@"type"];
+        self.details = [dictionary objectForKey:@"details"];
+        self.restaurantId = [dictionary objectForKey:@"_id"];
+        self.owner = [dictionary objectForKey:@"user"];
+        self.placeLocation = [dictionary objectForKey:@"location"];
+
+        for (NSNumber * auxKey in [dictionary allKeys])
+        {
+            Table * newTable = [[Table alloc] initWithDictionary: [dictionary objectForKey:auxKey]];
+            [self newTable: newTable];
+        }
+    }
+    
+    return self;
+}
+
 -(void) newTable:(Table*)tb {
     [self.tableArray addObject:tb];
 }
@@ -49,6 +74,12 @@
     NSMutableDictionary *coordinates = [[NSMutableDictionary alloc] init];
     [coordinates setObject: [NSNumber numberWithFloat:self.coordinates.x] forKey:@"longitude"];
     [coordinates setObject: [NSNumber numberWithFloat:self.coordinates.y] forKey:@"latitude"];
+    return coordinates;
+}
+
+-(CGPoint ) transformNSDictionaryOnCoordinates: (NSDictionary *)dictionary
+{
+    CGPoint coordinates = CGPointMake( [[dictionary objectForKey:@"longitude"] floatValue],[[dictionary objectForKey:@"latitude"]floatValue]);
     return coordinates;
 }
 @end

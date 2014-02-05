@@ -21,6 +21,7 @@ static Model* sharedModel = nil;
     if (self) {
         self.selectedRestaurant = [[Restaurant alloc] init];
         self.listOfRestaurants = [[NSMutableArray alloc] init];
+        self.listOfUsers = [[NSMutableArray alloc] init];
         self.restaurantRequest = [[RestaurantRequest alloc] init];
         self.userRequest = [[UserRequest alloc] init];
         self.selectedTable = NULL;
@@ -60,18 +61,39 @@ static Model* sharedModel = nil;
 }
 -(void) pickRestaurantWithCoordinates:(CGPoint) coordinates
 {
-    //TODO
+    
+    //verificar quanto eu preciso andar para poder fazer estas verificacoes!
+    [self pullRestaurantsList];
+    for (NSDictionary * rest in self.listOfRestaurants) {
+       NSDictionary *aux = [rest objectForKey:@"coordinates"];
+        if ([[aux objectForKey:@"latitude"] floatValue] == coordinates.y)
+        {
+            if ([[ aux objectForKey:@"longitude"] floatValue] == coordinates.x) {
+                self.selectedRestaurant = [[Restaurant alloc] initWithDictionary:aux];
+                break;
+            }
+        }
+        
+        
+    }
 }
 
 -(void) pickUserWithName:(NSString *) userName
 {
-    //TODO
+    [self pullUsersList];
+    for (User * user in self.listOfUsers)
+    {
+        if (user.name == userName) {
+            self.user = user;
+            break;
+        }
+    }
 }
 
 -(UIImage *) getRestaurantImage
 {
     UIImage *image;
-    //TODO
+    image = [self.restaurantRequest convertToUIImage: self.selectedRestaurant.picture];
     return  image;
 }
 
@@ -83,16 +105,12 @@ static Model* sharedModel = nil;
     response = object;
     NSLog(@"%@",response[0]);
     NSDictionary *teste = response[0];
-    
-    
     if ([teste objectForKey:@"picture"] != nil) {
         //_response eh um array de restaurantes!
-        UIImage *uimageReceived = [self.restaurantRequest convertToUIImage: [teste objectForKey:@"picture"]];
-        self.image = uimageReceived;
+        self.listOfRestaurants = response;
     }
-    else if ([teste objectForKey:@"password"]){
-        // _response eh um array de usuarios
-    }
+    else
+        self.listOfUsers = response;
     
     NSLog(@"Objeto de retorno %@", response);
     
