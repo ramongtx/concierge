@@ -8,11 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "Restaurant.h"
+typedef enum {
+    dontOwn=0,
+    own=1
+    
+}Owner;
 
 @interface User : NSObject
 @property (strong) NSString* name;
 @property (strong) NSString* phone;
 @property (strong) NSString* email;
-@property bool isOwner;
+@property Owner isOwner;
 @property (strong) Restaurant* restaurant;
 @end

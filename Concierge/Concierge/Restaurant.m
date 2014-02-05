@@ -31,4 +31,24 @@
     return NULL;
 }
 
+-(NSDictionary *) transformTableArraysOnNSDictionary
+{
+    
+    NSMutableDictionary * mutableDictionary = [[NSMutableDictionary alloc] init];
+    
+    for (Table * table in self.tableArray)
+    {
+        [mutableDictionary setObject:[table transformToDictionary] forKey:[NSNumber numberWithInt:table.tableNumber]];
+    }
+    
+    return mutableDictionary;
+}
+
+-(NSDictionary *)transformCoordinatesOnNSDictionary
+{
+    NSMutableDictionary *coordinates = [[NSMutableDictionary alloc] init];
+    [coordinates setObject: [NSNumber numberWithFloat:self.coordinates.x] forKey:@"longitude"];
+    [coordinates setObject: [NSNumber numberWithFloat:self.coordinates.y] forKey:@"latitude"];
+    return coordinates;
+}
 @end

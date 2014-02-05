@@ -93,7 +93,7 @@
 {
     if ([segue.identifier isEqualToString:@"locate"])
     {
-        [RESTAURANT setLatLong:latLong];
+        [RESTAURANT setCoordinates:latLong];
     }
 }
 
