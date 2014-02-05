@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concierge/Model.m"
-            timestampString = "413309029.936869"
+            timestampString = "413317742.589811"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "-addUser:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concierge/Model.m"
-            timestampString = "413309029.936869"
+            timestampString = "413317742.589811"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "-addRestaurantToList:"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concierge/Model.m"
-            timestampString = "413309029.936869"
+            timestampString = "413317742.589811"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "-pullRestaurantsList"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concierge/Model.m"
-            timestampString = "413309029.936869"
+            timestampString = "413317742.589811"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "-pullUsersList"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,13 +90,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concierge/Model.m"
-            timestampString = "413310858.332717"
+            timestampString = "413317742.589811"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "-pickRestaurantWithCoordinates:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[Model pickRestaurantWithCoordinates:]"
+                  moduleName = "Concierge"
+                  urlString = "file:///Users/BrunoVargas/Documents/BEPiD/projetoConcierge/concierge/Concierge/Concierge/Model.m"
+                  timestampString = "413317742.868365"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "119">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[Model pickRestaurantWithCoordinates:]"
+                  moduleName = "Concierge"
+                  urlString = "file:///Users/BrunoVargas/Documents/BEPiD/projetoConcierge/concierge/Concierge/Concierge/Model.m"
+                  timestampString = "413317742.868509"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "1082">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -106,11 +136,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concierge/Restaurant.m"
-            timestampString = "413312863.62691"
+            timestampString = "413317742.589811"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "-transformNSDictionaryOnCoordinates:"
             landmarkType = "5">
          </BreakpointContent>
@@ -122,13 +152,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Concierge/Model.m"
-            timestampString = "413316543.965329"
+            timestampString = "413317742.589811"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "-pickUserWithName:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[Model pickUserWithName:]"
+                  moduleName = "Concierge"
+                  urlString = "file:///Users/BrunoVargas/Documents/BEPiD/projetoConcierge/concierge/Concierge/Concierge/Model.m"
+                  timestampString = "413317742.86884"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "130">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[Model pickUserWithName:]"
+                  moduleName = "Concierge"
+                  urlString = "file:///Users/BrunoVargas/Documents/BEPiD/projetoConcierge/concierge/Concierge/Concierge/Model.m"
+                  timestampString = "413317742.86899"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "651">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -144,6 +204,22 @@
             startingLineNumber = "95"
             endingLineNumber = "95"
             landmarkName = "-getRestaurantImage"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Concierge/RestaurantInfoVC.m"
+            timestampString = "413318253.369141"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "-saveRestaurant"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
