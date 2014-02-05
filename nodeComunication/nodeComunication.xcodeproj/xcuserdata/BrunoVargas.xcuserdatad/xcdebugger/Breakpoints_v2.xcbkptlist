@@ -55,28 +55,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "nodeComunication/Restaurant.m"
-            timestampString = "413225886.955702"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "-transformTableArraysOnNSDictionary"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "nodeComunication/Table.m"
-            timestampString = "413226466.565294"
+            timestampString = "413294027.43379"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "-transformToDictionary"
             landmarkType = "5">
          </BreakpointContent>
@@ -87,13 +71,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "nodeComunication/RestaurantRequest.m"
-            timestampString = "413230900.131252"
+            filePath = "nodeComunication/Restaurant.m"
+            timestampString = "413294030.935345"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "-enviarRestaurante:andDelegate:"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "-initWithName:andPictureString:andCoordinates:andType:andDetails:andId:andOwner:andPlaceLocation:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -104,12 +88,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nodeComunication/ViewController.m"
-            timestampString = "413291083.262739"
+            timestampString = "413294144.995759"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "-request:didFinishWithObject:"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "-viewWillAppear:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
