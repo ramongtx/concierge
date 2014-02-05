@@ -7,7 +7,7 @@
 //
 
 #import "LocateVC.h"
-#import"RestaurantVC.h"
+#import"RestaurantInfoVC.h"
 
 
 @interface LocateVC ()

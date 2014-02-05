@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Pathfinders. All rights reserved.
 //
 
-#import "RestaurantVC.h"
+#import "RestaurantInfoVC.h"
 
-@interface RestaurantVC () <UITextViewDelegate>
+@interface RestaurantInfoVC () <UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameTextView;
 @property (weak, nonatomic) IBOutlet UITextField *typeTextView;
 @property (weak, nonatomic) IBOutlet UITextView *detailsTextView;
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation RestaurantVC
+@implementation RestaurantInfoVC
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

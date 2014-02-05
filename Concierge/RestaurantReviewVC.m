@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Pathfinders. All rights reserved.
 //
 
-#import "RestaurantInfoSearchViewController.h"
+#import "RestaurantReviewVC.h"
 
-@interface RestaurantInfoSearchViewController ()
+@interface RestaurantReviewVC ()
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextView;
 @property (weak, nonatomic) IBOutlet UITextField *typeTextView;
@@ -16,7 +16,7 @@
 
 @end
 
-@implementation RestaurantInfoSearchViewController
+@implementation RestaurantReviewVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 Pathfinders. All rights reserved.
 //
 
-#import "SearchViewController.h"
-#import "RestaurantInfoSearchViewController.h"
+#import "SearchVC.h"
+#import "RestaurantReviewVC.h"
 
-@interface SearchViewController ()
+@interface SearchVC ()
 
 @end
 
-@implementation SearchViewController
+@implementation SearchVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

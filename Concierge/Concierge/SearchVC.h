@@ -13,7 +13,7 @@
 #import "Model.h"
 
 
-@interface SearchViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
+@interface SearchVC : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
 {
    CLLocationManager *locationManager;
    CLLocationCoordinate2D currentCentre;

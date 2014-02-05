@@ -10,7 +10,7 @@
 #import "Model.h"
 #import "KeyboardVC.h"
 
-@interface RestaurantInfoSearchViewController : KeyboardVC
+@interface RestaurantReviewVC : KeyboardVC
 
 
 @end
