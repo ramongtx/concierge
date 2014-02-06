@@ -15,6 +15,10 @@
 		B9479C70189FC51E0026A4A8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9479C6F189FC51E0026A4A8 /* MapKit.framework */; };
 		B9479C73189FC86F0026A4A8 /* MapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = B9479C72189FC86F0026A4A8 /* MapPoint.m */; };
 		B9790D1A18A393A800A8CF72 /* IQKeyBoardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B9790D1918A393A800A8CF72 /* IQKeyBoardManager.m */; };
+		B9F914D518A3E94C005F1513 /* concierge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9F914D418A3E94C005F1513 /* concierge.jpg */; };
+		B9F914DA18A3EC3D005F1513 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F914D918A3EC3D005F1513 /* MenuViewController.m */; };
+		B9F914DE18A3F158005F1513 /* top.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9F914DD18A3F158005F1513 /* top.jpg */; };
+		B9F914E018A3F162005F1513 /* bottom.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9F914DF18A3F162005F1513 /* bottom.jpg */; };
 		DBB11B0818A3190000F62075 /* SignInVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB11B0718A3190000F62075 /* SignInVC.m */; };
 		DBB11B0B18A3191600F62075 /* SignUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB11B0A18A3191600F62075 /* SignUpVC.m */; };
 		F604D15318992A1C00038365 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F604D15218992A1C00038365 /* Foundation.framework */; };
@@ -87,6 +91,11 @@
 		B9479C72189FC86F0026A4A8 /* MapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPoint.m; sourceTree = "<group>"; };
 		B9790D1818A393A800A8CF72 /* IQKeyBoardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyBoardManager.h; sourceTree = "<group>"; };
 		B9790D1918A393A800A8CF72 /* IQKeyBoardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQKeyBoardManager.m; sourceTree = "<group>"; };
+		B9F914D418A3E94C005F1513 /* concierge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = concierge.jpg; sourceTree = "<group>"; };
+		B9F914D818A3EC3D005F1513 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		B9F914D918A3EC3D005F1513 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		B9F914DD18A3F158005F1513 /* top.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = top.jpg; sourceTree = "<group>"; };
+		B9F914DF18A3F162005F1513 /* bottom.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bottom.jpg; sourceTree = "<group>"; };
 		DBB11B0618A3190000F62075 /* SignInVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInVC.h; sourceTree = "<group>"; };
 		DBB11B0718A3190000F62075 /* SignInVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInVC.m; sourceTree = "<group>"; };
 		DBB11B0918A3191600F62075 /* SignUpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpVC.h; sourceTree = "<group>"; };
@@ -208,6 +217,16 @@
 			path = IQKeyBoardManager;
 			sourceTree = "<group>";
 		};
+		B9F914D318A3E93F005F1513 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				B9F914DF18A3F162005F1513 /* bottom.jpg */,
+				B9F914DD18A3F158005F1513 /* top.jpg */,
+				B9F914D418A3E94C005F1513 /* concierge.jpg */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		F604D14618992A1C00038365 = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +268,7 @@
 		F604D15818992A1C00038365 /* Concierge */ = {
 			isa = PBXGroup;
 			children = (
+				B9F914D318A3E93F005F1513 /* images */,
 				B9790D1718A393A800A8CF72 /* IQKeyBoardManager */,
 				F90A2B9E18A2634F007C1F00 /* Request */,
 				F69A70B3189BCFFF0008F122 /* Extras */,
@@ -314,6 +334,8 @@
 		F69A70A6189BCB1C0008F122 /* Control */ = {
 			isa = PBXGroup;
 			children = (
+				B9F914D818A3EC3D005F1513 /* MenuViewController.h */,
+				B9F914D918A3EC3D005F1513 /* MenuViewController.m */,
 				B901A64418A10DD30011C920 /* LocateVC.h */,
 				B901A64518A10DD30011C920 /* LocateVC.m */,
 				B927D115189FF5D800CD7386 /* RestaurantReviewVC.h */,
@@ -477,9 +499,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9F914DE18A3F158005F1513 /* top.jpg in Resources */,
 				F604D15D18992A1C00038365 /* InfoPlist.strings in Resources */,
 				F69A70B9189BDAC90008F122 /* restaurant_plan.jpg in Resources */,
 				B901A64318A0FC420011C920 /* rota.jpg in Resources */,
+				B9F914E018A3F162005F1513 /* bottom.jpg in Resources */,
+				B9F914D518A3E94C005F1513 /* concierge.jpg in Resources */,
 				F604D16518992A1C00038365 /* Images.xcassets in Resources */,
 				F604D18218992A3D00038365 /* iPhoneStoryboard.storyboard in Resources */,
 				F69A70B6189BD02A0008F122 /* hotel_floor.jpg in Resources */,
@@ -503,6 +528,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F90A2B7418A26178007C1F00 /* NSData+Base64.m in Sources */,
+				B9F914DA18A3EC3D005F1513 /* MenuViewController.m in Sources */,
 				F90A2B8F18A261B3007C1F00 /* ASIFormDataRequest.m in Sources */,
 				F60E5C6C18992FC900B2ACD6 /* Reservation.m in Sources */,
 				B9479C6C189FC4F70026A4A8 /* SearchVC.m in Sources */,

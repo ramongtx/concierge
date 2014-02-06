@@ -33,11 +33,13 @@
         self.restaurantId = [dictionary objectForKey:@"_id"];
         self.owner = [dictionary objectForKey:@"user"];
         self.placeLocation = [dictionary objectForKey:@"location"];
-
+        
+        NSArray * auxTable = [dictionary objectForKey:@"tables"];
+        NSLog(@"%@",auxTable);
         for (NSNumber * auxKey in [dictionary allKeys])
         {
-            Table * newTable = [[Table alloc] initWithDictionary: [dictionary objectForKey:auxKey]];
-            [self newTable: newTable];
+//            Table * newTable = [[Table alloc] initWithString: [dictionary objectForKey:auxKey]];
+//            [self newTable: newTable];
         }
     }
     

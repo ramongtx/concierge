@@ -10,6 +10,10 @@
 
 @interface MenuViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *topImageView;
+
+@property (weak, nonatomic) IBOutlet UIImageView *bottomImageView;
+
 @end
 
 @implementation MenuViewController
@@ -27,6 +31,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    
+    [self.topImageView setImage:[UIImage imageNamed:@"top.jpg"]];
+    
+    [self.bottomImageView setImage:[UIImage imageNamed:@"bottom.jpg"]];
+
 }
 
 - (void)didReceiveMemoryWarning

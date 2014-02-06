@@ -9,7 +9,12 @@
 #import "SignInVC.h"
 
 @interface SignInVC ()<UIAlertViewDelegate>
+
+
 @property (nonatomic) UIAlertView * alert;
+@property (weak, nonatomic) IBOutlet UIImageView *conciergeImgView;
+
+
 @end
 
 @implementation SignInVC
@@ -37,6 +42,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    UIImage* img = [UIImage imageNamed:@"concierge.jpg"];
+    
+    [self.conciergeImgView setImage:img];
 }
 
 - (void)didReceiveMemoryWarning
