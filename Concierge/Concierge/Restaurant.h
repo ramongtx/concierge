@@ -28,5 +28,6 @@
 
 -(NSDictionary *) transformTableArraysOnNSDictionary;
 -(NSDictionary *) transformCoordinatesOnNSDictionary;
+-(int) numberOfTables;
 
 @end
