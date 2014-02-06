@@ -82,4 +82,9 @@
     CGPoint coordinates = CGPointMake( [[dictionary objectForKey:@"longitude"] floatValue],[[dictionary objectForKey:@"latitude"]floatValue]);
     return coordinates;
 }
+
+- (int) numberOfTables
+{
+    return [self.tableArray count];
+}
 @end

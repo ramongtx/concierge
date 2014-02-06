@@ -59,12 +59,11 @@
     [self saveRestaurant];
 }
 - (IBAction)saveAndBack:(id)sender {
-    [RESTAURANT setOwner:USER];
-    [USER setRestaurant:RESTAURANT];
-    [USER setIsOwner:YES];
-    [MODEL addRestaurantToList:RESTAURANT];
-    NSLog(@"%ld",[[RESTAURANT tableArray] count]);
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    NSLog(@"%d",[RESTAURANT numberOfTables]);
+    if ([RESTAURANT numberOfTables] != 0)
+    {
+        [self saveAndBackEditing];
+    }
 }
 
 - (IBAction)changeLocation:(id)sender {
@@ -76,6 +75,26 @@
     [RESTAURANT setName:self.nameTextView.text];
     [RESTAURANT setType:self.typeTextView.text];
     [RESTAURANT setDetails:self.detailsTextView.text];
+    
+    NSLog(@"%@",RESTAURANT);
+    Restaurant *novo =  RESTAURANT;
+    NSLog(@"%@",novo);
+}
+
+-(void) saveAndBackEditing
+{
+    
+    Restaurant *novo =  MODEL.selectedRestaurant;
+    NSLog(@"%@",novo);
+    
+    [RESTAURANT setName:self.nameTextView.text];
+    [RESTAURANT setType:self.typeTextView.text];
+    [RESTAURANT setDetails:self.detailsTextView.text];
+    [RESTAURANT setOwner:USER];
+    [USER setRestaurant:RESTAURANT];
+    [USER setIsOwner:own];
+    [MODEL addRestaurantToList:RESTAURANT]; // quando nao tem restaurant cadastrado esta quebrando.
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end
