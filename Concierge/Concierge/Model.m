@@ -109,7 +109,7 @@ static Model* sharedModel = nil;
     NSDictionary *teste = response[0];
     if ([teste objectForKey:@"picture"] != nil) {
         //_response eh um array de restaurantes!
-        self.listOfRestaurants = response;
+        [self convertResponseToRestaurant: response];
     }
     else
         self.listOfUsers = response;
@@ -124,4 +124,12 @@ static Model* sharedModel = nil;
     NSLog(@"error with stocks request: %@",error);
 }
 
+-(void) convertResponseToRestaurant: (NSMutableArray *) arrayJson
+{
+    //este metodo converte o array de restaurantes em Json em um array de restaurantes no formato restaurantes, inserindo no array de restaurantes
+    for (NSDictionary * restaurantJson in arrayJson) {
+        Restaurant * novo = [[Restaurant alloc] initWithDictionary:restaurantJson];
+        [self.listOfRestaurants addObject:novo];
+    }
+}
 @end

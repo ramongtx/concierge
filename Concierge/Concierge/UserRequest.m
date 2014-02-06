@@ -66,7 +66,7 @@
     [newRequest setPostValue: [NSNumber numberWithBool:user.isOwner] forKey:@"owner"];
     [newRequest setPostValue: user.restaurant forKey:@"restaurant"];
     [newRequest setRequestMethod:@"POST"];
-    [newRequest startSynchronous];
+    [newRequest startAsynchronous];
     
 }
 

@@ -79,6 +79,14 @@
 
 -(CGPoint ) transformNSDictionaryOnCoordinates: (NSDictionary *)dictionary
 {
+    .
+    //nao esta funcionando esta parte estou  dictionary quando eh um restaurante,
+    //estou recebendo uma string.................. devo mudar a maneira de inserir no banco, ele esta transformando o dictionary em string
+    
+    NSLog(@"%@",[dictionary objectForKey:@"longitude"]);
+    NSNumber *Numero =    [dictionary objectForKey:@"longitude"];
+    NSLog(@"%f",[[dictionary objectForKey:@"latitude"] floatValue]);
+
     CGPoint coordinates = CGPointMake( [[dictionary objectForKey:@"longitude"] floatValue],[[dictionary objectForKey:@"latitude"]floatValue]);
     return coordinates;
 }

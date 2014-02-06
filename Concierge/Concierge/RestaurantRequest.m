@@ -67,7 +67,7 @@
     [newRequest setPostValue:restaurant.details forKey:@"details"];
     [newRequest setPostValue:[restaurant transformTableArraysOnNSDictionary] forKey:@"tables"];
     [newRequest setRequestMethod:@"POST"];
-    [newRequest startSynchronous];
+    [newRequest startAsynchronous];
 
     
     NSError *error = [newRequest error];
