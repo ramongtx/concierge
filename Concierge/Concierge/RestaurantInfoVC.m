@@ -1,4 +1,4 @@
-//
+    //
 //  RestaurantVC.m
 //  Concierge
 //
@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *typeTextView;
 @property (weak, nonatomic) IBOutlet UITextView *detailsTextView;
 @property (weak, nonatomic) IBOutlet UIButton *editTableButton;
+@property (weak, nonatomic) IBOutlet UIButton *saveAndBackButton;
 
 @property (strong) Restaurant* restaurant;
 
@@ -36,6 +37,7 @@
     self.detailsTextView.layer.borderWidth = 0.5f;
     self.detailsTextView.layer.borderColor = [[UIColor grayColor] CGColor];;
     [self.detailsTextView setDelegate:self];
+    self.saveAndBackButton.enabled = FALSE;
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -53,18 +55,22 @@
 -(void)textViewDidEndEditing:(UITextView *)textView
 {
     [self saveRestaurant];
+    if ([MODEL.selectedRestaurant numberOfTables] != 0)
+    {
+        self.saveAndBackButton.enabled = YES;
+    }
 }
 
 - (IBAction)editingFinished:(id)sender {
     [self saveRestaurant];
+    
 }
 - (IBAction)saveAndBack:(id)sender {
-    [RESTAURANT setOwner:USER];
-    [USER setRestaurant:RESTAURANT];
-    [USER setIsOwner:YES];
-    [MODEL addRestaurantToList:RESTAURANT];
-    NSLog(@"%ld",[[RESTAURANT tableArray] count]);
-    [self.navigationController popToRootViewControllerAnimated:YES];
+   
+    if ([MODEL.selectedRestaurant numberOfTables] == 0)
+        {
+                [self saveAndBackEditing];
+        }
 }
 
 - (IBAction)changeLocation:(id)sender {
@@ -76,6 +82,16 @@
     [RESTAURANT setName:self.nameTextView.text];
     [RESTAURANT setType:self.typeTextView.text];
     [RESTAURANT setDetails:self.detailsTextView.text];
+}
+
+-(void) saveAndBackEditing
+{
+    [RESTAURANT setOwner:USER];
+    [USER setRestaurant:RESTAURANT];
+    [USER setIsOwner:own];
+    [MODEL addRestaurantToList:RESTAURANT]; // quando nao tem restaurant cadastrado esta quebrando.
+    NSLog(@"%lu",(unsigned long)[[RESTAURANT tableArray] count]);
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end
