@@ -32,7 +32,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.detailsTextView.layer.borderWidth = 0.5f;
-    self.detailsTextView.layer.borderColor = [[UIColor grayColor] CGColor];;
+    self.detailsTextView.layer.borderColor = [[UIColor grayColor] CGColor];
     self.detailsTextView.editable = NO;
     
     self.nameTextView.text = [RESTAURANT name];

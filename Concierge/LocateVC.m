@@ -29,7 +29,7 @@
 {
     if ([USER isOwner]) {
         [MODEL setSelectedRestaurant:[USER restaurant]];
-        [self performSegueWithIdentifier:@"" sender:self];
+      //  [self performSegueWithIdentifier:@"" sender:self];
     }
 }
 

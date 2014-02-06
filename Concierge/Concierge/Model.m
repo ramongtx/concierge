@@ -81,10 +81,12 @@ static Model* sharedModel = nil;
 -(void) pickUserWithName:(NSString *) userName
 {
     [self pullUsersList];
-    for (User * user in self.listOfUsers)
+    for (NSDictionary * userDictionary in self.listOfUsers)
     {
-        if (user.name == userName) {
-            self.user = user;
+        NSLog(@"nome da ves %@",[userDictionary objectForKey:@"name"]);
+        //esta dando erro pois estou comparando userName, uma string com user.name, endereco de uma string
+        if ([[userDictionary objectForKey:@"name"] isEqualToString: userName]) {
+            MODEL.user = [[User alloc] initWithDictionary:userDictionary ];
             break;
         }
     }

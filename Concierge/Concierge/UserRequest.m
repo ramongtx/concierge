@@ -28,8 +28,8 @@
     self = [super init];
     if (self)
     {
-        self.serverInfo = @"http://172.16.3.72:8080";   //Eldorado
-        //self.serverInfo = @"http://192.168.1.53:8080"; //Casa
+        //self.serverInfo = @"http://172.16.3.72:8080";   //Eldorado
+        self.serverInfo = @"http://192.168.1.52:8080"; //Casa
     
         self.usuario = [[User alloc] init];
     }
@@ -113,7 +113,6 @@
     // You can parse the stuff in your instance variable now
     
     NSError *error = nil;
-    //parsed data tem photos stat,
     NSDictionary *parsedData = _responseData ? [NSJSONSerialization JSONObjectWithData:_responseData options:0 error:&error] : nil;
     if (error)
     {
