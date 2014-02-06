@@ -21,6 +21,7 @@
     CLPlacemark *placemark;
     CGPoint latLong;
     CGPoint userLocation;
+    NSString* address;
 }
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;

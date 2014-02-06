@@ -38,6 +38,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+     geocoder = [[CLGeocoder alloc] init];
+    
     //Make this controller the delegate for the map view.
     self.mapView.delegate = self;
     
@@ -74,18 +76,40 @@
         return;
     
     CGPoint touchPoint = [gestureRecognizer locationInView:self.mapView];
+    
     CLLocationCoordinate2D touchMapCoordinate =
     [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
     
     
-    latLong =   CGPointMake(touchMapCoordinate.latitude, touchMapCoordinate.longitude);
+    CLLocationDegrees latitudeDegrees = touchMapCoordinate.latitude;
+    CLLocationDegrees longitudeDegrees = touchMapCoordinate.longitude;
+    CLLocation *currentLocation = [[CLLocation alloc] initWithLatitude:latitudeDegrees longitude:longitudeDegrees];
     
-    [self performSegueWithIdentifier:@"locate" sender: nil];
     
-    
-//    MapPoint *toAdd = [[MapPoint alloc]initWithName:@"Title" address:@"Subtitle" coordinate:touchMapCoordinate];
-//    
-//    [self.mapView addAnnotation:toAdd];
+    // Reverse Geocoding
+    NSLog(@"Resolving the Address");
+    [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarks, NSError *error) {
+        NSLog(@"Found placemarks: %@, error: %@", placemarks, error);
+        if (error == nil && [placemarks count] > 0) {
+            placemark = [placemarks lastObject];
+                        address = [NSString stringWithFormat:@"%@ %@\n%@ %@\n%@\n%@",
+                                                  placemark.subThoroughfare, placemark.thoroughfare,
+                                                  placemark.postalCode, placemark.locality,
+                                                  placemark.administrativeArea,
+                                                  placemark.country];
+              NSLog(@"%@",address);
+            
+            
+            latLong =   CGPointMake(touchMapCoordinate.latitude, touchMapCoordinate.longitude);
+            
+            [self performSegueWithIdentifier:@"locate" sender: nil];
+            
+            
+            
+        } else {
+            NSLog(@"%@", error.debugDescription);
+        }
+    } ];
 }
 
 
@@ -109,7 +133,7 @@
 {
     
     latLong = userLocation;
-    
+
     [self performSegueWithIdentifier:@"locate" sender: nil];
 }
 
@@ -175,11 +199,13 @@
         NSLog(@"Found placemarks: %@, error: %@", placemarks, error);
         if (error == nil && [placemarks count] > 0) {
             placemark = [placemarks lastObject];
-//            self.addressLabel.text = [NSString stringWithFormat:@"%@ %@\n%@ %@\n%@\n%@",
-//                                      placemark.subThoroughfare, placemark.thoroughfare,
-//                                      placemark.postalCode, placemark.locality,
-//                                      placemark.administrativeArea,
-//                                      placemark.country];
+            address = [NSString stringWithFormat:@"%@ %@\n%@ %@\n%@\n%@",
+                                      placemark.subThoroughfare, placemark.thoroughfare,
+                                     placemark.postalCode, placemark.locality,
+                                      placemark.administrativeArea,
+                                      placemark.country];
+            
+            NSLog(@"%@",address);
         } else {
             NSLog(@"%@", error.debugDescription);
         }

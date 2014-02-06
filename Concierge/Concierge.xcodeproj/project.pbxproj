@@ -14,6 +14,7 @@
 		B9479C6E189FC5160026A4A8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9479C6D189FC5160026A4A8 /* CoreLocation.framework */; };
 		B9479C70189FC51E0026A4A8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9479C6F189FC51E0026A4A8 /* MapKit.framework */; };
 		B9479C73189FC86F0026A4A8 /* MapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = B9479C72189FC86F0026A4A8 /* MapPoint.m */; };
+		B9790D1A18A393A800A8CF72 /* IQKeyBoardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B9790D1918A393A800A8CF72 /* IQKeyBoardManager.m */; };
 		DBB11B0818A3190000F62075 /* SignInVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB11B0718A3190000F62075 /* SignInVC.m */; };
 		DBB11B0B18A3191600F62075 /* SignUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB11B0A18A3191600F62075 /* SignUpVC.m */; };
 		F604D15318992A1C00038365 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F604D15218992A1C00038365 /* Foundation.framework */; };
@@ -84,6 +85,8 @@
 		B9479C6F189FC51E0026A4A8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B9479C71189FC86F0026A4A8 /* MapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPoint.h; sourceTree = "<group>"; };
 		B9479C72189FC86F0026A4A8 /* MapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPoint.m; sourceTree = "<group>"; };
+		B9790D1818A393A800A8CF72 /* IQKeyBoardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyBoardManager.h; sourceTree = "<group>"; };
+		B9790D1918A393A800A8CF72 /* IQKeyBoardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQKeyBoardManager.m; sourceTree = "<group>"; };
 		DBB11B0618A3190000F62075 /* SignInVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInVC.h; sourceTree = "<group>"; };
 		DBB11B0718A3190000F62075 /* SignInVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInVC.m; sourceTree = "<group>"; };
 		DBB11B0918A3191600F62075 /* SignUpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpVC.h; sourceTree = "<group>"; };
@@ -196,6 +199,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B9790D1718A393A800A8CF72 /* IQKeyBoardManager */ = {
+			isa = PBXGroup;
+			children = (
+				B9790D1818A393A800A8CF72 /* IQKeyBoardManager.h */,
+				B9790D1918A393A800A8CF72 /* IQKeyBoardManager.m */,
+			);
+			path = IQKeyBoardManager;
+			sourceTree = "<group>";
+		};
 		F604D14618992A1C00038365 = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +249,7 @@
 		F604D15818992A1C00038365 /* Concierge */ = {
 			isa = PBXGroup;
 			children = (
+				B9790D1718A393A800A8CF72 /* IQKeyBoardManager */,
 				F90A2B9E18A2634F007C1F00 /* Request */,
 				F69A70B3189BCFFF0008F122 /* Extras */,
 				F69A70A6189BCB1C0008F122 /* Control */,
@@ -503,6 +516,7 @@
 				F90A2B8D18A261B3007C1F00 /* ASIDataCompressor.m in Sources */,
 				F69A70A9189BCB4A0008F122 /* RestaurantInfoVC.m in Sources */,
 				DBB11B0818A3190000F62075 /* SignInVC.m in Sources */,
+				B9790D1A18A393A800A8CF72 /* IQKeyBoardManager.m in Sources */,
 				F6B04BBB18A1244E00C88FAB /* TableReviewVC.m in Sources */,
 				F60E5C6918992FAB00B2ACD6 /* Restaurant.m in Sources */,
 				B9479C73189FC86F0026A4A8 /* MapPoint.m in Sources */,
