@@ -40,6 +40,7 @@
             [self newTable: newTable];
         }
     }
+    
     return self;
 }
 
@@ -53,12 +54,6 @@
         if ((tb.location.x == location.x) && (tb.location.y == location.y)) return tb;
     }
     return NULL;
-}
-
-
-- (int) numberOfTables
-{
-    return [self.tableArray count];
 }
 
 -(NSDictionary *) transformTableArraysOnNSDictionary
