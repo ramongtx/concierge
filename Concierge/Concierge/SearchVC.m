@@ -31,6 +31,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    [self.restaurantTypeTextField setDelegate:self];
+    
+    //Add gesture recognizer in order to dismiss keyboar when tap outside fields.
+    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:gestureRecognizer];
+    
     //Make this controller the delegate for the map view.
     self.mapView.delegate = self;
     
@@ -48,6 +54,12 @@
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
     
     [self performSelector:@selector(plotPositions:) withObject:LIST afterDelay:2.0];
+}
+
+//Take off the keyboard when lose the focus.
+-(void)dismissKeyboard
+{
+    [self.restaurantTypeTextField resignFirstResponder];
 }
 
 -(void) viewWillAppear:(BOOL)animated
@@ -74,12 +86,12 @@
         }
     }
     
+    NSLog(@" Essa    %@",LIST);
+    
     [self plotPositions:restaurantTypes];
     
     
 }
-
-
 
 - (void)didReceiveMemoryWarning
 {

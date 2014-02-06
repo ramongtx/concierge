@@ -77,18 +77,22 @@
     return coordinates;
 }
 
--(CGPoint ) transformNSDictionaryOnCoordinates: (NSDictionary *)dictionary
+-(CGPoint ) transformNSDictionaryOnCoordinates: (NSString *)dictionary
 {
-    .
     //nao esta funcionando esta parte estou  dictionary quando eh um restaurante,
     //estou recebendo uma string.................. devo mudar a maneira de inserir no banco, ele esta transformando o dictionary em string
     
-    NSLog(@"%@",[dictionary objectForKey:@"longitude"]);
-    NSNumber *Numero =    [dictionary objectForKey:@"longitude"];
-    NSLog(@"%f",[[dictionary objectForKey:@"latitude"] floatValue]);
+    NSLog(@"%@",dictionary);
+    
+    NSArray *substrings = [dictionary componentsSeparatedByString:@"\""];
+    NSString *latitude = substrings[1];
+    NSString *longitude = substrings[3];
+    
 
-    CGPoint coordinates = CGPointMake( [[dictionary objectForKey:@"longitude"] floatValue],[[dictionary objectForKey:@"latitude"]floatValue]);
-    return coordinates;
+    
+
+    NSLog(@"latitude: %f, and longitude %f", [latitude floatValue], [longitude floatValue]);
+    return CGPointMake([latitude floatValue], [longitude floatValue]);
 }
 
 - (int) numberOfTables
