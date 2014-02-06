@@ -11,6 +11,8 @@
 
 @interface SearchVC ()
 
+@property (weak, nonatomic) IBOutlet UITextField *restaurantTypeTextField;
+
 @end
 
 @implementation SearchVC
@@ -47,6 +49,37 @@
     
     [self performSelector:@selector(plotPositions:) withObject:LIST afterDelay:2.0];
 }
+
+-(void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [MODEL pullRestaurantsList];
+    
+    [self performSelector:@selector(plotPositions:) withObject:LIST afterDelay:2.0];
+}
+
+
+- (IBAction)goSearchRestaurantType:(id)sender
+{
+    [MODEL pullRestaurantsList];
+    
+    NSMutableArray* restaurantTypes = [[NSMutableArray alloc] init];
+    
+    for(Restaurant* restaurant in LIST)
+    {
+        if([restaurant.type isEqual:self.restaurantTypeTextField.text])
+        {
+            [restaurantTypes addObject:restaurant];
+        }
+    }
+    
+    [self plotPositions:restaurantTypes];
+    
+    
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {

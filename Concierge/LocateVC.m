@@ -61,6 +61,7 @@
     [locationManager startUpdatingLocation];
 }
 
+
 - (void)addGestureRecogniserToMapView{
     
     UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc]

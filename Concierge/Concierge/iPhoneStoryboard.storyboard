@@ -271,6 +271,9 @@
                                 <state key="normal" title="GO">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="goSearchRestaurantType:" destination="wq1-sp-wLZ" eventType="touchUpInside" id="gMF-AD-8lj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -291,6 +294,7 @@
                     <navigationItem key="navigationItem" title="Search" id="Rf1-E9-bZV"/>
                     <connections>
                         <outlet property="mapView" destination="vJZ-96-Hyu" id="Rip-W6-q4k"/>
+                        <outlet property="restaurantTypeTextField" destination="yKU-PJ-SOW" id="H4I-dr-L4G"/>
                         <segue destination="jTo-fg-PuL" kind="push" identifier="search" id="6jO-hz-3vR"/>
                     </connections>
                 </viewController>
