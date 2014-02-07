@@ -84,7 +84,7 @@
     [RESTAURANT setType:self.typeTextView.text];
     [RESTAURANT setDetails:self.detailsTextView.text];
     [RESTAURANT setOwner:USER];
-    [USER setRestaurant:RESTAURANT];
+    [USER setRestaurant:RESTAURANT.name];
     [USER setIsOwner:own];
     [MODEL addRestaurantToList:RESTAURANT]; // quando nao tem restaurant cadastrado esta quebrando.
     [self.navigationController popToRootViewControllerAnimated:YES];

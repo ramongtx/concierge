@@ -76,6 +76,7 @@
         [self.passText setText:@""];
         
     } else
+        
         [self performSegueWithIdentifier:@"loginToMenuVC" sender:nil];
 }
 
