@@ -66,7 +66,7 @@
 {
     [super viewWillAppear:animated];
     
-    [MODEL pullRestaurantsList];
+ //   [MODEL pullRestaurantsList];
     
     [self performSelector:@selector(plotPositions:) withObject:LIST afterDelay:2.0];
 }

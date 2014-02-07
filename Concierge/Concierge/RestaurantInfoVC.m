@@ -86,7 +86,7 @@
     [RESTAURANT setOwner:USER];
     [USER setRestaurant:RESTAURANT];
     [USER setIsOwner:own];
-    [MODEL addRestaurantToList:RESTAURANT]; // quando nao tem restaurant cadastrado esta quebrando.
+    [MODEL addRestaurantToList:RESTAURANT];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
