@@ -31,7 +31,11 @@
 {
     [super viewWillAppear:animated];
     self.alert = [[UIAlertView alloc] initWithTitle:@"Usuário inexistente" message:@"Por favor, redigite seu nome de usuário e senha" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-    [MODEL pullUsersList];
+   
+    
+ //   [MODEL pullUsersList];
+ //   [MODEL pullRestaurantsList];
+    
     self.loginText.layer.borderWidth = 0.5f;
     self.loginText.layer.borderColor = [[UIColor grayColor] CGColor];
     self.passText.layer.borderWidth = 0.5f;

@@ -53,6 +53,7 @@ static Model* sharedModel = nil;
 -(void) pullRestaurantsList
 {
     [self.restaurantRequest pullAllRestaurants:self];
+    NSLog(@"list of Restaurants %@", self.listOfRestaurants );
 }
 
 -(void) pullUsersList
@@ -62,7 +63,6 @@ static Model* sharedModel = nil;
 -(void) pickRestaurantWithCoordinates:(CGPoint) coordinates
 {
     
-    //verificar quanto eu preciso andar para poder fazer estas verificacoes!
     [self pullRestaurantsList];
     for (NSDictionary * rest in self.listOfRestaurants) {
        NSDictionary *aux = [rest objectForKey:@"coordinates"];
@@ -73,8 +73,6 @@ static Model* sharedModel = nil;
                 break;
             }
         }
-        
-        
     }
 }
 
@@ -83,8 +81,6 @@ static Model* sharedModel = nil;
     [self pullUsersList];
     for (NSDictionary * userDictionary in self.listOfUsers)
     {
-        NSLog(@"nome da ves %@",[userDictionary objectForKey:@"name"]);
-        //esta dando erro pois estou comparando userName, uma string com user.name, endereco de uma string
         if ([[userDictionary objectForKey:@"name"] isEqualToString: userName]) {
             MODEL.user = [[User alloc] initWithDictionary:userDictionary ];
             break;
@@ -107,16 +103,17 @@ static Model* sharedModel = nil;
     response = object;
     NSLog(@"%@",response[0]);
     NSDictionary *teste = response[0];
-    if ([teste objectForKey:@"picture"] != nil) {
+    if ([teste objectForKey:@"password"] == nil) {
         //_response eh um array de restaurantes!
         [self convertResponseToRestaurant: response];
+        NSLog(@"Objeto de retorno como restaurants %@", response);
+
     }
-    else
+    else     if ([teste objectForKey:@"password"] != nil) {
+    
         self.listOfUsers = response;
-    
-    NSLog(@"Objeto de retorno %@", response);
-    
-    
+        NSLog(@"Objeto de retorno como usuarios %@", response);
+    }
 }
 
 -(void) request: (RestaurantRequest*) request didFailWithError:(NSError*) error
@@ -129,7 +126,28 @@ static Model* sharedModel = nil;
     //este metodo converte o array de restaurantes em Json em um array de restaurantes no formato restaurantes, inserindo no array de restaurantes
     for (NSDictionary * restaurantJson in arrayJson) {
         Restaurant * novo = [[Restaurant alloc] initWithDictionary:restaurantJson];
-        [self.listOfRestaurants addObject:novo];
+        [self insertRestaurants:novo]; //Todo verificar se o restaurante nao existe na hora de inseri-lo novamente.
     }
+}
+
+#pragma mark - Support
+-(void) insertRestaurants: (Restaurant *) newRestaurant
+{
+    int inserido = 0;
+    for (Restaurant * auxRestaurant in self.listOfRestaurants )
+    {
+        if ([auxRestaurant.name isEqualToString: newRestaurant.name]) {
+            NSLog(@"restaurant ja cadastrado-> %@", newRestaurant.name);
+            inserido = 1;
+            break;
+        }
+    
+    }
+    if (inserido == 0) {
+        [self.listOfRestaurants addObject:newRestaurant];
+        NSLog(@"restaurant %@, inserido com sucesso", newRestaurant.name);
+    }
+    
+    
 }
 @end

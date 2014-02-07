@@ -39,11 +39,7 @@
         NSArray * auxTable = [dictionary objectForKey:@"tables"];
         NSLog(@"%@",auxTable);
        
-   //     for (NSNumber * auxKey in [dictionary allKeys])
-   //     {
-  //          Table * newTable = [[Table alloc] initWithDictionary: [dictionary objectForKey:auxKey]];
-   //         [self newTable: newTable];
-   //     }
+        //TODO aqui eu devo fazer uma funcao para andar na String do inferno!
     }
     
     return self;
