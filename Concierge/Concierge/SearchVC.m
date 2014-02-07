@@ -112,8 +112,8 @@
         NSString *name = rest.name;
         NSString *vicinity = rest.placeLocation;
         CLLocationCoordinate2D placeCoord;
-        placeCoord.latitude = rest.coordinates.y;
-        placeCoord.longitude = rest.coordinates.x;
+        placeCoord.latitude = rest.coordinates.x;
+        placeCoord.longitude = rest.coordinates.y;
         
         MapPoint *placeObject = [[MapPoint alloc] initWithName:name address:vicinity coordinate:placeCoord];
         [self.mapView addAnnotation:placeObject];
