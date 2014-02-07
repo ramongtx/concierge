@@ -118,6 +118,7 @@
 {
     if ([segue.identifier isEqualToString:@"locate"])
     {
+        [RESTAURANT setPlaceLocation:address];
         [RESTAURANT setCoordinates:latLong];
     }
 }
