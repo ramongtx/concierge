@@ -74,6 +74,8 @@
 
 - (IBAction)goSearchRestaurantType:(id)sender
 {
+    [self dismissKeyboard];
+    
     [MODEL pullRestaurantsList];
     NSMutableArray* restaurantTypes = [[NSMutableArray alloc] init];
     
@@ -88,12 +90,25 @@
     NSLog(@" Essa    %@",LIST);
     
     [self plotPositions:restaurantTypes];
+//    
+//    MKMapRect r = [self.mapView visibleMapRect];
+//    MKMapPoint pt = MKMapPointForCoordinate(    [[self.mapView.annotations objectAtIndex:0] coordinate]);
+//    r.origin.x = pt.x - r.size.width * 0.5;
+//    r.origin.y = pt.y - r.size.height * 0.25;
+//    [self.mapView setVisibleMapRect:r animated:YES];
     
-    MKMapRect r = [self.mapView visibleMapRect];
-    MKMapPoint pt = MKMapPointForCoordinate(    [[self.mapView.annotations objectAtIndex:0] coordinate]);
-    r.origin.x = pt.x - r.size.width * 0.5;
-    r.origin.y = pt.y - r.size.height * 0.25;
-    [self.mapView setVisibleMapRect:r animated:YES];
+    MKMapRect zoomRect = MKMapRectNull;
+    for (id <MKAnnotation> annotation in self.mapView.annotations) {
+        MKMapPoint annotationPoint = MKMapPointForCoordinate(annotation.coordinate);
+        MKMapRect pointRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0, 0);
+        if (MKMapRectIsNull(zoomRect)) {
+            zoomRect = pointRect;
+        } else {
+            zoomRect = MKMapRectUnion(zoomRect, pointRect);
+        }
+    }
+    [self.mapView setVisibleMapRect:zoomRect animated:YES];
+
 }
 
 - (void)didReceiveMemoryWarning
