@@ -66,7 +66,7 @@
 {
     [super viewWillAppear:animated];
     
-    [MODEL pullRestaurantsList];
+   // [MODEL pullRestaurantsList];
     
     [self performSelector:@selector(plotPositions:) withObject:LIST afterDelay:2.0];
 }
@@ -75,7 +75,6 @@
 - (IBAction)goSearchRestaurantType:(id)sender
 {
     [MODEL pullRestaurantsList];
-    
     NSMutableArray* restaurantTypes = [[NSMutableArray alloc] init];
     
     for(Restaurant* restaurant in LIST)
@@ -108,28 +107,19 @@
         }
     }
     // 2 - Loop through the array of places.
-    for (int i=0; i<[data count]; i++)
+    for (Restaurant *rest in data)
     {
-        
-        // 3 - Get your name and address info for adding to a pin.
-        NSString *name=[[data objectAtIndex:i] name];
-        NSString *vicinity=[[data objectAtIndex:i] placeLocation];
-        // Create a special variable to hold this coordinate info.
+        NSString *name = rest.name;
+        NSString *vicinity = rest.placeLocation;
         CLLocationCoordinate2D placeCoord;
-        // Set the lat and long.
+        placeCoord.latitude = rest.coordinates.y;
+        placeCoord.longitude = rest.coordinates.x;
         
-        CGPoint latLong = [[data objectAtIndex:i] coordinates];
-        
-        placeCoord.latitude=latLong.x;
-        placeCoord.longitude=latLong.y;
-        // 4 - Create a new annotation.
         MapPoint *placeObject = [[MapPoint alloc] initWithName:name address:vicinity coordinate:placeCoord];
         [self.mapView addAnnotation:placeObject];
         
         [self.mapView selectAnnotation:placeObject animated:YES];//here we select the pins that are added to the map
     }
-
-    
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
