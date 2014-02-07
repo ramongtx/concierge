@@ -112,8 +112,8 @@
         NSString *name = rest.name;
         NSString *vicinity = rest.placeLocation;
         CLLocationCoordinate2D placeCoord;
-        placeCoord.latitude = rest.coordinates.y;
-        placeCoord.longitude = rest.coordinates.x;
+        placeCoord.latitude = rest.coordinates.x;
+        placeCoord.longitude = rest.coordinates.y;
         
         MapPoint *placeObject = [[MapPoint alloc] initWithName:name address:vicinity coordinate:placeCoord];
         [self.mapView addAnnotation:placeObject];
@@ -153,8 +153,8 @@
         
         for (Restaurant* restaurant  in LIST)
         {
-            NSLog(@"X = %f, Y = %f, lat = %f, long = %f", restaurant.coordinates.x,restaurant.coordinates.y,[[view annotation] coordinate].latitude,[[view annotation] coordinate].longitude);
-            if(restaurant.coordinates.x ==[[view annotation] coordinate].longitude && restaurant.coordinates.y == [[view annotation] coordinate].latitude)
+            NSLog(@"%f %F %f %F",restaurant.coordinates.x,[[view annotation] coordinate].latitude,restaurant.coordinates.y,[[view annotation] coordinate].longitude);
+             if(restaurant.coordinates.x ==[[view annotation] coordinate].latitude && restaurant.coordinates.y == [[view annotation] coordinate].longitude)
             {
                   [self performSegueWithIdentifier:@"search" sender:restaurant];
                 return;

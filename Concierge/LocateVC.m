@@ -39,6 +39,7 @@
 	// Do any additional setup after loading the view.
     
      geocoder = [[CLGeocoder alloc] init];
+    [MODEL setSelectedRestaurant:[USER restaurant]];
     
     //Make this controller the delegate for the map view.
     self.mapView.delegate = self;
