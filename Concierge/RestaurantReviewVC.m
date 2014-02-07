@@ -36,7 +36,8 @@
     self.detailsTextView.editable = NO;
     
     self.nameTextView.text = [RESTAURANT name];
-    self.detailsTextView.text = [NSString stringWithFormat:@"Latitude = %f, Longitude = %f\nAddress = %@", [RESTAURANT coordinates].x , [RESTAURANT coordinates].y, [RESTAURANT placeLocation]];
+    self.detailsTextView.text = [RESTAURANT details];
+    self.typeTextView.text = [RESTAURANT type];
 }
 
 @end

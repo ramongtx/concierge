@@ -30,11 +30,11 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.alert = [[UIAlertView alloc] initWithTitle:@"Usuário inexistente" message:@"Por favor, redigite seu nome de usuário e senha" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    self.alert = [[UIAlertView alloc] initWithTitle:@"User/Password not found" message:@"Please enter your username and password again" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
    
     
- //   [MODEL pullUsersList];
- //   [MODEL pullRestaurantsList];
+    [MODEL pullUsersList];
+    [MODEL pullRestaurantsList];
     
     self.loginText.layer.borderWidth = 0.5f;
     self.loginText.layer.borderColor = [[UIColor grayColor] CGColor];
