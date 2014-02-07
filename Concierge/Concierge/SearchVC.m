@@ -97,17 +97,26 @@
 //    r.origin.y = pt.y - r.size.height * 0.25;
 //    [self.mapView setVisibleMapRect:r animated:YES];
     
-    MKMapRect zoomRect = MKMapRectNull;
-    for (id <MKAnnotation> annotation in self.mapView.annotations) {
-        MKMapPoint annotationPoint = MKMapPointForCoordinate(annotation.coordinate);
-        MKMapRect pointRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0, 0);
-        if (MKMapRectIsNull(zoomRect)) {
-            zoomRect = pointRect;
-        } else {
-            zoomRect = MKMapRectUnion(zoomRect, pointRect);
-        }
-    }
-    [self.mapView setVisibleMapRect:zoomRect animated:YES];
+    //other try
+    
+    
+//    MKMapRect zoomRect = MKMapRectNull;
+//    for (id <MKAnnotation> annotation in self.mapView.annotations) {
+//        MKMapPoint annotationPoint = MKMapPointForCoordinate(annotation.coordinate);
+//        MKMapRect pointRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0, 0);
+//        if (MKMapRectIsNull(zoomRect)) {
+//            zoomRect = pointRect;
+//        } else {
+//            zoomRect = MKMapRectUnion(zoomRect, pointRect);
+//        }
+//    }
+//    [self.mapView setVisibleMapRect:zoomRect animated:YES];
+    
+    
+    //other try
+
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance([[self.mapView.annotations objectAtIndex:1] coordinate], 1000, 1000);
+    [self.mapView setRegion:region animated:YES];
 
 }
 
@@ -249,15 +258,15 @@
 -(void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
 {
     //Get the east and west points on the map so you can calculate the distance (zoom level) of the current map view.
-    MKMapRect mRect = self.mapView.visibleMapRect;
-    MKMapPoint eastMapPoint = MKMapPointMake(MKMapRectGetMinX(mRect), MKMapRectGetMidY(mRect));
-    MKMapPoint westMapPoint = MKMapPointMake(MKMapRectGetMaxX(mRect), MKMapRectGetMidY(mRect));
-    
-    //Set your current distance instance variable.
-    currenDist = MKMetersBetweenMapPoints(eastMapPoint, westMapPoint);
-    
-    //Set your current center point on the map instance variable.
-    currentCentre = self.mapView.centerCoordinate;
+//    MKMapRect mRect = self.mapView.visibleMapRect;
+//    MKMapPoint eastMapPoint = MKMapPointMake(MKMapRectGetMinX(mRect), MKMapRectGetMidY(mRect));
+//    MKMapPoint westMapPoint = MKMapPointMake(MKMapRectGetMaxX(mRect), MKMapRectGetMidY(mRect));
+//    
+//    //Set your current distance instance variable.
+//    currenDist = MKMetersBetweenMapPoints(eastMapPoint, westMapPoint);
+//    
+//    //Set your current center point on the map instance variable.
+//    currentCentre = self.mapView.centerCoordinate;
 }
 
 
