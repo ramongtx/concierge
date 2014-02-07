@@ -15,6 +15,8 @@
     self = [super init];
     if(self) {
         [self setTableArray:[[NSMutableArray alloc] init]];
+        self.numOfTables = 0;
+    
     }
     return self;
 }
@@ -38,6 +40,7 @@
         {
             Table * newTable = [[Table alloc] initWithDictionary: [dictionary objectForKey:auxKey]];
             [self newTable: newTable];
+
         }
     }
     

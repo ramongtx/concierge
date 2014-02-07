@@ -65,7 +65,7 @@
     [newRequest setPostValue:restaurant.placeLocation forKey:@"location"];
     [newRequest setPostValue:restaurant.type forKey:@"type"];
     [newRequest setPostValue:restaurant.details forKey:@"details"];
-    [newRequest setPostValue:[restaurant transformTableArraysOnNSDictionary] forKey:@"tables"];
+    [newRequest setPostValue:[restaurant transformTableArraysOnNSDictionary] forKey:@"tables"]; // os servidor nao esta entendendo o json enviado neste campo.
     [newRequest setRequestMethod:@"POST"];
     [newRequest startAsynchronous];
 

@@ -21,6 +21,10 @@
 @property (strong) NSString* picture;
 @property (strong) User* owner;
 @property (strong) NSString* restaurantId;
+
+@property (nonatomic) int numOfTables;
+
+
 -(id) initWithDictionary:(NSDictionary *) dictionary;
 
 -(void) newTable:(Table*)tb;
