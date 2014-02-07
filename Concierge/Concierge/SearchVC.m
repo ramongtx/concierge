@@ -89,7 +89,11 @@
     
     [self plotPositions:restaurantTypes];
     
-    
+    MKMapRect r = [self.mapView visibleMapRect];
+    MKMapPoint pt = MKMapPointForCoordinate(    [[self.mapView.annotations objectAtIndex:0] coordinate]);
+    r.origin.x = pt.x - r.size.width * 0.5;
+    r.origin.y = pt.y - r.size.height * 0.25;
+    [self.mapView setVisibleMapRect:r animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
