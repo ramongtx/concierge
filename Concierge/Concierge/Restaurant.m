@@ -37,8 +37,7 @@
         self.placeLocation = [dictionary objectForKey:@"location"];
         
         NSArray * auxTable = [dictionary objectForKey:@"tables"];
-        NSLog(@"%@",auxTable);
-       
+        
         //TODO aqui eu devo fazer uma funcao para andar na String do inferno!
     }
     
@@ -83,17 +82,11 @@
     //nao esta funcionando esta parte estou  dictionary quando eh um restaurante,
     //estou recebendo uma string.................. devo mudar a maneira de inserir no banco, ele esta transformando o dictionary em string
     
-    NSLog(@"%@",dictionary);
-    
     NSArray *substrings = [dictionary componentsSeparatedByString:@"\""];
-    NSString *latitude = substrings[1];
-    NSString *longitude = substrings[3];
+    NSString *longitude = substrings[1];
+    NSString *latitude = substrings[3];
     
-
-    
-
-    NSLog(@"latitude: %f, and longitude %f", [latitude floatValue], [longitude floatValue]);
-    return CGPointMake([latitude floatValue], [longitude floatValue]);
+    return CGPointMake([longitude floatValue], [latitude floatValue]);
 }
 
 - (int) numberOfTables

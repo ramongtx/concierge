@@ -27,7 +27,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    if ([USER isOwner]) {
+    if ([USER isOwner] == own) {
         [MODEL setSelectedRestaurant:[USER restaurant]];
       //  [self performSegueWithIdentifier:@"" sender:self];
     }
@@ -101,7 +101,7 @@
               NSLog(@"%@",address);
             
             
-            latLong =   CGPointMake(touchMapCoordinate.latitude, touchMapCoordinate.longitude);
+            latLong =   CGPointMake(touchMapCoordinate.longitude, touchMapCoordinate.latitude);
             
             [self performSegueWithIdentifier:@"locate" sender: nil];
             
