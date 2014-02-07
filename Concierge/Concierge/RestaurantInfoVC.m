@@ -76,17 +76,10 @@
     [RESTAURANT setType:self.typeTextView.text];
     [RESTAURANT setDetails:self.detailsTextView.text];
     
-    NSLog(@"%@",RESTAURANT);
-    Restaurant *novo =  RESTAURANT;
-    NSLog(@"%@",novo);
 }
 
 -(void) saveAndBackEditing
 {
-    
-    Restaurant *novo =  MODEL.selectedRestaurant;
-    NSLog(@"%@",novo);
-    
     [RESTAURANT setName:self.nameTextView.text];
     [RESTAURANT setType:self.typeTextView.text];
     [RESTAURANT setDetails:self.detailsTextView.text];
