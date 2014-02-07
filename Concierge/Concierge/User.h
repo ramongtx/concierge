@@ -20,7 +20,7 @@ typedef enum {
 @property (strong) NSString* email;
 @property (strong) NSString* password;
 @property Owner isOwner;
-@property (strong) NSString* restaurant;
+@property (strong) Restaurant* restaurant;
 
 -(id) initWithDictionary: (NSDictionary *) dictionary;
 @end

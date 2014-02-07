@@ -66,7 +66,7 @@
 {
     [super viewWillAppear:animated];
     
-   // [MODEL pullRestaurantsList];
+    [MODEL pullRestaurantsList];
     
     [self performSelector:@selector(plotPositions:) withObject:LIST afterDelay:2.0];
 }
@@ -112,8 +112,8 @@
         NSString *name = rest.name;
         NSString *vicinity = rest.placeLocation;
         CLLocationCoordinate2D placeCoord;
-        placeCoord.latitude = rest.coordinates.x;
-        placeCoord.longitude = rest.coordinates.y;
+        placeCoord.latitude = rest.coordinates.y;
+        placeCoord.longitude = rest.coordinates.x;
         
         MapPoint *placeObject = [[MapPoint alloc] initWithName:name address:vicinity coordinate:placeCoord];
         [self.mapView addAnnotation:placeObject];
@@ -154,7 +154,7 @@
         for (Restaurant* restaurant  in LIST)
         {
             NSLog(@"%f %F %f %F",restaurant.coordinates.x,[[view annotation] coordinate].latitude,restaurant.coordinates.y,[[view annotation] coordinate].longitude);
-             if(restaurant.coordinates.x ==[[view annotation] coordinate].latitude && restaurant.coordinates.y == [[view annotation] coordinate].longitude)
+             if(restaurant.coordinates.x ==[[view annotation] coordinate].longitude && restaurant.coordinates.y == [[view annotation] coordinate].latitude)
             {
                   [self performSegueWithIdentifier:@"search" sender:restaurant];
                 return;

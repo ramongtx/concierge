@@ -34,7 +34,7 @@
    
     
     [MODEL pullUsersList];
-    [MODEL pullRestaurantsList];
+//    [MODEL pullRestaurantsList];
     
     self.loginText.layer.borderWidth = 0.5f;
     self.loginText.layer.borderColor = [[UIColor grayColor] CGColor];
