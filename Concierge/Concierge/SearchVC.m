@@ -153,8 +153,7 @@
         
         for (Restaurant* restaurant  in LIST)
         {
-            NSLog(@"%f %F %f %F",restaurant.coordinates.x,[[view annotation] coordinate].latitude,restaurant.coordinates.y,[[view annotation] coordinate].longitude);
-             if(restaurant.coordinates.x ==[[view annotation] coordinate].longitude && restaurant.coordinates.y == [[view annotation] coordinate].latitude)
+             if([restaurant.name isEqualToString: [[view annotation] title]])
             {
                   [self performSegueWithIdentifier:@"search" sender:restaurant];
                 return;
