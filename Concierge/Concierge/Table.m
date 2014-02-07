@@ -29,12 +29,12 @@
     self = [super init];
     
     if (self) {
-        
-        self.tableNumber = [[dictionary objectForKey:@"number"] integerValue];
-        self.numberOfChairs = [[dictionary objectForKey:@"chairs"] integerValue];
-        self.details = [dictionary objectForKey:@"details"];
-        self.status = [[dictionary objectForKey:@"avaible"]integerValue];
-        self.location = [self transformNSDictionaryOnCoordinates:[dictionary objectForKey:@"coordinates"]];
+        NSLog(@"%@",dictionary);
+//        self.tableNumber = [[dictionary objectForKey:@"number"] integerValue];
+//        self.numberOfChairs = [[dictionary objectForKey:@"chairs"] integerValue];
+//        self.details = [dictionary objectForKey:@"details"];
+//        self.status = [[dictionary objectForKey:@"avaible"]integerValue];
+//        self.location = [self transformNSDictionaryOnCoordinates:[dictionary objectForKey:@"coordinates"]];
         
         
     }else{
@@ -51,9 +51,18 @@
     return coordinates;
 }
 
--(CGPoint ) transformNSDictionaryOnCoordinates: (NSDictionary *)dictionary
+-(CGPoint ) transformNSDictionaryOnCoordinates: (NSString *)dictionary
 {
-    CGPoint coordinates = CGPointMake( [[dictionary objectForKey:@"longitude"] floatValue],[[dictionary objectForKey:@"latitude"]floatValue]);
-    return coordinates;
+    NSLog(@"%@",dictionary);
+    
+    NSArray *substrings = [dictionary componentsSeparatedByString:@"\""];
+    NSString *latitude = substrings[1];
+    NSString *longitude = substrings[3];
+    
+    
+    NSLog(@"latitude: %f, and longitude %f", [latitude floatValue], [longitude floatValue]);
+    
+    return CGPointMake([latitude floatValue], [longitude floatValue]);
+    
 }
 @end
