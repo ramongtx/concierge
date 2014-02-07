@@ -27,6 +27,7 @@
     if (self) {
         self.name = [dictionary objectForKey:@"name"];
         self.phone = [dictionary objectForKey:@"phone"];
+        self.password = [dictionary objectForKey:@"password"];
         self.email = [dictionary objectForKey:@"email"];
         self.isOwner = [[dictionary objectForKey:@"owner"]integerValue];
         self.restaurant = [dictionary objectForKey:@"restaurant"];

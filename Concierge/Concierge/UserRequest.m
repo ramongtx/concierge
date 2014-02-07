@@ -63,6 +63,7 @@
     [newRequest setPostValue: user.name forKey:@"name"];
     [newRequest setPostValue: user.phone forKey:@"phone"];
     [newRequest setPostValue: user.email forKey:@"email"];
+    [newRequest setPostValue: user.password forKey:@"password"];
     [newRequest setPostValue: [NSNumber numberWithBool:user.isOwner] forKey:@"owner"];
     [newRequest setPostValue: user.restaurant forKey:@"restaurant"];
     [newRequest setRequestMethod:@"POST"];
