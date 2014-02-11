@@ -25,7 +25,7 @@
                   symbolName = "-[Model pickRestaurantWithCoordinates:]"
                   moduleName = "Concierge"
                   urlString = "file:///Users/BrunoVargas/Documents/BEPiD/projetoConcierge/concierge/concierge/Concierge/Concierge/Model.m"
-                  timestampString = "413486291.893362"
+                  timestampString = "413822985.173286"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "67"
@@ -39,7 +39,7 @@
                   symbolName = "-[Model pickRestaurantWithCoordinates:]"
                   moduleName = "Concierge"
                   urlString = "file:///Users/BrunoVargas/Documents/BEPiD/projetoConcierge/concierge/concierge/Concierge/Concierge/Model.m"
-                  timestampString = "413486291.893568"
+                  timestampString = "413822985.173492"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "67"
@@ -62,54 +62,6 @@
             startingLineNumber = "80"
             endingLineNumber = "80"
             landmarkName = "-transformNSDictionaryOnCoordinates:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LocateVC.m"
-            timestampString = "413478315.00619"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "-viewWillAppear:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Concierge/SearchVC.m"
-            timestampString = "413482300.552686"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
-            landmarkName = "@implementation SearchVC"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Concierge/SearchVC.m"
-            timestampString = "413482411.786043"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
-            landmarkName = "-mapView:annotationView:calloutAccessoryControlTapped:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
