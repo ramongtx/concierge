@@ -27,7 +27,7 @@ Concièrge:
 
       Como motivar aos usuários a fazer as pesquisas pelo sistema ? (Se possível) vincular com o sistema de mapas , quando mostrar os lugares no mapa, caso o restaurante/ hotél em questão já tenha o cadastro feito no sistema, possibilitar a visualizacao das informacões e imagens, porém para usar outras features, pedir o download. Caso o restaurante/ hotél ainda nao tenha este cadastro montar uma estatística para facilitar a venda do app ao restaurante em questao.
              ✔ Pesquisar sobre a comunicacao com o sistema de mapas da Apple @fellipecoelho @deadline (28-01-2014) @done (14-01-29 09:37)
-             ☐ Estudar se política dos mapas permite que seja enviado mensagens aos usuários (restaurantes) @fellipecoelho @deadline (28-01-2014)
+             ✔ Estudar se política dos mapas permite que seja enviado mensagens aos usuários (restaurantes) @fellipecoelho @deadline (28-01-2014) @done (14-02-11 10:15)
 
       Como evitar que o restaurante/hotel cadastre mentiras ou alertar aos usuários que a descricao esta incorreta ? Montar um sistema de ranking, e colocar o que o cliente achou da mesa em equestao, montando um ranking dos melhores e piores restaurantes e os usuários consigam ver o que outros acharam
              ✔ Pesquisar concorrentes @ramongtx @deadline (28-01-2014) @done (14-01-27 10:19)
@@ -58,9 +58,6 @@ Concièrge:
             ☐ Conversar com a equipe de trabalho do restaurante para ver se o que foi montado (prototipo) será realmente útil aos stakeholders. @todos @deadline (03-02-2014)
 
       A ideia de utilizar somente em restaurantes, pode tornar muito pequeno o publico alvo, vale a pena investir ? Utilizando praticamente a mesma estrutura, podemos expandir para a utilizacao em quartos de hotéis, pois assim como mesas de restaurantes, é fundamental poder visualizar antes.
-
-
-      ☐ Pesquisa IP fixo para Linux @ramongtx @deadline (02-02-2014)
 
    Planejamento do Desenvolvimento:
        ✔ Início do desenvolvimento @todos @deadline (28-01-2014) @done (14-01-29 10:06)
