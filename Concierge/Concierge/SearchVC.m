@@ -114,9 +114,15 @@
     
     
     //other try
+    
+    NSLog(@"%d",[self.mapView.annotations count]);
+    
+    if([self.mapView.annotations count] == 0)
+    {
 
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance([[self.mapView.annotations objectAtIndex:1] coordinate], 1000, 1000);
     [self.mapView setRegion:region animated:YES];
+    }
 
 }
 
