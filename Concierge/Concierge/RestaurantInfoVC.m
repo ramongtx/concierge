@@ -70,6 +70,16 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (IBAction)uploadMapButtonClicked:(id)sender {
+    [self setGalleryDelegate:self];
+    [self launchBrowser];
+}
+
+-(void) didFinishLoadingImage:(UIImage *)image original:(UIImage*)originalImage
+{
+    [RESTAURANT setPicture:image];
+}
+
 -(void)saveRestaurant
 {
     [RESTAURANT setName:self.nameTextView.text];

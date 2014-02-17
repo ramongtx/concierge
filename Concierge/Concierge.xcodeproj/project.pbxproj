@@ -40,6 +40,7 @@
 		F60E5C6C18992FC900B2ACD6 /* Reservation.m in Sources */ = {isa = PBXBuildFile; fileRef = F60E5C6B18992FC900B2ACD6 /* Reservation.m */; };
 		F60E5C6F18992FD500B2ACD6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F60E5C6E18992FD500B2ACD6 /* User.m */; };
 		F61680B8189FC196006C03C7 /* TableInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F61680B7189FC196006C03C7 /* TableInfoVC.m */; };
+		F67A877318B241D800DB5351 /* CameraVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F67A877218B241D800DB5351 /* CameraVC.m */; };
 		F69A70A9189BCB4A0008F122 /* RestaurantInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F69A70A8189BCB4A0008F122 /* RestaurantInfoVC.m */; };
 		F69A70AC189BCBEC0008F122 /* KeyboardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F69A70AB189BCBEC0008F122 /* KeyboardVC.m */; };
 		F69A70AF189BCF530008F122 /* EditMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F69A70AE189BCF530008F122 /* EditMapVC.m */; };
@@ -129,6 +130,8 @@
 		F60E5C6E18992FD500B2ACD6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		F61680B6189FC196006C03C7 /* TableInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableInfoVC.h; sourceTree = "<group>"; };
 		F61680B7189FC196006C03C7 /* TableInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableInfoVC.m; sourceTree = "<group>"; };
+		F67A877118B241D800DB5351 /* CameraVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraVC.h; sourceTree = "<group>"; };
+		F67A877218B241D800DB5351 /* CameraVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraVC.m; sourceTree = "<group>"; };
 		F69A70A7189BCB4A0008F122 /* RestaurantInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantInfoVC.h; sourceTree = "<group>"; };
 		F69A70A8189BCB4A0008F122 /* RestaurantInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantInfoVC.m; sourceTree = "<group>"; };
 		F69A70AA189BCBEC0008F122 /* KeyboardVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardVC.h; sourceTree = "<group>"; };
@@ -334,6 +337,8 @@
 		F69A70A6189BCB1C0008F122 /* Control */ = {
 			isa = PBXGroup;
 			children = (
+				F67A877118B241D800DB5351 /* CameraVC.h */,
+				F67A877218B241D800DB5351 /* CameraVC.m */,
 				B9F914D818A3EC3D005F1513 /* MenuViewController.h */,
 				B9F914D918A3EC3D005F1513 /* MenuViewController.m */,
 				B901A64418A10DD30011C920 /* LocateVC.h */,
@@ -559,6 +564,7 @@
 				F90A2B9318A261B3007C1F00 /* ASIAuthenticationDialog.m in Sources */,
 				F69A70B2189BCF650008F122 /* TableMapVC.m in Sources */,
 				F604D15F18992A1C00038365 /* main.m in Sources */,
+				F67A877318B241D800DB5351 /* CameraVC.m in Sources */,
 				F90A2B9218A261B3007C1F00 /* ASIDownloadCache.m in Sources */,
 				F90A2B9118A261B3007C1F00 /* ASINetworkQueue.m in Sources */,
 			);
