@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Table.h"
+#import "RestaurantRequest.h"
 
 @class User;
 

@@ -91,7 +91,7 @@ static Model* sharedModel = nil;
 -(UIImage *) getRestaurantImage
 {
     UIImage *image;
-    image = [self.restaurantRequest convertToUIImage: self.selectedRestaurant.picture];
+    image = [RestaurantRequest convertToUIImage: self.selectedRestaurant.picture];
     return  image;
 }
 
