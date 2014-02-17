@@ -114,15 +114,9 @@
     
     
     //other try
-    
-    NSLog(@"%d",[self.mapView.annotations count]);
-    
-    if([self.mapView.annotations count] == 0)
-    {
 
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance([[self.mapView.annotations objectAtIndex:1] coordinate], 1000, 1000);
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance([[self.mapView.annotations objectAtIndex:0] coordinate], 1000, 1000);
     [self.mapView setRegion:region animated:YES];
-    }
 
 }
 
@@ -154,6 +148,24 @@
         
         [self.mapView selectAnnotation:placeObject animated:YES];//here we select the pins that are added to the map
     }
+    
+    
+    if (RESTAURANT)
+    {
+        
+        NSString *name = RESTAURANT.name;
+        NSString *vicinity = RESTAURANT.placeLocation;
+        CLLocationCoordinate2D placeCoord;
+        placeCoord.latitude = RESTAURANT.coordinates.y;
+        placeCoord.longitude = RESTAURANT.coordinates.x;
+    
+        MapPoint *placeObject = [[MapPoint alloc] initWithName:name address:vicinity coordinate:placeCoord];
+        [self.mapView addAnnotation:placeObject];
+    
+        [self.mapView selectAnnotation:placeObject animated:YES];//here we select the pins that are added to the map
+    }
+
+    
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
