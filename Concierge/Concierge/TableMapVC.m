@@ -38,7 +38,9 @@ NSMutableArray* tableIndicatorArray;
     tap.delegate = self;
     [self.scrollView addGestureRecognizer:tap];
     
-    self.mapImage = [UIImage imageNamed:@MAP_IMAGE];
+    if ([RESTAURANT picture]) self.mapImage = [RESTAURANT picture];
+    else self.mapImage = [UIImage imageNamed:@MAP_IMAGE];
+    
     self.roomIndicator = [UIImage imageNamed:@ROOM_INDICATOR];
     self.indicatorSize = INDICATOR_SIZE;
     self.indicatorRadius = INDICATOR_RADIUS;

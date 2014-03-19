@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "KeyboardVC.h"
+#import "CameraVC.h"
 #import "Model.h"
 
-@interface RestaurantInfoVC : KeyboardVC
+@interface RestaurantInfoVC : CameraVC <GalleryViewProtocol>
 
 @end

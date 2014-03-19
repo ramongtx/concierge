@@ -10,6 +10,8 @@
 #import "Restaurant.h"
 
 @class RestaurantRequest;
+@class Restaurant;
+
 @protocol RestaurantRequestDelegate <NSObject>
 @optional
 -(void) request: (RestaurantRequest*) request didFinishWithObject:(id) object;
@@ -27,7 +29,7 @@
 
 -(void) pullAllRestaurants:(id<RestaurantRequestDelegate >) delegate;
 -(void) insertRestaurant: (Restaurant *) restaurant andDelegate: (id<RestaurantRequestDelegate>) delegate;
--(UIImage *)convertToUIImage:(NSString *) encodedString;
++(UIImage *)convertToUIImage:(NSString *) encodedString;
 -(NSString *) convertToString64bits:(UIImage *) image;
 
 

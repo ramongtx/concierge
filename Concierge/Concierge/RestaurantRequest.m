@@ -146,7 +146,7 @@
     return encodedString;
 }
 
--(UIImage *)convertToUIImage:(NSString *) encodedString
++(UIImage *)convertToUIImage:(NSString *) encodedString
 {
     NSData *imageData = [[NSData alloc] initWithBase64EncodedString:encodedString options:0];
     UIImage *image = [UIImage imageWithData:imageData];

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Table.h"
+#import "RestaurantRequest.h"
 
 @class User;
 
@@ -18,7 +19,7 @@
 @property (strong) NSMutableArray* tableArray;
 @property (strong) NSString* type;
 @property (strong) NSString* details;
-@property (strong) NSString* picture;
+@property (strong) UIImage* picture;
 @property (strong) User* owner;
 @property (strong) NSString* restaurantId;
 

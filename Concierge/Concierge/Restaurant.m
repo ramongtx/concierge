@@ -28,7 +28,7 @@
     if (self) {
         [self setTableArray:[[NSMutableArray alloc] init]];
         self.name = [dictionary objectForKey:@"name"];
-        self.picture = [dictionary objectForKey:@"picture"];
+        self.picture = [RestaurantRequest convertToUIImage:[dictionary objectForKey:@"picture"]];
         self.coordinates = [self transformNSDictionaryOnCoordinates:[dictionary objectForKey:@"coordinates"]];
         self.type = [dictionary objectForKey:@"type"];
         self.details = [dictionary objectForKey:@"details"];
