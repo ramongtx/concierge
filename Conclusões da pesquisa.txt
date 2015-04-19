@@ -1,0 +1,15 @@
+Conclusões da pesquisa:
+
+	Não existe concorrência nacional (popular) para o mercado de reserva de hotéis e restaurantes;
+	Não existe solução (popular) para a escolha de mesas visualmente, mas existem diversos que propõe fazer pedidos especiais na hora da reserva (como, próximo da janela, banheiro, etc);
+	Os aplicativos existentes já possibilitam o pagamento do quarto (hotéis);
+	Os aplicativos existentes usam geolocalização para sugerir lugares;
+	Fotos da instalações estão sempre disponíveis;
+	Reserva de hotel pede telefone celular para comunicação por SMS;
+	Precisa-se de permissão para usar push notifications (permissão pedida first-run);
+	Alguns apps de reserva (restaurante), não pedem registro prévio;
+	Sistema de reviews sempre integrado na solução (ranking por estrelas);
+	Pessoas gostariam de ver os menus dos restaurantes antes de reservar;
+	Confirmação instantânea é um pedido constante;
+	Alguns concorrentes oferecem sistema de pontos para trocar por descontos;
+	Alguns usuários prefere selecionar restaurantes/mesas de uma lista que visualmente;
